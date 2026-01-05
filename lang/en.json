@@ -1,96 +1,150 @@
 {
   "meta": {
-    "title": "Mishpacha"
+    "title": "Mishpacha – A Family for Orphans in Israel"
   },
+
   "brand": {
     "title": "Mishpacha",
-    "subtitle": "A family for orphans in Israel"
+    "subtitle": "A Family for Orphans in Israel"
   },
+
   "nav": {
-    "about": "About",
+    "about": "About Us",
     "services": "What We Do",
-    "story": "A True Story",
+    "story": "Personal Story",
     "video": "Video",
     "contact": "Contact"
   },
+
   "ui": {
-    "langToggle": "עברית",
-    "backTop": "Back to top"
+    "langToggle": "HE",
+    "backTop": "Back to Top"
   },
+
   "hero": {
-    "h1": "Mishpacha",
-    "h2": "A family for orphans in Israel",
-    "p": "Paste the exact paragraph from the PDF and I will fill it 1:1.",
-    "ctaNote": ""
+    "h1": "Mishpacha – A Family for Orphans in Israel",
+    "h2": "Comprehensive support for orphans in Israel – emotional, educational, legal, and social",
+    "p": "A national central platform providing assistance, support, and empowerment to orphans and their families throughout Israel. We are here to ensure that no orphaned child or young adult is left alone."
   },
+
   "cta": {
-    "volunteer": "I want to volunteer",
-    "donate": "I want to donate",
-    "help": "I am an orphan and I need help"
+    "volunteer": "I Want to Volunteer",
+    "donate": "I Want to Donate",
+    "help": "I Am an Orphan – I Need Help"
   },
+
   "about": {
-    "title": "Who are we?",
-    "card1": { "title": "Title 1", "text": "Text 1 from the PDF" },
-    "card2": { "title": "Title 2", "text": "Text 2 from the PDF" },
-    "card3": { "title": "Title 3", "text": "Text 3 from the PDF" }
+    "title": "Who We Are and Why We Founded Mishpacha",
+    "card1": {
+      "title": "Systemic Approach",
+      "text": "Comprehensive support across all areas of life"
+    },
+    "card2": {
+      "title": "Digital Innovation",
+      "text": "Technology in service of society"
+    },
+    "card3": {
+      "title": "Personal Empowerment",
+      "text": "Not pity, but strength and dignity"
+    }
   },
+
   "services": {
-    "title": "What do we do?",
-    "subtitle": "Short line from the PDF",
-    "s1": { "title": "Service 1", "text": "Description 1" },
-    "s2": { "title": "Service 2", "text": "Description 2" },
-    "s3": { "title": "Service 3", "text": "Description 3" },
-    "s4": { "title": "Service 4", "text": "Description 4" },
-    "s5": { "title": "Service 5", "text": "Description 5" },
-    "s6": { "title": "Service 6", "text": "Description 6" }
+    "title": "What We Do for Orphans in Israel",
+    "subtitle": "",
+    "s1": {
+      "title": "Financial and Educational Assistance",
+      "text": "Scholarships, tuition assistance, funding for courses and training. We ensure that financial barriers do not stop dreams."
+    },
+    "s2": {
+      "title": "Emotional and Psychological Support",
+      "text": "Professional guidance, support groups, emotional therapy, and empowerment workshops. A safe place for growth and healing."
+    },
+    "s3": {
+      "title": "Mentorship and Guidance",
+      "text": "Connection to personal mentors, career guidance, and professional direction. A supportive adult for every orphan."
+    },
+    "s4": {
+      "title": "Rights Realization",
+      "text": "Assistance in obtaining benefits, legal guidance, and representation מול authorities. We ensure full realization of rights."
+    },
+    "s5": {
+      "title": "Community and Belonging",
+      "text": "Social gatherings, camps, trips, and clubs. Building a supportive community and lifelong connections."
+    },
+    "s6": {
+      "title": "Housing and Foster Families",
+      "text": "Assistance in finding foster families, adoption support, and housing assistance. No child will be left without a warm home."
+    }
   },
+
   "story": {
-    "title": "A True Story",
-    "p1": "Paragraph 1 from the PDF",
-    "p2": "Paragraph 2 from the PDF"
+    "title": "Personal Story: A Voice from the Field",
+    "p1": "\"When my father passed away, I was 14 and didn’t know where to turn. Mishpacha didn’t just help me financially – they gave me a second family. My mentor, Danny, was there every step of the way, helped me cope with the pain and believe in myself again. Today I am studying engineering, and I know I wouldn’t be here without them.\"",
+    "p2": "— Yonatan, 22, Engineering Student"
   },
+
   "video": {
-    "title": "Our video",
-    "subtitle": "The NGO’s YouTube video will appear here once you upload it",
-    "placeholder": "Video will appear after you set youtubeVideoId in main.js"
+    "title": "Our Story on Video",
+    "subtitle": ""
   },
+
   "help": {
-    "title": "I am an orphan and I need help",
-    "step1": "Step 1 from the PDF",
-    "step2": "Step 2 from the PDF",
-    "step3": "Step 3 from the PDF",
-    "step4": "Step 4 from the PDF",
-    "button": "Open the contact form"
+    "title": "I Am an Orphan – I Need Help",
+    "step1": "Tell us about yourself",
+    "step2": "We will talk and understand what you need",
+    "step3": "We will build a personal plan",
+    "step4": "We will begin the journey together",
+    "button": "Fill Out the Contact Form Here"
   },
+
   "volunteer": {
-    "title": "Volunteer and change lives",
-    "subtitle": "Sentence from the PDF",
-    "v1": { "title": "Professional volunteering", "text": "Description from the PDF" },
-    "v2": { "title": "Personal mentoring", "text": "Description from the PDF" },
-    "v3": { "title": "Logistics support", "text": "Description from the PDF" },
-    "button": "Join as volunteers"
+    "title": "Volunteer and Change Lives",
+    "subtitle": "Volunteering with us means creating meaningful connections and real impact",
+    "v1": {
+      "title": "Personal Mentorship",
+      "text": "Close, long-term guidance for an orphan"
+    },
+    "v2": {
+      "title": "Professional Volunteering",
+      "text": "Social workers, lawyers, technology mentors"
+    },
+    "v3": {
+      "title": "Logistical Assistance",
+      "text": "Event organization, transportation, project management"
+    },
+    "button": "Join as a Volunteer"
   },
+
   "donate": {
-    "title": "Donation & transparency",
-    "subtitle": "Line from the PDF",
-    "stat1": { "num": "5%", "text": "Development" },
-    "stat2": { "num": "10%", "text": "Operations" },
-    "stat3": { "num": "85%", "text": "Programs" },
-    "button": "Donate now",
-    "legalLine": "I confirm that I read and understood the legal terms of the donation",
-    "legalNote": "Note: If you embed a payment platform on the website, you must work with proven professional providers.",
-    "legalAlert": "You must approve the terms before continuing to payment."
+    "title": "Your Donation Changes Lives",
+    "subtitle": "Every shekel you donate goes directly to changing lives, with full transparency",
+    "stat1": {
+      "num": "",
+      "text": "Goes directly to programs and services"
+    },
+    "stat2": {
+      "num": "",
+      "text": "Organization management and operational costs"
+    },
+    "stat3": {
+      "num": "",
+      "text": "Development, innovation, and service improvement"
+    },
+    "button": "Donate Now",
+    "legalLine": "I confirm that I have read and understood the donation terms",
+    "legalNote": "Donations will be processed exclusively through secure and recognized payment platforms"
   },
+
   "contact": {
-    "title": "Contact",
-    "subtitle": "Text from the PDF",
+    "title": "Contact Us – We Are Here for You",
+    "subtitle": "Have questions? Want to join Mishpacha? Need help?",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
-    "emailValue": "mishporg@gmail.com",
-    "phoneValue": "+972 00 000 0000",
-    "formBtn": "Contact form"
+    "formBtn": "Send Us a Message"
   },
+
   "footer": {
-    "text": "© Mishpacha"
+    "text": "Mishpacha – because no child should go through this alone. Together, we can change reality."
   }
 }
