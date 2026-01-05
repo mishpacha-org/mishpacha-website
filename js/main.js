@@ -1,186 +1,148 @@
-"use strict";
+(() => {
+  const LANG_KEY = "mishpacha_lang";
+  const DEFAULT_LANG = "he";
 
-const PATHS = {
-  config: "local/config.json",
-  translations: "local/translations.json"
-};
-
-let CONFIG = null;
-let TRANSLATIONS = null;
-
-function qs(selector, root = document) {
-  return root.querySelector(selector);
-}
-
-function qsa(selector, root = document) {
-  return Array.from(root.querySelectorAll(selector));
-}
-
-function byId(id) {
-  const el = document.getElementById(id);
-  if (!el) throw new Error(`Missing element with id: ${id}`);
-  return el;
-}
-
-function safeSetText(el, value) {
-  if (!el) return;
-  el.textContent = value ?? "";
-}
-
-function getSavedLang() {
-  return localStorage.getItem("mishpacha_lang");
-}
-
-function setSavedLang(lang) {
-  localStorage.setItem("mishpacha_lang", lang);
-}
-
-async function loadJson(path) {
-  const res = await fetch(path, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed loading ${path} (${res.status})`);
-  return res.json();
-}
-
-function getValueByPath(obj, path) {
-  return path.split(".").reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), obj);
-}
-
-function applyMeta(langKey) {
-  const meta = TRANSLATIONS[langKey].meta;
-  document.documentElement.lang = meta.lang;
-  document.documentElement.dir = meta.dir;
-}
-
-function applyTranslations(langKey) {
-  applyMeta(langKey);
-
-  qsa("[data-i18n]").forEach(el => {
-    const key = el.getAttribute("data-i18n");
-    const value = getValueByPath(TRANSLATIONS[langKey], key);
-    if (value === undefined) return;
-    safeSetText(el, value);
-  });
-
-  const langToggle = byId("langToggle");
-  safeSetText(langToggle, getValueByPath(TRANSLATIONS[langKey], "top.langToggle"));
-}
-
-function setLinks() {
-  const forms = CONFIG.forms;
-
-  byId("btnVolunteer").href = forms.volunteer;
-  byId("btnDonate").href = forms.donate;
-  byId("btnHelp").href = forms.help;
-
-  const donateSecondary = document.getElementById("btnDonateSecondary");
-  if (donateSecondary) donateSecondary.href = forms.donate;
-
-  const volunteerSecondary = document.getElementById("btnVolunteerSecondary");
-  if (volunteerSecondary) volunteerSecondary.href = forms.volunteer;
-
-  const helpSecondary = document.getElementById("btnHelpSecondary");
-  if (helpSecondary) helpSecondary.href = forms.help;
-
-  const contactBtn = document.getElementById("btnContact");
-  if (contactBtn) contactBtn.href = forms.contact;
-
-  const social = CONFIG.social || {};
-  const fb = document.getElementById("socialFacebook");
-  const ig = document.getElementById("socialInstagram");
-  const li = document.getElementById("socialLinkedin");
-  const yt = document.getElementById("socialYoutube");
-
-  if (fb && social.facebook) fb.href = social.facebook;
-  if (ig && social.instagram) ig.href = social.instagram;
-  if (li && social.linkedin) li.href = social.linkedin;
-  if (yt && social.youtube) yt.href = social.youtube;
-}
-
-function setupAiVideo() {
-  const embed = CONFIG.assets?.aiVideoYoutubeEmbed?.trim();
-  const box = document.getElementById("aiVideoBox");
-  const iframe = document.getElementById("aiVideoIframe");
-  const note = document.getElementById("aiVideoNote");
-
-  if (!box || !iframe || !note) return;
-
-  if (!embed) {
-    box.hidden = true;
-    note.hidden = false;
-    return;
-  }
-
-  iframe.src = embed;
-  box.hidden = false;
-  note.hidden = true;
-}
-
-function setupDonationLegalGate() {
-  const enabled = !!CONFIG.donationDisclaimer?.enabled;
-
-  const box = document.getElementById("donationLegalBox");
-  const btn = document.getElementById("donateProceed");
-  const chk1 = document.getElementById("donateChk1");
-  const chk2 = document.getElementById("donateChk2");
-  const chk3 = document.getElementById("donateChk3");
-
-  if (!box || !btn || !chk1 || !chk2 || !chk3) return;
-
-  if (!enabled) {
-    box.hidden = true;
-    return;
-  }
-
-  const update = () => {
-    const ok = chk1.checked && chk2.checked && chk3.checked;
-    btn.disabled = !ok;
+  // ====== External links placeholders (update later) ======
+  const LINKS = {
+    volunteerForm: "https://example.com/volunteer-form",
+    helpForm: "https://example.com/help-form",
+    contactForm: "https://example.com/contact-form",
+    donatePlatform: "https://example.com/donate",
+    // If you upload an AI video to YouTube, put the videoId here:
+    youtubeVideoId: "" // e.g. "dQw4w9WgXcQ"
   };
 
-  chk1.addEventListener("change", update);
-  chk2.addEventListener("change", update);
-  chk3.addEventListener("change", update);
+  let dictionary = {};
+  let currentLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
 
-  btn.addEventListener("click", () => {
-    window.open(CONFIG.forms.donate, "_blank", "noopener");
-  });
+  const $ = (sel) => document.querySelector(sel);
+  const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
-  update();
-}
-
-function setupLangToggle(initialLang) {
-  const toggle = byId("langToggle");
-
-  const switchLang = () => {
-    const current = document.documentElement.lang === "he" ? "he" : "en";
-    const next = current === "he" ? "en" : "he";
-    setSavedLang(next);
-    applyTranslations(next);
-  };
-
-  toggle.addEventListener("click", switchLang);
-
-  applyTranslations(initialLang);
-}
-
-async function init() {
-  CONFIG = await loadJson(PATHS.config);
-  TRANSLATIONS = await loadJson(PATHS.translations);
-
-  const saved = getSavedLang();
-  const initialLang = saved || CONFIG.defaultLang || "he";
-  if (!TRANSLATIONS[initialLang]) {
-    setSavedLang("he");
+  async function loadJson(lang) {
+    const res = await fetch(`local/${lang}.json`, { cache: "no-cache" });
+    if (!res.ok) throw new Error(`Failed to load JSON for lang=${lang}`);
+    return res.json();
   }
 
-  setLinks();
-  setupAiVideo();
-  setupDonationLegalGate();
-  setupLangToggle(saved || CONFIG.defaultLang || "he");
-}
+  function setDocDirection(lang) {
+    const html = document.documentElement;
+    if (lang === "en") {
+      html.lang = "en";
+      html.dir = "ltr";
+    } else {
+      html.lang = "he";
+      html.dir = "rtl";
+    }
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
-  init().catch(err => {
-    console.error(err);
-    alert("שגיאה בטעינת האתר. פתח את ה Console לפרטים.");
+  function applyText() {
+    // title
+    document.title = dictionary?.meta?.title || "Mishpacha";
+
+    $$("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      const value = getByKey(dictionary, key);
+      if (typeof value === "string") el.textContent = value;
+    });
+  }
+
+  function getByKey(obj, dottedKey) {
+    return dottedKey.split(".").reduce((acc, k) => (acc && acc[k] !== undefined ? acc[k] : undefined), obj);
+  }
+
+  function wireLinks() {
+    // CTA buttons
+    $("#ctaVolunteer").href = LINKS.volunteerForm;
+    $("#ctaHelp").href = LINKS.helpForm;
+
+    // Contact / help / volunteer
+    $("#helpFormBtn").href = LINKS.helpForm;
+    $("#volunteerBtn").href = LINKS.volunteerForm;
+    $("#contactFormBtn").href = LINKS.contactForm;
+
+    // Contact info (you can set these later in JSON if you want)
+    const email = dictionary?.contact?.emailValue || "mishporg@gmail.com";
+    const phone = dictionary?.contact?.phoneValue || "+972-00-000-0000";
+
+    $("#contactEmail").textContent = email;
+    $("#contactEmail").href = `mailto:${email}`;
+
+    $("#contactPhone").textContent = phone;
+    $("#contactPhone").href = `tel:${phone.replace(/\s+/g, "")}`;
+  }
+
+  function wireYoutube() {
+    const holder = $("#youtubeFrame");
+    holder.innerHTML = "";
+
+    if (!LINKS.youtubeVideoId) {
+      // fallback placeholder
+      const div = document.createElement("div");
+      div.style.height = "360px";
+      div.style.display = "grid";
+      div.style.placeItems = "center";
+      div.style.color = "rgba(30,22,51,.65)";
+      div.style.fontWeight = "900";
+      div.textContent = dictionary?.video?.placeholder || "YouTube video placeholder";
+      holder.appendChild(div);
+      return;
+    }
+
+    const iframe = document.createElement("iframe");
+    iframe.allow =
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    iframe.src = `https://www.youtube.com/embed/${LINKS.youtubeVideoId}`;
+    holder.appendChild(iframe);
+  }
+
+  function wireDonateButton() {
+    const btn = $("#donateNowBtn");
+    const checkbox = $("#donateLegalCheck");
+
+    btn.addEventListener("click", () => {
+      if (!checkbox.checked) {
+        alert(dictionary?.donate?.legalAlert || "חובה לאשר את התנאים לפני מעבר לתשלום.");
+        return;
+      }
+
+      // IMPORTANT: you said it yourself — payment platform must be done with proven professionals.
+      // So here we only redirect to the donation platform URL you will define later.
+      window.open(LINKS.donatePlatform, "_blank", "noopener");
+    });
+  }
+
+  async function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem(LANG_KEY, lang);
+
+    setDocDirection(lang);
+    dictionary = await loadJson(lang);
+
+    applyText();
+    wireLinks();
+    wireYoutube();
+
+    // update lang toggle label (show other language)
+    const toggleLabel = $("#langToggle span");
+    toggleLabel.textContent = lang === "he" ? "EN" : "עברית";
+  }
+
+  function wireLangToggle() {
+    $("#langToggle").addEventListener("click", async () => {
+      const next = currentLang === "he" ? "en" : "he";
+      await setLanguage(next);
+    });
+  }
+
+  async function init() {
+    wireLangToggle();
+    await setLanguage(currentLang);
+    wireDonateButton();
+  }
+
+  init().catch((e) => {
+    console.error(e);
+    alert("בעיה בטעינת האתר. בדוק את קבצי ה־JSON והנתיבים.");
   });
-});
+})();

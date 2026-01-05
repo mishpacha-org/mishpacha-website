@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Mishpacha"
+  },
+  "brand": {
+    "title": "Mishpacha",
+    "subtitle": "A family for orphans in Israel"
+  },
+  "nav": {
+    "about": "About",
+    "services": "What We Do",
+    "story": "A True Story",
+    "video": "Video",
+    "contact": "Contact"
+  },
+  "ui": {
+    "langToggle": "עברית",
+    "backTop": "Back to top"
+  },
+  "hero": {
+    "h1": "Mishpacha",
+    "h2": "A family for orphans in Israel",
+    "p": "Paste the exact paragraph from the PDF and I will fill it 1:1.",
+    "ctaNote": ""
+  },
+  "cta": {
+    "volunteer": "I want to volunteer",
+    "donate": "I want to donate",
+    "help": "I am an orphan and I need help"
+  },
+  "about": {
+    "title": "Who are we?",
+    "card1": { "title": "Title 1", "text": "Text 1 from the PDF" },
+    "card2": { "title": "Title 2", "text": "Text 2 from the PDF" },
+    "card3": { "title": "Title 3", "text": "Text 3 from the PDF" }
+  },
+  "services": {
+    "title": "What do we do?",
+    "subtitle": "Short line from the PDF",
+    "s1": { "title": "Service 1", "text": "Description 1" },
+    "s2": { "title": "Service 2", "text": "Description 2" },
+    "s3": { "title": "Service 3", "text": "Description 3" },
+    "s4": { "title": "Service 4", "text": "Description 4" },
+    "s5": { "title": "Service 5", "text": "Description 5" },
+    "s6": { "title": "Service 6", "text": "Description 6" }
+  },
+  "story": {
+    "title": "A True Story",
+    "p1": "Paragraph 1 from the PDF",
+    "p2": "Paragraph 2 from the PDF"
+  },
+  "video": {
+    "title": "Our video",
+    "subtitle": "The NGO’s YouTube video will appear here once you upload it",
+    "placeholder": "Video will appear after you set youtubeVideoId in main.js"
+  },
+  "help": {
+    "title": "I am an orphan and I need help",
+    "step1": "Step 1 from the PDF",
+    "step2": "Step 2 from the PDF",
+    "step3": "Step 3 from the PDF",
+    "step4": "Step 4 from the PDF",
+    "button": "Open the contact form"
+  },
+  "volunteer": {
+    "title": "Volunteer and change lives",
+    "subtitle": "Sentence from the PDF",
+    "v1": { "title": "Professional volunteering", "text": "Description from the PDF" },
+    "v2": { "title": "Personal mentoring", "text": "Description from the PDF" },
+    "v3": { "title": "Logistics support", "text": "Description from the PDF" },
+    "button": "Join as volunteers"
+  },
+  "donate": {
+    "title": "Donation & transparency",
+    "subtitle": "Line from the PDF",
+    "stat1": { "num": "5%", "text": "Development" },
+    "stat2": { "num": "10%", "text": "Operations" },
+    "stat3": { "num": "85%", "text": "Programs" },
+    "button": "Donate now",
+    "legalLine": "I confirm that I read and understood the legal terms of the donation",
+    "legalNote": "Note: If you embed a payment platform on the website, you must work with proven professional providers.",
+    "legalAlert": "You must approve the terms before continuing to payment."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Text from the PDF",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "emailValue": "mishporg@gmail.com",
+    "phoneValue": "+972 00 000 0000",
+    "formBtn": "Contact form"
+  },
+  "footer": {
+    "text": "© Mishpacha"
+  }
+}
