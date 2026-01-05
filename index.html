@@ -1,13 +1,224 @@
 <!doctype html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b0f19" />
   <title>Mishpacha</title>
-  <link rel="stylesheet" href="css/main_style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <h1>Mishpacha – Site skeleton</h1>
+  <a class="skip-link" href="#main" data-i18n="top.skipToContent">דלג לתוכן</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-text">
+          <div class="brand-title">Mishpacha</div>
+          <div class="brand-sub">Family for Orphans in Israel</div>
+        </div>
+      </div>
+
+      <nav class="top-actions">
+        <button id="langToggle" class="btn btn-secondary" type="button" aria-label="Toggle language">
+          English
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title" data-i18n="hero.title">משפאחה</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">משפחה ליתומים בישראל</p>
+        <p class="hero-desc" data-i18n="hero.desc"></p>
+
+        <div class="cta-grid">
+          <a id="btnVolunteer" class="btn btn-primary" href="#" target="_blank" rel="noopener"
+             data-i18n="cta.volunteer">אני רוצה להתנדב</a>
+
+          <a id="btnDonate" class="btn btn-primary" href="#" target="_blank" rel="noopener"
+             data-i18n="cta.donate">אני רוצה לתרום</a>
+
+          <a id="btnHelp" class="btn btn-outline" href="#" target="_blank" rel="noopener"
+             data-i18n="cta.help">אני יתום או יתומה וצריך או צריכה עזרה</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-image" role="img" aria-label="Mishpacha hero image"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title" data-i18n="sections.aboutTitle"></h2>
+      <p class="section-text" data-i18n="sections.aboutBody"></p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title" data-i18n="sections.pillarsTitle"></h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3 class="card-title" data-i18n="sections.pillar1Title"></h3>
+          <p class="card-text" data-i18n="sections.pillar1Body"></p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title" data-i18n="sections.pillar2Title"></h3>
+          <p class="card-text" data-i18n="sections.pillar2Body"></p>
+        </article>
+
+        <article class="card">
+          <h3 class="card-title" data-i18n="sections.pillar3Title"></h3>
+          <p class="card-text" data-i18n="sections.pillar3Body"></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title" data-i18n="sections.servicesTitle"></h2>
+
+      <div class="grid-2">
+        <article class="tile">
+          <h3 class="tile-title" data-i18n="sections.service1Title"></h3>
+          <p class="tile-text" data-i18n="sections.service1Body"></p>
+        </article>
+
+        <article class="tile">
+          <h3 class="tile-title" data-i18n="sections.service2Title"></h3>
+          <p class="tile-text" data-i18n="sections.service2Body"></p>
+        </article>
+
+        <article class="tile">
+          <h3 class="tile-title" data-i18n="sections.service3Title"></h3>
+          <p class="tile-text" data-i18n="sections.service3Body"></p>
+        </article>
+
+        <article class="tile">
+          <h3 class="tile-title" data-i18n="sections.service4Title"></h3>
+          <p class="tile-text" data-i18n="sections.service4Body"></p>
+        </article>
+
+        <article class="tile">
+          <h3 class="tile-title" data-i18n="sections.service5Title"></h3>
+          <p class="tile-text" data-i18n="sections.service5Body"></p>
+        </article>
+
+        <article class="tile">
+          <h3 class="tile-title" data-i18n="sections.service6Title"></h3>
+          <p class="tile-text" data-i18n="sections.service6Body"></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section story">
+      <h2 class="section-title" data-i18n="sections.storyTitle"></h2>
+      <blockquote class="quote" data-i18n="sections.storyQuote"></blockquote>
+      <div class="quote-by" data-i18n="sections.storyByline"></div>
+    </section>
+
+    <section class="section video">
+      <h2 class="section-title" data-i18n="sections.videoTitle"></h2>
+      <p class="section-text" data-i18n="sections.videoBody"></p>
+
+      <div class="video-frame" id="aiVideoBox" hidden>
+        <iframe
+          id="aiVideoIframe"
+          title="Mishpacha video"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="note" id="aiVideoNote">
+        כדי שיופיע כאן סרטון, תכניס את ה embed ביוטיוב לתוך local/config.json תחת aiVideoYoutubeEmbed
+      </div>
+    </section>
+
+    <section class="section donate">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-i18n="sections.donateTitle"></h2>
+          <p class="section-text" data-i18n="sections.donateBody"></p>
+        </div>
+        <a id="btnDonateSecondary" class="btn btn-secondary" href="#" target="_blank" rel="noopener"
+           data-i18n="cta.donate">אני רוצה לתרום</a>
+      </div>
+
+      <div class="legal-box" id="donationLegalBox">
+        <h3 class="legal-title" data-i18n="sections.donateLegalTitle"></h3>
+
+        <label class="check">
+          <input type="checkbox" id="donateChk1" />
+          <span data-i18n="sections.donateLegalItem1"></span>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" id="donateChk2" />
+          <span data-i18n="sections.donateLegalItem2"></span>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" id="donateChk3" />
+          <span data-i18n="sections.donateLegalItem3"></span>
+        </label>
+
+        <button id="donateProceed" class="btn btn-primary" type="button" disabled
+                data-i18n="sections.donateProceed"></button>
+
+        <div class="legal-foot">
+          אם בעתיד מוסיפים סליקה באתר, עושים את זה רק עם גורמים מקצועיים מוכחים.
+        </div>
+      </div>
+    </section>
+
+    <section class="section volunteer">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-i18n="sections.volunteerTitle"></h2>
+          <p class="section-text" data-i18n="sections.volunteerBody"></p>
+        </div>
+        <a id="btnVolunteerSecondary" class="btn btn-secondary" href="#" target="_blank" rel="noopener"
+           data-i18n="cta.volunteer">אני רוצה להתנדב</a>
+      </div>
+    </section>
+
+    <section class="section contact">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" data-i18n="sections.contactTitle"></h2>
+          <p class="section-text" data-i18n="sections.contactBody"></p>
+        </div>
+
+        <div class="contact-actions">
+          <a id="btnHelpSecondary" class="btn btn-outline" href="#" target="_blank" rel="noopener"
+             data-i18n="cta.help">אני יתום או יתומה וצריך או צריכה עזרה</a>
+          <a id="btnContact" class="btn btn-primary" href="#" target="_blank" rel="noopener"
+             data-i18n="sections.contactButton">שלחו פנייה</a>
+        </div>
+      </div>
+
+      <div class="social" aria-label="Social links">
+        <a id="socialFacebook" class="social-link" href="#" target="_blank" rel="noopener">Facebook</a>
+        <a id="socialInstagram" class="social-link" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a id="socialLinkedin" class="social-link" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a id="socialYoutube" class="social-link" href="#" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-text" data-i18n="footer.rights"></div>
+      <div class="footer-follow" data-i18n="footer.follow"></div>
+    </div>
+  </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
