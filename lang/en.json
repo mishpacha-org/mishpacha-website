@@ -2,130 +2,118 @@
   "meta": {
     "title": "Mishpacha – A Family for Orphans in Israel"
   },
-
   "brand": {
     "title": "Mishpacha",
     "subtitle": "A Family for Orphans in Israel"
   },
-
   "nav": {
     "about": "About Us",
     "services": "What We Do",
     "story": "Personal Story",
     "video": "Video",
-    "contact": "Contact"
+    "contact": "Contact Us"
   },
-
   "ui": {
     "langToggle": "HE",
     "backTop": "Back to Top"
   },
-
   "hero": {
     "h1": "Mishpacha – A Family for Orphans in Israel",
     "h2": "Comprehensive support for orphans in Israel – emotional, educational, legal, and social",
-    "p": "A national central platform providing assistance, support, and empowerment to orphans and their families throughout Israel. We are here to ensure that no orphaned child or young adult is left alone."
+    "p": "A national platform providing assistance, support, and empowerment for orphans and their families across Israel. We are here to ensure that no orphaned child or young adult is left alone."
   },
-
   "cta": {
     "volunteer": "I Want to Volunteer",
     "donate": "I Want to Donate",
     "help": "I Am an Orphan – I Need Help"
   },
-
   "about": {
     "title": "Who We Are and Why We Founded Mishpacha",
     "card1": {
       "title": "Systemic Approach",
-      "text": "Comprehensive support across all areas of life"
+      "text": "Comprehensive guidance across all areas of life"
     },
     "card2": {
       "title": "Digital Innovation",
-      "text": "Technology in service of society"
+      "text": "Technology serving society"
     },
     "card3": {
       "title": "Personal Empowerment",
-      "text": "Not pity, but strength and dignity"
+      "text": "Not pity — strength and dignity"
     }
   },
-
   "services": {
     "title": "What We Do for Orphans in Israel",
     "subtitle": "",
     "s1": {
-      "title": "Financial and Educational Assistance",
-      "text": "Scholarships, tuition assistance, funding for courses and training. We ensure that financial barriers do not stop dreams."
+      "title": "Financial and Educational Support",
+      "text": "Scholarships, tuition assistance, funding for courses and training. We ensure financial barriers don’t stop dreams."
     },
     "s2": {
       "title": "Emotional and Psychological Support",
-      "text": "Professional guidance, support groups, emotional therapy, and empowerment workshops. A safe place for growth and healing."
+      "text": "Professional guidance, support groups, emotional therapy, and empowerment workshops. A safe place for healing and growth."
     },
     "s3": {
-      "title": "Mentorship and Guidance",
-      "text": "Connection to personal mentors, career guidance, and professional direction. A supportive adult for every orphan."
+      "title": "Mentoring and Guidance",
+      "text": "Personal mentors, career guidance, and professional direction. A supportive adult for every orphan."
     },
     "s4": {
-      "title": "Rights Realization",
-      "text": "Assistance in obtaining benefits, legal guidance, and representation מול authorities. We ensure full realization of rights."
+      "title": "Rights Assistance",
+      "text": "Help with receiving allowances, legal support, and representation with authorities. Ensuring full rights realization."
     },
     "s5": {
-      "title": "Community and Belonging",
-      "text": "Social gatherings, camps, trips, and clubs. Building a supportive community and lifelong connections."
+      "title": "Community and Social Life",
+      "text": "Social events, camps, trips, and activities. Building a supportive community and lifelong connections."
     },
     "s6": {
       "title": "Housing and Foster Families",
-      "text": "Assistance in finding foster families, adoption support, and housing assistance. No child will be left without a warm home."
+      "text": "Assistance in finding foster families, adoption support, and housing solutions. No child should be left without a warm home."
     }
   },
-
   "story": {
     "title": "Personal Story: A Voice from the Field",
-    "p1": "\"When my father passed away, I was 14 and didn’t know where to turn. Mishpacha didn’t just help me financially – they gave me a second family. My mentor, Danny, was there every step of the way, helped me cope with the pain and believe in myself again. Today I am studying engineering, and I know I wouldn’t be here without them.\"",
+    "p1": "“When my father passed away, I was 14 and had no idea where to turn. Mishpacha didn’t just help me financially — they gave me a second family. My mentor, Danny, was there every moment, helping me cope with the pain and believe in myself again. Today I’m studying engineering, and I know I wouldn’t be here without them.”",
     "p2": "— Yonatan, 22, Engineering Student"
   },
-
   "video": {
-    "title": "Our Story on Video",
+    "title": "Our Story in Video",
     "subtitle": ""
   },
-
   "help": {
     "title": "I Am an Orphan – I Need Help",
     "step1": "Tell us about yourself",
-    "step2": "We will talk and understand what you need",
-    "step3": "We will build a personal plan",
-    "step4": "We will begin the journey together",
+    "step2": "We’ll talk and understand what you need",
+    "step3": "We’ll build a personal plan",
+    "step4": "We’ll begin the journey together",
     "button": "Fill Out the Contact Form Here"
   },
-
   "volunteer": {
     "title": "Volunteer and Change Lives",
     "subtitle": "Volunteering with us means creating meaningful connections and real impact",
     "v1": {
-      "title": "Personal Mentorship",
-      "text": "Close, long-term guidance for an orphan"
+      "title": "Personal Mentoring",
+      "text": "Long-term guidance for an orphan"
     },
     "v2": {
       "title": "Professional Volunteering",
-      "text": "Social workers, lawyers, technology mentors"
+      "text": "Social workers, lawyers, tech mentors"
     },
     "v3": {
-      "title": "Logistical Assistance",
+      "title": "Logistical Support",
       "text": "Event organization, transportation, project management"
     },
     "button": "Join as a Volunteer"
   },
-
   "donate": {
     "title": "Your Donation Changes Lives",
-    "subtitle": "Every shekel you donate goes directly to changing lives, with full transparency",
+    "subtitle": "Every shekel you donate goes directly to life-changing programs, with full transparency",
     "stat1": {
       "num": "",
       "text": "Goes directly to programs and services"
     },
     "stat2": {
       "num": "",
-      "text": "Organization management and operational costs"
+      "text": "Organizational management and operations"
     },
     "stat3": {
       "num": "",
@@ -133,18 +121,80 @@
     },
     "button": "Donate Now",
     "legalLine": "I confirm that I have read and understood the donation terms",
-    "legalNote": "Donations will be processed exclusively through secure and recognized payment platforms"
+    "legalNote": "Donations are processed only through secure and recognized payment platforms"
   },
-
   "contact": {
-    "title": "Contact Us – We Are Here for You",
+    "title": "Contact Us – We’re Here for You",
     "subtitle": "Have questions? Want to join Mishpacha? Need help?",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
     "formBtn": "Send Us a Message"
   },
-
   "footer": {
     "text": "Mishpacha – because no child should go through this alone. Together, we can change reality."
+  },
+  "statistics": {
+    "title": "Orphanhood Statistics in Israel 2025",
+    "intro": "The 2025 orphanhood data in Israel reveals a complex picture and the many challenges faced by orphans and their families.",
+    "items": {
+      "total": {
+        "label": "Total Orphans",
+        "value": "Approx. 45,000"
+      },
+      "minors": {
+        "label": "Under Age 18",
+        "value": "Approx. 30,000"
+      },
+      "newPerYear": {
+        "label": "New Orphans per Year",
+        "value": "Approx. 900"
+      },
+      "poverty": {
+        "label": "Living in Poverty",
+        "value": "Approx. 40%"
+      },
+      "housing": {
+        "label": "Problematic Housing",
+        "value": "Thousands"
+      }
+    },
+    "note": "Data based on publications from the Central Bureau of Statistics, highlighting the need for systemic and ongoing support."
+  },
+  "rights": {
+    "title": "Rights Guide – Everything You Need to Know",
+    "intro": "Orphans in Israel are entitled to a wide range of rights and support, but the information is often inaccessible.",
+    "items": {
+      "allowance": "National Insurance orphan allowance – monthly financial support",
+      "scholarships": "Educational scholarships and tuition assistance",
+      "housing": "Housing support, transitional apartments, and guidance",
+      "psychology": "Professional emotional and psychological therapy",
+      "transport": "Discounts on public transportation"
+    },
+    "note": "Mishpacha accompanies orphans throughout the entire rights‑realization process and assists in communication with relevant authorities."
+  },
+  "knowledge": {
+    "title": "Knowledge Center: Rights and Information for Orphans",
+    "intro": "A comprehensive knowledge center offering information, tools, and guidance for orphans and their families.",
+    "items": {
+      "guides": "Guides tailored by age and life stage",
+      "rights": "Information on rights, allowances, and benefits",
+      "faq": "Frequently asked questions",
+      "articles": "Professional articles from experts",
+      "links": "Useful links to support organizations"
+    },
+    "cta": "Enter the Knowledge Center"
+  },
+  "transparency": {
+    "title": "Transparency Report 2024",
+    "intro": "We are committed to full transparency in managing donations and activities.",
+    "items": {
+      "emotional": "Emotional and psychological support",
+      "education": "Educational support and scholarships",
+      "housing": "Housing and community",
+      "mentoring": "Mentoring and guidance",
+      "management": "Administrative expenses"
+    },
+    "summary": "In 2024, the organization supported approx. 2,500 orphans across Israel."
   }
 }
+
