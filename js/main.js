@@ -19,7 +19,7 @@
   const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
   async function loadJson(lang) {
-    const res = await fetch(`local/${lang}.json`, { cache: "no-cache" });
+    const res = await fetch(`lang/${lang}.json`, { cache: "no-cache" });
     if (!res.ok) throw new Error(`Failed to load JSON for lang=${lang}`);
     return res.json();
   }
