@@ -10,7 +10,14 @@
     "about": "About Us",
     "services": "What We Do",
     "story": "Personal Story",
-    "video": "Video",
+    "help": "Orphans Need Help",
+    "volunteer": "Volunteer",
+    "donate": "Donate",
+    "knowledge": "Knowledge Center",
+    "statistics": "Statistics",
+    "rights": "Rights Guide",
+    "orphanWeek": "Orphan Families Week",
+    "documents": "Documents",
     "contact": "Contact Us"
   },
   "ui": {
@@ -18,183 +25,237 @@
     "backTop": "Back to Top"
   },
   "hero": {
-    "h1": "Mishpacha – A Family for Orphans in Israel",
-    "h2": "Comprehensive support for orphans in Israel – emotional, educational, legal, and social",
-    "p": "A national platform providing assistance, support, and empowerment for orphans and their families across Israel. We are here to ensure that no orphaned child or young adult is left alone."
-  },
-  "cta": {
-    "volunteer": "I Want to Volunteer",
-    "donate": "I Want to Donate",
-    "help": "I Am an Orphan – I Need Help"
+    "title": "Mishpacha – A Family for Orphans in Israel",
+    "subtitle": "Comprehensive support for orphans in Israel – emotional, educational, legal, and social",
+    "text": "Mishpacha is a national platform providing assistance, support, and empowerment to orphans and their families across Israel. We are here to ensure that no orphaned child or young adult is left alone.",
+    "primaryCtas": [
+      { "id": "donate", "label": "I Want to Donate" },
+      { "id": "volunteer", "label": "I Want to Volunteer" },
+      { "id": "help", "label": "I'm an Orphan – I Need Help" }
+    ]
   },
   "about": {
     "title": "Who We Are and Why We Founded Mishpacha",
-    "card1": {
-      "title": "Systemic Approach",
-      "text": "Comprehensive guidance across all areas of life"
-    },
-    "card2": {
-      "title": "Digital Innovation",
-      "text": "Technology serving society"
-    },
-    "card3": {
-      "title": "Personal Empowerment",
-      "text": "Not pity — strength and dignity"
-    }
+    "intro": [
+      "Mishpacha was born from deep personal experience and the understanding that orphans in Israel need comprehensive, systemic support.",
+      "We are more than a welfare organization – we are a true family, accompanying orphans at every stage of their lives.",
+      "Our vision is to build a national support network that empowers them to realize their full potential, provides tools for independence, and ensures they are surrounded by love and support.",
+      "Our systemic approach, technological innovation, and personal guidance set us apart."
+    ],
+    "pillars": [
+      { "id": "systemic", "title": "Systemic Approach", "text": "Comprehensive guidance across all areas of life." },
+      { "id": "digital", "title": "Digital Innovation", "text": "Leveraging technology to serve society." },
+      { "id": "empowerment", "title": "Personal Empowerment", "text": "Not pity — strength and dignity." }
+    ]
   },
   "services": {
     "title": "What We Do for Orphans in Israel",
-    "subtitle": "",
-    "s1": {
-      "title": "Financial and Educational Support",
-      "text": "Scholarships, tuition assistance, funding for courses and training. We ensure financial barriers don’t stop dreams."
-    },
-    "s2": {
-      "title": "Emotional and Psychological Support",
-      "text": "Professional guidance, support groups, emotional therapy, and empowerment workshops. A safe place for healing and growth."
-    },
-    "s3": {
-      "title": "Mentoring and Guidance",
-      "text": "Personal mentors, career guidance, and professional direction. A supportive adult for every orphan."
-    },
-    "s4": {
-      "title": "Rights Assistance",
-      "text": "Help with receiving allowances, legal support, and representation with authorities. Ensuring full rights realization."
-    },
-    "s5": {
-      "title": "Community and Social Life",
-      "text": "Social events, camps, trips, and activities. Building a supportive community and lifelong connections."
-    },
-    "s6": {
-      "title": "Housing and Foster Families",
-      "text": "Assistance in finding foster families, adoption support, and housing solutions. No child should be left without a warm home."
-    }
+    "intro": "We offer a wide range of services supporting orphans emotionally, socially, financially, educationally, and legally.",
+    "items": [
+      {
+        "id": "financialEducation",
+        "title": "Financial & Educational Support",
+        "text": "Scholarships, tuition assistance, and funding for courses and training."
+      },
+      {
+        "id": "emotionalSupport",
+        "title": "Emotional & Psychological Support",
+        "text": "Professional guidance, support groups, emotional therapy, and empowerment workshops."
+      },
+      {
+        "id": "mentoring",
+        "title": "Mentoring & Coaching",
+        "text": "Personal mentors, career guidance, and professional direction."
+      },
+      {
+        "id": "rights",
+        "title": "Rights & Legal Guidance",
+        "text": "Assistance with benefits, legal representation, and advocacy."
+      },
+      {
+        "id": "community",
+        "title": "Community & Friendship",
+        "text": "Social gatherings, camps, trips, and activities."
+      },
+      {
+        "id": "housing",
+        "title": "Housing & Foster Care",
+        "text": "Assistance in finding foster families, adoption guidance, and housing solutions."
+      }
+    ]
   },
   "story": {
     "title": "Personal Story: A Voice from the Field",
-    "p1": "“When my father passed away, I was 14 and had no idea where to turn. Mishpacha didn’t just help me financially — they gave me a second family. My mentor, Danny, was there every moment, helping me cope with the pain and believe in myself again. Today I’m studying engineering, and I know I wouldn’t be here without them.”",
-    "p2": "— Yonatan, 22, Engineering Student"
-  },
-  "video": {
-    "title": "Our Story in Video",
-    "subtitle": ""
+    "quote": "When my father passed away, I was 14 and didn't know where to turn. Mishpacha didn’t just help me financially – they gave me a second family...",
+    "attribution": "Jonathan, 22, Engineering Student",
+    "note": "Stories like Jonathan's are why we wake up every morning."
   },
   "help": {
-    "title": "I Am an Orphan – I Need Help",
-    "step1": "Tell us about yourself",
-    "step2": "We’ll talk and understand what you need",
-    "step3": "We’ll build a personal plan",
-    "step4": "We’ll begin the journey together",
-    "button": "Fill Out the Contact Form Here"
+    "title": "I'm an Orphan – I Need Help",
+    "intro": "You are not alone. We are here for you.",
+    "steps": [
+      { "order": 1, "title": "Tell us about yourself", "text": "Fill out a short and discreet form." },
+      { "order": 2, "title": "We'll talk and understand what you need", "text": "A representative will contact you within 48 hours." },
+      { "order": 3, "title": "We'll build a personal plan", "text": "We will tailor the services to your needs." },
+      { "order": 4, "title": "We'll begin the journey together", "text": "We will support you every step of the way." }
+    ],
+    "benefitsText": "Emotional support, financial assistance, legal guidance, a personal mentor, and more.",
+    "button": "Fill out the application form here"
   },
   "volunteer": {
     "title": "Volunteer and Change Lives",
-    "subtitle": "Volunteering with us means creating meaningful connections and real impact",
-    "v1": {
-      "title": "Personal Mentoring",
-      "text": "Long-term guidance for an orphan"
-    },
-    "v2": {
-      "title": "Professional Volunteering",
-      "text": "Social workers, lawyers, tech mentors"
-    },
-    "v3": {
-      "title": "Logistical Support",
-      "text": "Event organization, transportation, project management"
-    },
+    "intro": "You can make a real difference in the life of an orphan.",
+    "roles": [
+      { "id": "personalMentor", "title": "Personal Mentoring", "text": "Long-term guidance and support." },
+      { "id": "professionalVolunteer", "title": "Professional Volunteering", "text": "Social workers, lawyers, tech mentors." },
+      { "id": "logistics", "title": "Logistical Support", "text": "Event organization, transportation, project management." }
+    ],
+    "processTitle": "Our Process",
+    "processSteps": [
+      { "order": 1, "title": "Submit a form", "text": "A short form with personal details." },
+      { "order": 2, "title": "Get-to-know interview", "text": "A personal conversation to align expectations." },
+      { "order": 3, "title": "Professional training", "text": "Training tailored to the volunteer role." },
+      { "order": 4, "title": "Matching & ongoing support", "text": "Matching with an orphan and continuous support." }
+    ],
     "button": "Join as a Volunteer"
   },
   "donate": {
     "title": "Your Donation Changes Lives",
-    "subtitle": "Every shekel you donate goes directly to life-changing programs, with full transparency",
-    "stat1": {
-      "num": "",
-      "text": "Goes directly to programs and services"
-    },
-    "stat2": {
-      "num": "",
-      "text": "Organizational management and operations"
-    },
-    "stat3": {
-      "num": "",
-      "text": "Development, innovation, and service improvement"
-    },
+    "intro": "Every shekel you donate goes directly to changing lives.",
+    "allocation": [
+      { "label": "Programs & Services", "percent": 85, "description": "Direct support for programs." },
+      { "label": "Administration & Operations", "percent": 10, "description": "Management and operational costs." },
+      { "label": "Development & Innovation", "percent": 5, "description": "Program development and improvement." }
+    ],
+    "waysToGive": [
+      { "id": "oneTime", "title": "One-time Donation", "text": "Any amount, anytime." },
+      { "id": "monthly", "title": "Monthly Donation", "text": "Join our family of recurring donors." },
+      { "id": "sponsorship", "title": "Project Sponsorship", "text": "Adopt a program or a young person." },
+      { "id": "corporate", "title": "Corporate Partnership", "text": "Companies and foundations are welcome." }
+    ],
     "button": "Donate Now",
-    "legalLine": "I confirm that I have read and understood the donation terms",
-    "legalNote": "Donations are processed only through secure and recognized payment platforms"
-  },
-  "contact": {
-    "title": "Contact Us – We’re Here for You",
-    "subtitle": "Have questions? Want to join Mishpacha? Need help?",
-    "emailLabel": "Email",
-    "phoneLabel": "Phone",
-    "formBtn": "Send Us a Message"
-  },
-  "footer": {
-    "text": "Mishpacha – because no child should go through this alone. Together, we can change reality."
-  },
-  "statistics": {
-    "title": "Orphanhood Statistics in Israel 2025",
-    "intro": "The 2025 orphanhood data in Israel reveals a complex picture and the many challenges faced by orphans and their families.",
-    "items": {
-      "total": {
-        "label": "Total Orphans",
-        "value": "Approx. 45,000"
-      },
-      "minors": {
-        "label": "Under Age 18",
-        "value": "Approx. 30,000"
-      },
-      "newPerYear": {
-        "label": "New Orphans per Year",
-        "value": "Approx. 900"
-      },
-      "poverty": {
-        "label": "Living in Poverty",
-        "value": "Approx. 40%"
-      },
-      "housing": {
-        "label": "Problematic Housing",
-        "value": "Thousands"
-      }
-    },
-    "note": "Data based on publications from the Central Bureau of Statistics, highlighting the need for systemic and ongoing support."
-  },
-  "rights": {
-    "title": "Rights Guide – Everything You Need to Know",
-    "intro": "Orphans in Israel are entitled to a wide range of rights and support, but the information is often inaccessible.",
-    "items": {
-      "allowance": "National Insurance orphan allowance – monthly financial support",
-      "scholarships": "Educational scholarships and tuition assistance",
-      "housing": "Housing support, transitional apartments, and guidance",
-      "psychology": "Professional emotional and psychological therapy",
-      "transport": "Discounts on public transportation"
-    },
-    "note": "Mishpacha accompanies orphans throughout the entire rights‑realization process and assists in communication with relevant authorities."
+    "legalLine": "I confirm that I have read and understood the donation terms.",
+    "legalNote": "Donations are processed only through secure platforms.",
+    "legalAlert": "You must accept the terms."
   },
   "knowledge": {
-    "title": "Knowledge Center: Rights and Information for Orphans",
-    "intro": "A comprehensive knowledge center offering information, tools, and guidance for orphans and their families.",
-    "items": {
-      "guides": "Guides tailored by age and life stage",
-      "rights": "Information on rights, allowances, and benefits",
-      "faq": "Frequently asked questions",
-      "articles": "Professional articles from experts",
-      "links": "Useful links to support organizations"
-    },
+    "title": "Knowledge Center",
+    "intro": "All the information, rights, and tools orphans and their families need.",
+    "sections": [
+      { "id": "guides", "title": "Age-Specific Guides", "text": "From childhood to adulthood." },
+      { "id": "rights", "title": "Rights & Benefits", "text": "Everything you need to know." },
+      { "id": "faq", "title": "Frequently Asked Questions", "text": "Answers to common questions." },
+      { "id": "articles", "title": "Professional Articles", "text": "Content from experts." },
+      { "id": "links", "title": "Useful Links", "text": "Authorities and government offices." }
+    ],
+    "comingSoon": "Coming soon: Israeli Orphan Wiki.",
     "cta": "Enter the Knowledge Center"
+  },
+  "orphanWeek": {
+    "title": "Israeli Orphan Families Week",
+    "intro": "A national week of awareness, advocacy, and community activities.",
+    "days": [
+      { "order": 1, "label": "Sunday – Opening", "title": "Opening Event", "text": "Speakers, personal stories, and a call to action." },
+      { "order": 2, "label": "Mon–Wed – Awareness", "title": "Media Campaigns", "text": "Campaigns, school visits, and public awareness." },
+      { "order": 3, "label": "Thursday – Policy", "title": "Government Meetings", "text": "Advancing rights and support systems." },
+      { "order": 4, "label": "Fri–Sat – Community", "title": "Community Events", "text": "Family activities and closing events." }
+    ],
+    "note": "An opportunity to raise awareness and strengthen the community."
+  },
+  "statistics": {
+    "title": "Orphan Statistics in Israel 2025",
+    "intro": "Official data on orphanhood in Israel.",
+    "metrics": [
+      { "label": "Total Orphans", "value": "44,864" },
+      { "label": "Under 18", "value": "29,782" },
+      { "label": "New Orphans per Year", "value": "901" },
+      { "label": "Living in Poverty", "value": "18,500" },
+      { "label": "In Difficult Housing", "value": "3,200" }
+    ],
+    "ageGroups": [
+      "0–6 years",
+      "7–12 years",
+      "13–18 years",
+      "19+ years"
+    ],
+    "note": "These figures highlight the importance of supporting orphans."
+  },
+  "rights": {
+    "title": "Rights Guide",
+    "intro": "All the rights available to orphans in Israel.",
+    "items": [
+      {
+        "id": "orphanAllowance",
+        "right": "Orphan Allowance",
+        "description": "Monthly benefit from National Insurance.",
+        "howToApply": "Apply through the National Insurance Institute."
+      },
+      {
+        "id": "scholarships",
+        "right": "Educational Scholarships",
+        "description": "Tuition assistance.",
+        "howToApply": "Apply through the Ministry of Education."
+      },
+      {
+        "id": "housing",
+        "right": "Housing Support",
+        "description": "Rent assistance or transitional housing.",
+        "howToApply": "Apply through the organization."
+      },
+      {
+        "id": "psychology",
+        "right": "Psychological Treatment",
+        "description": "Professional emotional therapy.",
+        "howToApply": "Referral through the organization."
+      },
+      {
+        "id": "transport",
+        "right": "Transportation Discounts",
+        "description": "Discounts on public transportation.",
+        "howToApply": "Request through the transportation authority."
+      }
+    ],
+    "note": "Mishpacha supports you throughout the entire process."
   },
   "transparency": {
     "title": "Transparency Report 2024",
-    "intro": "We are committed to full transparency in managing donations and activities.",
-    "items": {
-      "emotional": "Emotional and psychological support",
-      "education": "Educational support and scholarships",
-      "housing": "Housing and community",
-      "mentoring": "Mentoring and guidance",
-      "management": "Administrative expenses"
-    },
-    "summary": "In 2024, the organization supported approx. 2,500 orphans across Israel."
+    "intro": "How we used donations in 2024.",
+    "allocation": [
+      { "amount": "1,500,000", "percent": 35, "category": "Emotional & Psychological Support" },
+      { "amount": "1,300,000", "percent": 30, "category": "Educational Support & Scholarships" },
+      { "amount": "650,000", "percent": 15, "category": "Housing & Community" },
+      { "amount": "430,000", "percent": 10, "category": "Mentoring & Guidance" },
+      { "amount": "430,000", "percent": 10, "category": "Administration" }
+    ],
+    "summary": "In 2024, we supported approximately 2,500 orphans."
+  },
+  "documents": {
+    "title": "Documents & Files",
+    "intro": "All official Mishpacha documents.",
+    "items": [
+      { "id": "orphanReport", "title": "Israel Orphanhood Report 2025", "text": "Full statistics." },
+      { "id": "volunteerGuide", "title": "Volunteer Guide", "text": "How to volunteer." },
+      { "id": "onlineGroups", "title": "Online Support Groups", "text": "Detailed guide." },
+      { "id": "byMunicipality", "title": "Orphans by Municipality", "text": "Data by city." },
+      { "id": "orphanWeekKit", "title": "Orphan Week Kit", "text": "Campaign materials." },
+      { "id": "businessPlan", "title": "Business Plan 2025", "text": "Annual plan." },
+      { "id": "rightsGuide", "title": "Rights Guide", "text": "Official guidelines." },
+      { "id": "regulation", "title": "Regulations & Governance", "text": "Legal documents." },
+      { "id": "aboutPdf", "title": "About the Organization", "text": "General information." }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "We are available and happy to hear from you.",
+    "methods": [
+      { "type": "phone", "label": "Phone", "value": "055-3134210" },
+      { "type": "email", "label": "Email", "value": "misshporg@gmail.com" },
+      { "type": "org", "label": "Registered Organization", "value": "580012345" }
+    ],
+    "socialTitle": "Follow Us",
+    "social": ["Facebook", "Instagram", "LinkedIn", "YouTube"],
+    "cta": "Send a Message",
+    "pressNote": "For media inquiries: we are happy to collaborate.",
+    "footerLine": "Mishpacha – because no child should go through this alone."
   }
 }
-
