@@ -19,13 +19,7 @@
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="#about" data-i18n="nav.about"></a>
-        <a href="#services" data-i18n="nav.services"></a>
-        <a href="#story" data-i18n="nav.story"></a>
-        <a href="#video" data-i18n="nav.video"></a>
-        <a href="#contact" data-i18n="nav.contact"></a>
-      </nav>
+      <nav class="nav" id="navLinks" aria-label="Main navigation"></nav>
 
       <div class="topbar__actions">
         <button class="btn btn--ghost" id="langToggle" type="button">
@@ -39,21 +33,11 @@
   <section class="hero">
     <div class="wrap hero__inner">
       <div class="hero__text">
-        <h1 class="hero__h1" data-i18n="hero.h1"></h1>
-        <h2 class="hero__h2" data-i18n="hero.h2"></h2>
+        <h1 class="hero__h1" data-i18n="hero.title"></h1>
+        <h2 class="hero__h2" data-i18n="hero.subtitle"></h2>
+        <p class="hero__p" data-i18n="hero.text"></p>
 
-        <p class="hero__p" data-i18n="hero.p"></p>
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" id="ctaVolunteer" target="_blank" rel="noopener" href="#"
-             data-i18n="cta.volunteer"></a>
-
-          <a class="btn btn--outline" id="ctaDonate" href="#donate"
-             data-i18n="cta.donate"></a>
-
-          <a class="btn btn--outline" id="ctaHelp" target="_blank" rel="noopener" href="#"
-             data-i18n="cta.help"></a>
-        </div>
+        <div class="hero__cta" id="heroCtas"></div>
       </div>
 
       <div class="hero__art" aria-hidden="true"></div>
@@ -68,21 +52,9 @@
       </div>
 
       <div class="about">
-        <div class="about__cards">
-          <div class="card">
-            <div class="card__title" data-i18n="about.card1.title"></div>
-            <div class="card__text" data-i18n="about.card1.text"></div>
-          </div>
-
-          <div class="card">
-            <div class="card__title" data-i18n="about.card2.title"></div>
-            <div class="card__text" data-i18n="about.card2.text"></div>
-          </div>
-
-          <div class="card">
-            <div class="card__title" data-i18n="about.card3.title"></div>
-            <div class="card__text" data-i18n="about.card3.text"></div>
-          </div>
+        <div>
+          <div id="aboutIntro"></div>
+          <div class="about__cards" id="aboutPillars"></div>
         </div>
 
         <div class="about__visual" aria-hidden="true"></div>
@@ -95,93 +67,46 @@
     <div class="wrap">
       <div class="section__head">
         <h3 class="section__title" data-i18n="services.title"></h3>
-        <p class="section__subtitle" data-i18n="services.subtitle"></p>
+        <p class="section__subtitle" data-i18n="services.intro"></p>
       </div>
 
-      <div class="grid">
-        <div class="service">
-          <div class="service__icon" aria-hidden="true"></div>
-          <div class="service__title" data-i18n="services.s1.title"></div>
-          <div class="service__text" data-i18n="services.s1.text"></div>
-        </div>
-
-        <div class="service">
-          <div class="service__icon" aria-hidden="true"></div>
-          <div class="service__title" data-i18n="services.s2.title"></div>
-          <div class="service__text" data-i18n="services.s2.text"></div>
-        </div>
-
-        <div class="service">
-          <div class="service__icon" aria-hidden="true"></div>
-          <div class="service__title" data-i18n="services.s3.title"></div>
-          <div class="service__text" data-i18n="services.s3.text"></div>
-        </div>
-
-        <div class="service">
-          <div class="service__icon" aria-hidden="true"></div>
-          <div class="service__title" data-i18n="services.s4.title"></div>
-          <div class="service__text" data-i18n="services.s4.text"></div>
-        </div>
-
-        <div class="service">
-          <div class="service__icon" aria-hidden="true"></div>
-          <div class="service__title" data-i18n="services.s5.title"></div>
-          <div class="service__text" data-i18n="services.s5.text"></div>
-        </div>
-
-        <div class="service">
-          <div class="service__icon" aria-hidden="true"></div>
-          <div class="service__title" data-i18n="services.s6.title"></div>
-          <div class="service__text" data-i18n="services.s6.text"></div>
-        </div>
-      </div>
+      <div class="grid" id="servicesItems"></div>
     </div>
   </section>
 
   <!-- STORY -->
   <section class="section" id="story">
-    <div class="wrap story">
-      <div class="story__text">
-        <h3 class="section__title" data-i18n="story.title"></h3>
-        <p class="story__p" data-i18n="story.p1"></p>
-        <p class="story__p" data-i18n="story.p2"></p>
-      </div>
-
-      <div class="story__visual" aria-hidden="true"></div>
-    </div>
-  </section>
-
-  <!-- VIDEO -->
-  <section class="section" id="video">
     <div class="wrap">
       <div class="section__head">
-        <h3 class="section__title" data-i18n="video.title"></h3>
-        <p class="section__subtitle" data-i18n="video.subtitle"></p>
+        <h3 class="section__title" data-i18n="story.title"></h3>
       </div>
 
-      <div class="video">
-        <div class="video__frame" id="youtubeFrame"></div>
+      <div class="card">
+        <div class="quote" data-i18n="story.quote"></div>
+        <div class="quote__by" data-i18n="story.attribution"></div>
+        <div class="muted" data-i18n="story.note"></div>
       </div>
     </div>
   </section>
 
   <!-- HELP -->
-  <section class="section help" id="help">
-    <div class="wrap help__inner">
-      <div class="help__text">
+  <section class="section" id="help">
+    <div class="wrap">
+      <div class="section__head">
         <h3 class="section__title" data-i18n="help.title"></h3>
-        <ol class="help__steps">
-          <li data-i18n="help.step1"></li>
-          <li data-i18n="help.step2"></li>
-          <li data-i18n="help.step3"></li>
-          <li data-i18n="help.step4"></li>
-        </ol>
-
-        <a class="btn btn--primary" id="helpFormBtn" target="_blank" rel="noopener" href="#"
-           data-i18n="help.button"></a>
+        <p class="section__subtitle" data-i18n="help.intro"></p>
       </div>
 
-      <div class="help__visual" aria-hidden="true"></div>
+      <div class="card">
+        <div class="help__steps" id="helpSteps"></div>
+
+        <div class="muted" data-i18n="help.benefitsText"></div>
+
+        <div style="margin-top:14px">
+          <a class="btn btn--primary" id="helpFormBtn" target="_blank" rel="noopener" href="#"
+             data-i18n="help.button"></a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -190,74 +115,144 @@
     <div class="wrap">
       <div class="section__head">
         <h3 class="section__title" data-i18n="volunteer.title"></h3>
-        <p class="section__subtitle" data-i18n="volunteer.subtitle"></p>
+        <p class="section__subtitle" data-i18n="volunteer.intro"></p>
       </div>
 
-      <div class="volunteer">
-        <div class="volunteer__cards">
-          <div class="card card--soft">
-            <div class="card__title" data-i18n="volunteer.v1.title"></div>
-            <div class="card__text" data-i18n="volunteer.v1.text"></div>
-          </div>
+      <div class="grid" id="volunteerRoles"></div>
 
-          <div class="card card--soft">
-            <div class="card__title" data-i18n="volunteer.v2.title"></div>
-            <div class="card__text" data-i18n="volunteer.v2.text"></div>
-          </div>
+      <div style="margin-top:16px" class="card">
+        <div class="card__title" data-i18n="volunteer.processTitle"></div>
+        <div id="volunteerProcess" style="margin-top:10px"></div>
 
-          <div class="card card--soft">
-            <div class="card__title" data-i18n="volunteer.v3.title"></div>
-            <div class="card__text" data-i18n="volunteer.v3.text"></div>
-          </div>
+        <div style="margin-top:14px">
+          <a class="btn btn--outline" id="volunteerBtn" target="_blank" rel="noopener" href="#"
+             data-i18n="volunteer.button"></a>
         </div>
-
-        <div class="volunteer__aside" aria-hidden="true"></div>
-      </div>
-
-      <div class="volunteer__cta">
-        <a class="btn btn--primary" id="volunteerBtn" target="_blank" rel="noopener" href="#"
-           data-i18n="volunteer.button"></a>
       </div>
     </div>
   </section>
 
   <!-- DONATE -->
-  <section class="donate" id="donate">
-    <div class="wrap donate__inner">
-      <div class="donate__head">
-        <h3 class="donate__title" data-i18n="donate.title"></h3>
-        <p class="donate__subtitle" data-i18n="donate.subtitle"></p>
+  <section class="section" id="donate">
+    <div class="wrap">
+      <div class="section__head">
+        <h3 class="section__title" data-i18n="donate.title"></h3>
+        <p class="section__subtitle" data-i18n="donate.intro"></p>
       </div>
 
-      <div class="donate__split">
-        <div class="donate__stats">
-          <div class="stat">
-            <div class="stat__num" data-i18n="donate.stat1.num"></div>
-            <div class="stat__text" data-i18n="donate.stat1.text"></div>
-          </div>
-          <div class="stat">
-            <div class="stat__num" data-i18n="donate.stat2.num"></div>
-            <div class="stat__text" data-i18n="donate.stat2.text"></div>
-          </div>
-          <div class="stat">
-            <div class="stat__num" data-i18n="donate.stat3.num"></div>
-            <div class="stat__text" data-i18n="donate.stat3.text"></div>
-          </div>
-        </div>
+      <div class="grid" id="donateAllocation"></div>
 
-        <div class="donate__actions">
+      <div style="margin-top:16px" class="grid" id="donateWays"></div>
+
+      <div style="margin-top:16px" class="card">
+        <label class="check">
+          <input id="donateLegalCheck" type="checkbox" />
+          <span data-i18n="donate.legalLine"></span>
+        </label>
+
+        <div class="muted" style="margin-top:8px" data-i18n="donate.legalNote"></div>
+
+        <div style="margin-top:14px">
           <button class="btn btn--primary" id="donateNowBtn" type="button" data-i18n="donate.button"></button>
-
-          <label class="legal">
-            <input id="donateLegalCheck" type="checkbox" />
-            <span data-i18n="donate.legalLine"></span>
-          </label>
-
-          <div class="donate__note" data-i18n="donate.legalNote"></div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <a class="backtop" href="#top" data-i18n="ui.backTop"></a>
+  <!-- KNOWLEDGE -->
+  <section class="section" id="knowledge">
+    <div class="wrap">
+      <div class="section__head">
+        <h3 class="section__title" data-i18n="knowledge.title"></h3>
+        <p class="section__subtitle" data-i18n="knowledge.intro"></p>
+      </div>
+
+      <div class="grid" id="knowledgeSections"></div>
+
+      <div style="margin-top:16px" class="card">
+        <div class="muted" data-i18n="knowledge.comingSoon"></div>
+        <div style="margin-top:14px">
+          <a class="btn btn--outline" id="knowledgeCta" href="#knowledge" data-i18n="knowledge.cta"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICS -->
+  <section class="section" id="statistics">
+    <div class="wrap">
+      <div class="section__head">
+        <h3 class="section__title" data-i18n="statistics.title"></h3>
+        <p class="section__subtitle" data-i18n="statistics.intro"></p>
+      </div>
+
+      <div class="grid" id="statisticsMetrics"></div>
+
+      <div style="margin-top:16px" class="card">
+        <div class="card__title" data-i18n="statistics.ageGroupsTitle"></div>
+        <ul class="list" id="statisticsAgeGroups"></ul>
+        <div class="muted" style="margin-top:8px" data-i18n="statistics.note"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RIGHTS -->
+  <section class="section" id="rights">
+    <div class="wrap">
+      <div class="section__head">
+        <h3 class="section__title" data-i18n="rights.title"></h3>
+        <p class="section__subtitle" data-i18n="rights.intro"></p>
+      </div>
+
+      <div class="grid" id="rightsItems"></div>
+
+      <div style="margin-top:16px" class="card">
+        <div class="muted" data-i18n="rights.note"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPARENCY -->
+  <section class="section" id="transparency">
+    <div class="wrap">
+      <div class="section__head">
+        <h3 class="section__title" data-i18n="transparency.title"></h3>
+        <p class="section__subtitle" data-i18n="transparency.intro"></p>
+      </div>
+
+      <div class="grid" id="transparencyAllocation"></div>
+
+      <div style="margin-top:16px" class="card">
+        <div class="muted" data-i18n="transparency.summary"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORPHAN WEEK -->
+  <section class="section" id="orphanWeek">
+    <div class="wrap">
+      <div class="section__head">
+        <h3 class="section__title" data-i18n="orphanWeek.title"></h3>
+        <p class="section__subtitle" data-i18n="orphanWeek.intro"></p>
+      </div>
+
+      <div class="grid" id="orphanWeekDays"></div>
+
+      <div style="margin-top:16px" class="card">
+        <div class="muted" data-i18n="orphanWeek.note"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTS -->
+  <section class="section" id="documents">
+    <div class="wrap">
+      <div class="section__head">
+        <h3 class="section__title" data-i18n="documents.title"></h3>
+        <p class="section__subtitle" data-i18n="documents.intro"></p>
+      </div>
+
+      <div class="grid" id="documentsItems"></div>
     </div>
   </section>
 
@@ -266,149 +261,37 @@
     <div class="wrap">
       <div class="section__head">
         <h3 class="section__title" data-i18n="contact.title"></h3>
-        <p class="section__subtitle" data-i18n="contact.subtitle"></p>
+        <p class="section__subtitle" data-i18n="contact.intro"></p>
       </div>
 
       <div class="contact">
-        <div class="contact__card">
-          <div class="contact__row">
-            <div class="contact__label" data-i18n="contact.emailLabel"></div>
-            <a class="contact__value" id="contactEmail" href="#"></a>
-          </div>
-          <div class="contact__row">
-            <div class="contact__label" data-i18n="contact.phoneLabel"></div>
-            <a class="contact__value" id="contactPhone" href="#"></a>
+        <div class="card">
+          <div id="contactMethods"></div>
+
+          <div style="margin-top:14px">
+            <div class="card__title" data-i18n="contact.socialTitle"></div>
+            <div class="contact__chips" id="contactSocial"></div>
           </div>
 
-          <div class="contact__row contact__row--btn">
+          <div class="muted" style="margin-top:12px" data-i18n="contact.pressNote"></div>
+
+          <div style="margin-top:14px">
             <a class="btn btn--primary" id="contactFormBtn" target="_blank" rel="noopener" href="#"
-               data-i18n="contact.formBtn"></a>
+               data-i18n="contact.cta"></a>
           </div>
         </div>
 
-        <div class="contact__visual" aria-hidden="true"></div>
+        <div class="card">
+          <div class="card__title" data-i18n="ui.backTop"></div>
+          <p class="muted" style="margin-top:8px" data-i18n="contact.footerLine"></p>
+          <div style="margin-top:12px">
+            <a class="btn btn--outline" href="#top" data-i18n="ui.backTop"></a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <div class="footer__text" data-i18n="footer.text"></div>
-    </div>
-  </footer>
-  <!-- ================= STATISTICS ================= -->
-<section class="section" id="statistics">
-  <div class="wrap">
-    <div class="section__head">
-      <h2 class="section__title" data-i18n="statistics.title"></h2>
-      <p class="section__subtitle" data-i18n="statistics.intro"></p>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="card__title" data-i18n="statistics.items.total.label"></div>
-        <div class="card__text" data-i18n="statistics.items.total.value"></div>
-      </div>
-
-      <div class="card">
-        <div class="card__title" data-i18n="statistics.items.minors.label"></div>
-        <div class="card__text" data-i18n="statistics.items.minors.value"></div>
-      </div>
-
-      <div class="card">
-        <div class="card__title" data-i18n="statistics.items.newPerYear.label"></div>
-        <div class="card__text" data-i18n="statistics.items.newPerYear.value"></div>
-      </div>
-
-      <div class="card">
-        <div class="card__title" data-i18n="statistics.items.poverty.label"></div>
-        <div class="card__text" data-i18n="statistics.items.poverty.value"></div>
-      </div>
-
-      <div class="card">
-        <div class="card__title" data-i18n="statistics.items.housing.label"></div>
-        <div class="card__text" data-i18n="statistics.items.housing.value"></div>
-      </div>
-    </div>
-
-    <p class="section__subtitle" style="margin-top:14px" data-i18n="statistics.note"></p>
-  </div>
-</section>
-
-<!-- ================= RIGHTS GUIDE ================= -->
-<section class="section" id="rights">
-  <div class="wrap">
-    <div class="section__head">
-      <h2 class="section__title" data-i18n="rights.title"></h2>
-      <p class="section__subtitle" data-i18n="rights.intro"></p>
-    </div>
-
-    <div class="card card--soft">
-      <ul class="help__steps">
-        <li data-i18n="rights.items.allowance"></li>
-        <li data-i18n="rights.items.scholarships"></li>
-        <li data-i18n="rights.items.housing"></li>
-        <li data-i18n="rights.items.psychology"></li>
-        <li data-i18n="rights.items.transport"></li>
-      </ul>
-
-      <p class="card__text" data-i18n="rights.note"></p>
-    </div>
-  </div>
-</section>
-
-<!-- ================= KNOWLEDGE CENTER ================= -->
-<section class="section" id="knowledge">
-  <div class="wrap">
-    <div class="section__head">
-      <h2 class="section__title" data-i18n="knowledge.title"></h2>
-      <p class="section__subtitle" data-i18n="knowledge.intro"></p>
-    </div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="card__title" data-i18n="knowledge.items.guides"></div>
-      </div>
-      <div class="card">
-        <div class="card__title" data-i18n="knowledge.items.rights"></div>
-      </div>
-      <div class="card">
-        <div class="card__title" data-i18n="knowledge.items.faq"></div>
-      </div>
-      <div class="card">
-        <div class="card__title" data-i18n="knowledge.items.articles"></div>
-      </div>
-      <div class="card">
-        <div class="card__title" data-i18n="knowledge.items.links"></div>
-      </div>
-    </div>
-
-    <a class="btn btn--outline" style="margin-top:16px" data-i18n="knowledge.cta"></a>
-  </div>
-</section>
-
-<!-- ================= TRANSPARENCY ================= -->
-<section class="section" id="transparency">
-  <div class="wrap">
-    <div class="section__head">
-      <h2 class="section__title" data-i18n="transparency.title"></h2>
-      <p class="section__subtitle" data-i18n="transparency.intro"></p>
-    </div>
-
-    <div class="grid">
-      <div class="card"><div class="card__title" data-i18n="transparency.items.emotional"></div></div>
-      <div class="card"><div class="card__title" data-i18n="transparency.items.education"></div></div>
-      <div class="card"><div class="card__title" data-i18n="transparency.items.housing"></div></div>
-      <div class="card"><div class="card__title" data-i18n="transparency.items.mentoring"></div></div>
-      <div class="card"><div class="card__title" data-i18n="transparency.items.management"></div></div>
-    </div>
-
-    <p class="section__subtitle" style="margin-top:14px" data-i18n="transparency.summary"></p>
-  </div>
-</section>
-
-
-
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
