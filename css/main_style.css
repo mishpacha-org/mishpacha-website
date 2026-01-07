@@ -313,6 +313,15 @@ body{
   font-weight: 800;
   letter-spacing: .2px;
   margin-bottom: 8px;
+  
+ 
+}
+html[dir="rtl"] .card{
+  flex-direction: row-reverse; /* תמונה משמאל בעברית */
+}
+
+html[dir="ltr"] .card{
+  flex-direction: row;         /* תמונה מימין באנגלית */
 }
 
 .card__text{
