@@ -625,3 +625,77 @@ html[dir="ltr"] .split{
   .hero__art::after{ animation: none; }
   .btn, .nav a{ transition: none; }
 }
+
+/* ---------- Buttons: consistent interactive states ---------- */
+.btn:active{
+  transform: translateY(0);
+  box-shadow: none;
+}
+.btn:focus-visible{
+  outline: 3px solid rgba(184,72,216,.45);
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+
+/* ---------- Card icons (thin-line SVG) ---------- */
+.card__icon{
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  border: 1px solid rgba(184,72,216,.22);
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 10px 20px rgba(0,0,0,.10);
+  display: grid;
+  place-items: center;
+}
+.card__icon svg,
+.service__icon svg,
+.socialBtn svg{
+  width: 22px;
+  height: 22px;
+  stroke: var(--accent-2);
+  fill: none;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- Back to top (floating) ---------- */
+.backToTop{
+  position: fixed;
+  inset-inline-end: 18px;
+  bottom: 18px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backToTop.is-visible{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ---------- Contact social icon buttons ---------- */
+.socialBtn{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(20,20,35,.10);
+  background: rgba(255,255,255,1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.socialBtn:hover{
+  transform: translateY(-1px);
+  background: rgba(184,72,216,.06);
+  border-color: rgba(184,72,216,.22);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+}
+.socialBtn:active{
+  transform: translateY(0);
+  box-shadow: none;
+}

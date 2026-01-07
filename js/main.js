@@ -7,7 +7,16 @@
     volunteerForm: "https://example.com/volunteer-form",
     helpForm: "https://example.com/help-form",
     contactForm: "https://example.com/contact-form",
-    donatePlatform: "https://example.com/donate"
+    donatePlatform: "https://example.com/donate",
+    // Social links (placeholders; replace when ready)
+    social: {
+      facebook: "#",
+      instagram: "#",
+      whatsapp: "#",
+      linkedin: "#",
+      youtube: "#",
+      x: "#"
+    }
   };
     // ====== Images mapping ======
   const IMAGES = {
@@ -60,6 +69,38 @@
   function setSafeInnerText(el, text) {
     el.textContent = typeof text === "string" ? text : "";
   }
+
+function getIconSvg(name) {
+  // Thin-line inline SVG icons (RTL/LTR safe)
+  const icons = {
+    heart: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6c-1.6-1.6-4.2-1.6-5.8 0L12 7.6 9 4.6c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8L12 20l8.8-9.6c1.6-1.6 1.6-4.2 0-5.8Z"/></svg>`,
+    hands: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 12v-2a2 2 0 0 1 4 0v2"/><path d="M11 12V8a2 2 0 0 1 4 0v4"/><path d="M15 12v-1a2 2 0 1 1 4 0v4c0 3-2 5-5 5H9c-3 0-5-2-5-5v-3a2 2 0 0 1 3-1.7"/></svg>`,
+    spark: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.6 6.4L20 10l-6.4 1.6L12 18l-1.6-6.4L4 10l6.4-1.6L12 2Z"/></svg>`,
+    book: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V6.5A2.5 2.5 0 0 1 6.5 4H20v16H6.5A2.5 2.5 0 0 0 4 22"/><path d="M8 7h8"/><path d="M8 11h8"/></svg>`,
+    users: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg>`,
+    mail: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg>`,
+    phone: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2c-9.5-1-17-8.5-18-18A2 2 0 0 1 3.9 1.7h3a2 2 0 0 1 2 1.7c.2 1.2.6 2.4 1.2 3.5a2 2 0 0 1-.5 2.3L8.5 10.3a16 16 0 0 0 5.2 5.2l1.1-1.1a2 2 0 0 1 2.3-.5c1.1.6 2.3 1 3.5 1.2a2 2 0 0 1 1.7 1.8Z"/></svg>`,
+    facebook: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v3H8v3h3v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1Z"/></svg>`,
+    instagram: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"/><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/><path d="M17.5 6.5h.01"/></svg>`,
+    whatsapp: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.6 7.1L4 20l.9-4.4A8 8 0 1 1 20 12Z"/><path d="M8.5 9.5c.4-1 1.2-1 1.6-.9.3 0 .6.7.8 1.1.2.4.1.7-.1 1l-.4.4c-.2.2-.3.4-.1.7.4.8 1.3 1.7 2.1 2.1.3.2.5.1.7-.1l.4-.4c.3-.3.6-.3 1-.1.4.2 1.1.5 1.1.8.1.4.1 1.2-.9 1.6"/></svg>`,
+    linkedin: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h4v4H4z"/><path d="M4 10h4v10H4z"/><path d="M10 10h4v2a4 4 0 0 1 8 2v6h-4v-5a2 2 0 0 0-4 0v5h-4z"/></svg>`,
+    youtube: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12s0-4-1-5-4-1-9-1-8 0-9 1-1 5-1 5 0 4 1 5 4 1 9 1 8 0 9-1 1-5 1-5Z"/><path d="M10 15V9l6 3-6 3Z"/></svg>`,
+    x: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l8 9 8-9"/><path d="M4 20l8-9 8 9"/></svg>`,
+    link: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1"/><path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1"/></svg>`
+  };
+  return icons[name] || icons.link;
+}
+
+function normalizeSocialKey(label) {
+  const raw = (label || "").toString().trim().toLowerCase();
+  if (raw.includes("facebook") || raw.includes("פייסבוק")) return "facebook";
+  if (raw.includes("instagram") || raw.includes("אינסטגרם")) return "instagram";
+  if (raw.includes("whatsapp") || raw.includes("וואטסאפ")) return "whatsapp";
+  if (raw.includes("linkedin") || raw.includes("לינקד")) return "linkedin";
+  if (raw.includes("youtube") || raw.includes("יוטיוב")) return "youtube";
+  if (raw === "x" || raw.includes("twitter") || raw.includes("טוויט")) return "x";
+  return "link";
+}
 //   function setSafeInnerText(el, text) {
 //   el.textContent = typeof text === "string" ? text : "";
 // }
@@ -196,6 +237,12 @@ function createCardWithMedia(imgKey, title, text) {
         const card = document.createElement("div");
         card.className = "card";
 
+        const icon = document.createElement("div");
+        icon.className = "card__icon";
+        // simple deterministic icon rotation for pillars
+        const pillarIcons = ["heart","hands","book","spark"];
+        icon.innerHTML = getIconSvg(pillarIcons[(pillars.children.length) % pillarIcons.length]);
+
         const t = document.createElement("div");
         t.className = "card__title";
         setSafeInnerText(t, item?.title);
@@ -204,6 +251,7 @@ function createCardWithMedia(imgKey, title, text) {
         x.className = "card__text";
         setSafeInnerText(x, item?.text);
 
+        card.appendChild(icon);
         card.appendChild(t);
         card.appendChild(x);
         pillars.appendChild(card);
@@ -223,6 +271,8 @@ function createCardWithMedia(imgKey, title, text) {
       const icon = document.createElement("div");
       icon.className = "service__icon";
       icon.setAttribute("aria-hidden", "true");
+
+      icon.innerHTML = getIconSvg("spark");
 
       const t = document.createElement("div");
       t.className = "service__title";
@@ -271,6 +321,8 @@ function createCardWithMedia(imgKey, title, text) {
         const icon = document.createElement("div");
         icon.className = "service__icon";
         icon.setAttribute("aria-hidden", "true");
+
+        icon.innerHTML = getIconSvg("users");
 
         const t = document.createElement("div");
         t.className = "service__title";
@@ -569,11 +621,21 @@ function createCardWithMedia(imgKey, title, text) {
     const social = $("#contactSocial");
     if (social) {
       social.innerHTML = "";
-      (dictionary?.contact?.social || []).forEach((s) => {
-        const chip = document.createElement("span");
-        chip.className = "chip";
-        chip.textContent = s;
-        social.appendChild(chip);
+      (dictionary?.contact?.social || []).forEach((label) => {
+        const key = normalizeSocialKey(label);
+        const href = (LINKS.social && LINKS.social[key]) ? LINKS.social[key] : "#";
+
+        const a = document.createElement("a");
+        a.className = "socialBtn";
+        a.href = href || "#";
+        a.setAttribute("aria-label", label || key);
+        if (href && href !== "#") {
+          a.target = "_blank";
+          a.rel = "noopener";
+        }
+
+        a.innerHTML = getIconSvg(key);
+        social.appendChild(a);
       });
     }
   }
@@ -654,6 +716,25 @@ function setupMenuToggle() {
   });
 }
 
+function setupBackToTop() {
+  const btn = document.querySelector("#backToTopBtn");
+  if (!btn) return;
+
+  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const onScroll = () => {
+    const y = window.scrollY || document.documentElement.scrollTop || 0;
+    btn.classList.toggle("is-visible", y > 400);
+  };
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" });
+  });
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
 async function init() {
   wireLangToggle();
   try {
@@ -663,6 +744,7 @@ async function init() {
     alert("Failed to load language JSON. Check console.");
   }
   setupMenuToggle();
+  setupBackToTop();
 }
 
   document.addEventListener("DOMContentLoaded", init);
