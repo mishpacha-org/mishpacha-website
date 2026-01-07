@@ -11,11 +11,11 @@
   };
     // ====== Images mapping ======
   const IMAGES = {
-    logo: "..assets\img\logo.png",
-    hero: "..assets\img\logo.png",
-    about: "..assets\img\about.png",
-    story: "..assets\img\story.png",
-    help: "..assets\img\vision2.png"
+    logo: "assets/img/logo.png",
+    hero: "assets/img/logo.png",
+    about: "assets/img/about.png",
+    story: "assets/img/story.png",
+    help: "assets/img/vision2.png"
   };
 
 
