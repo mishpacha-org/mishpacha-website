@@ -73,6 +73,7 @@ html{
 
 body{
   min-height: 100%;
+  padding-top: 72px; /* תכוון אם צריך */
 }
 
 /* ---------- Layout Helpers ---------- */
@@ -117,20 +118,48 @@ body{
 
 /* ---------- Topbar ---------- */
 .topbar{
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 50;
+  left: 0;
+  right: 0;
+  z-index: 999;
   backdrop-filter: blur(10px);
   background: rgba(245,246,248,.70);
   border-bottom: 1px solid var(--stroke);
 }
 
-.topbar__inner{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: var(--space-3);
-  padding: 12px 0;
+/* nav dropdown only (single source of truth) */
+.topbar__inner{ position: relative; }
+
+.topbar .nav{
+  position: absolute;
+  top: calc(100% + 10px);
+  inset-inline-end: 0;
+
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+
+  min-width: 220px;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid var(--stroke);
+  background: rgba(245,246,248,.95);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
+  z-index: 60;
+}
+
+.topbar.is-menu-open .nav{ display: flex; }
+
+.topbar .nav a{
+  display:block;
+  width:100%;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid transparent;
 }
 
 .brand{
@@ -336,8 +365,9 @@ html[dir="ltr"] .card{
 }
 /* ---------- Split (like Hero layout) ---------- */
 .split{
-  background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,92));
-  border: 1px solid rgba(20,20,35,10);
+  /* Fix invalid rgba alpha values (must be 0..1). */
+  background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.92));
+  border: 1px solid rgba(20,20,35,.10);
   border-radius: var(--r-3);
   box-shadow: var(--shadow-soft);
   padding: var(--space-4);
@@ -355,7 +385,7 @@ html[dir="ltr"] .card{
 .split__art{
   height: 320px;              /* חובה כדי שלתמונה יהיה “מקום” */
   border-radius: var(--r-3);
-  border: 1px solid rgba(20,20,35,10);
+  border: 1px solid rgba(20,20,35,.10);
   overflow: hidden;
 }
 
@@ -561,13 +591,13 @@ html[dir="ltr"] .split{
 /* ===== Topbar dropdown menu ===== */
 .topbar__inner{ position: relative; }
 
-.nav{
+/* .nav{
   position: absolute;
   top: calc(100% + 10px);
   inset-inline-end: 0;
 
   display: none;              /* סגור ברירת מחדל */
-  flex-direction: column;
+  /* flex-direction: column;
   gap: 8px;
 
   min-width: 220px;
@@ -578,7 +608,7 @@ html[dir="ltr"] .split{
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-soft);
   z-index: 60;
-}
+/* } */
 
 .topbar.is-menu-open .nav{
   display: flex;
