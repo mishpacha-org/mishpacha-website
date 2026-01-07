@@ -14,7 +14,7 @@
   const IMAGES = {
     hero: { src: "..assets\img\logo.png", eager: true },
     about: { src: "..assets\img\about.png" },
-    story: { src: "..assets\img\story.png" }
+    story: { src: "assets\img\story.png" }
   };
 
 
