@@ -9,6 +9,15 @@
     contactForm: "https://example.com/contact-form",
     donatePlatform: "https://example.com/donate"
   };
+    // ====== Images mapping ======
+  const IMAGES = {
+    logo: "..assets\img\logo.png",
+    hero: "..assets\img\logo.png",
+    about: "..assets\img\about.png",
+    story: "..assets\img\story.png",
+    help: "..assets\img\vision2.png"
+  };
+
 
   let dictionary = {};
   let currentLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
@@ -51,6 +60,26 @@
   function setSafeInnerText(el, text) {
     el.textContent = typeof text === "string" ? text : "";
   }
+    function renderImages() {
+    $$("[data-img]").forEach((el) => {
+      const key = el.getAttribute("data-img");
+      const src = IMAGES[key];
+      if (!src) return;
+
+      el.innerHTML = "";
+
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "";
+      img.loading = "lazy";
+      img.style.width = "100%";
+      img.style.height = "100%";
+      img.style.objectFit = "cover";
+
+      el.appendChild(img);
+    });
+  }
+
 
   function renderNav() {
     const nav = $("#navLinks");
@@ -543,6 +572,8 @@
 
     applyText();
     renderAllDynamic();
+	renderImages();
+
   }
 
   function wireLangToggle() {
