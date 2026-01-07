@@ -303,6 +303,10 @@ body{
   border-radius: var(--r-3);
   box-shadow: var(--shadow-soft);
   padding: var(--space-4);
+
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
 }
 
 .card__title{
@@ -315,6 +319,28 @@ body{
   color: var(--muted);
   font-size: 15px;
 }
+.card__media{
+  width: 140px;
+  min-width: 140px;
+  height: 140px;
+  border-radius: var(--r-2);
+  overflow: hidden;
+
+  border: 1px solid rgba(20,20,35,.10);
+  background:
+    radial-gradient(120px 120px at 30% 30%, rgba(184,72,216,.12), transparent 60%),
+    rgba(255,255,255,.6);
+
+  box-shadow: 0 10px 24px rgba(20,20,35,.10);
+}
+
+.card__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 
 /* ---------- Services (icon cards) ---------- */
 .service{
