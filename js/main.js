@@ -73,6 +73,7 @@ function createCardWithMedia(imgKey, title, text) {
   media.setAttribute("data-img", imgKey);
 
   const body = document.createElement("div");
+  body.className = "card__body";
 
   const t = document.createElement("div");
   t.className = "card__title";

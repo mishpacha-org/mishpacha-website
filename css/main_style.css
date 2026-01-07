@@ -312,12 +312,15 @@ body{
 }
 
 /* Direction by language */
+/* Direction + alignment by language */
 html[dir="rtl"] .card{
-  flex-direction: row-reverse !important;
+  flex-direction: row-reverse;
+  text-align: right;
 }
 
 html[dir="ltr"] .card{
-  flex-direction: row !important;
+  flex-direction: row;
+  text-align: left;
 }
 
 /* ---------- Card content ---------- */
@@ -357,7 +360,7 @@ html[dir="ltr"] .card{
 }
 
 /* ---------- Card body takes remaining space ---------- */
-.card > :not(.card__media){
+.card__body{
   flex: 1;
   min-width: 0;
 }
