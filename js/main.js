@@ -60,6 +60,37 @@
   function setSafeInnerText(el, text) {
     el.textContent = typeof text === "string" ? text : "";
   }
+  function setSafeInnerText(el, text) {
+  el.textContent = typeof text === "string" ? text : "";
+}
+
+function createCardWithMedia(imgKey, title, text) {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const media = document.createElement("div");
+  media.className = "card__media";
+  media.setAttribute("data-img", imgKey);
+
+  const body = document.createElement("div");
+
+  const t = document.createElement("div");
+  t.className = "card__title";
+  t.textContent = title;
+
+  const x = document.createElement("div");
+  x.className = "card__text";
+  x.textContent = text;
+
+  body.appendChild(t);
+  body.appendChild(x);
+
+  card.appendChild(media);
+  card.appendChild(body);
+
+  return card;
+}
+
     function renderImages() {
     $$("[data-img]").forEach((el) => {
       const key = el.getAttribute("data-img");
