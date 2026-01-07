@@ -60,9 +60,9 @@
   function setSafeInnerText(el, text) {
     el.textContent = typeof text === "string" ? text : "";
   }
-  function setSafeInnerText(el, text) {
-  el.textContent = typeof text === "string" ? text : "";
-}
+//   function setSafeInnerText(el, text) {
+//   el.textContent = typeof text === "string" ? text : "";
+// }
 
 function createCardWithMedia(imgKey, title, text) {
   const card = document.createElement("div");
@@ -604,7 +604,11 @@ function createCardWithMedia(imgKey, title, text) {
 
     applyText();
     renderAllDynamic();
-	renderImages();
+    renderImages();
+
+    document.querySelector(".topbar")?.classList.remove("is-menu-open");
+    document.querySelector("#menuToggle")?.setAttribute("aria-expanded", "false");
+
 
   }
 
@@ -614,14 +618,52 @@ function createCardWithMedia(imgKey, title, text) {
       await setLanguage(next);
     });
   }
+function setupMenuToggle() {
+  const topbar = document.querySelector(".topbar");
+  const btn = document.querySelector("#menuToggle");
+  const nav = document.querySelector("#navLinks");
+  if (!topbar || !btn || !nav) return;
 
-  function init() {
-    wireLangToggle();
-    setLanguage(currentLang).catch((err) => {
-      console.error(err);
-      alert("Failed to load language JSON. Check console.");
-    });
+  const close = () => {
+    topbar.classList.remove("is-menu-open");
+    btn.setAttribute("aria-expanded", "false");
+  };
+
+  const toggle = () => {
+    const open = topbar.classList.toggle("is-menu-open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggle();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!topbar.classList.contains("is-menu-open")) return;
+    if (topbar.contains(e.target)) return;
+    close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") close();
+  });
+
+  nav.addEventListener("click", (e) => {
+    if (e.target.closest("a")) close();
+  });
+}
+
+async function init() {
+  wireLangToggle();
+  try {
+    await setLanguage(currentLang);
+  } catch (err) {
+    console.error(err);
+    alert("Failed to load language JSON. Check console.");
   }
+  setupMenuToggle();
+}
 
   document.addEventListener("DOMContentLoaded", init);
 })();
