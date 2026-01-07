@@ -297,6 +297,7 @@ body{
   gap: var(--space-3);
 }
 
+/* ---------- Card ---------- */
 .card{
   background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.92));
   border: 1px solid rgba(20,20,35,.10);
@@ -307,34 +308,39 @@ body{
   display: flex;
   gap: var(--space-4);
   align-items: flex-start;
+  flex-wrap: nowrap;
 }
 
+/* Direction by language */
+html[dir="rtl"] .card{
+  flex-direction: row-reverse; /* תמונה משמאל */
+}
+
+html[dir="ltr"] .card{
+  flex-direction: row;         /* תמונה מימין */
+}
+
+/* ---------- Card content ---------- */
 .card__title{
   font-weight: 800;
   letter-spacing: .2px;
   margin-bottom: 8px;
-  
- 
-}
-html[dir="rtl"] .card{
-  flex-direction: row-reverse; /* תמונה משמאל בעברית */
-}
-
-html[dir="ltr"] .card{
-  flex-direction: row;         /* תמונה מימין באנגלית */
 }
 
 .card__text{
   color: var(--muted);
   font-size: 15px;
 }
+
+/* ---------- Card media (image frame) ---------- */
 .card__media{
+  flex: 0 0 140px;          /* 🔒 נעילה מוחלטת */
   width: 140px;
-  min-width: 140px;
   height: 140px;
+  min-width: 140px;
+
   border-radius: var(--r-2);
   overflow: hidden;
-
   border: 1px solid rgba(20,20,35,.10);
   background:
     radial-gradient(120px 120px at 30% 30%, rgba(184,72,216,.12), transparent 60%),
@@ -349,8 +355,11 @@ html[dir="ltr"] .card{
   object-fit: cover;
   display: block;
 }
-.card:not(:has(.card__media)){
-  display: block;
+
+/* ---------- Card body takes remaining space ---------- */
+.card > :not(.card__media){
+  flex: 1;
+  min-width: 0;
 }
 
 
