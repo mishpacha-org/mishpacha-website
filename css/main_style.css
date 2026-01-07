@@ -313,11 +313,11 @@ body{
 
 /* Direction by language */
 html[dir="rtl"] .card{
-  flex-direction: row-reverse; /* תמונה משמאל */
+  flex-direction: row-reverse !important;
 }
 
 html[dir="ltr"] .card{
-  flex-direction: row;         /* תמונה מימין */
+  flex-direction: row !important;
 }
 
 /* ---------- Card content ---------- */
