@@ -334,6 +334,40 @@ html[dir="ltr"] .card{
   color: var(--muted);
   font-size: 15px;
 }
+/* ---------- Split (like Hero layout) ---------- */
+.split{
+  background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,92));
+  border: 1px solid rgba(20,20,35,10);
+  border-radius: var(--r-3);
+  box-shadow: var(--shadow-soft);
+  padding: var(--space-4);
+
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.split__text{
+  min-width: 0;
+}
+
+.split__art{
+  height: 320px;              /* חובה כדי שלתמונה יהיה “מקום” */
+  border-radius: var(--r-3);
+  border: 1px solid rgba(20,20,35,10);
+  overflow: hidden;
+}
+
+/* swap sides by language */
+html[dir="rtl"] .split{
+  grid-template-columns: .8fr 1.2fr;
+  text-align: right;
+}
+
+html[dir="ltr"] .split{
+  text-align: left;
+}
 
 /* ---------- Card media (image frame) ---------- */
 .card__media{
