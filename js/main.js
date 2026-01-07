@@ -10,6 +10,14 @@
     donatePlatform: "https://example.com/donate"
   };
 
+  // ====== Images map (loaded via JS into HTML slots marked with data-img) ======
+  const IMAGES = {
+    hero: { src: "..assets\img\logo.png", eager: true },
+    about: { src: "..assets\img\about.png" },
+    story: { src: "..assets\img\story.png" }
+  };
+
+
   let dictionary = {};
   let currentLang = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
 
@@ -517,6 +525,35 @@
     }
   }
 
+  function renderImages() {
+    $$("[data-img]").forEach((slot) => {
+      const key = slot.dataset.img;
+      const cfg = IMAGES[key];
+      if (!cfg || !cfg.src) return;
+
+      // prevent flicker on language toggle
+      const existing = slot.querySelector("img");
+      if (existing && existing.getAttribute("src") === cfg.src) return;
+
+      slot.innerHTML = "";
+
+      const img = document.createElement("img");
+      img.src = cfg.src;
+      img.decoding = "async";
+      img.loading = cfg.eager ? "eager" : "lazy";
+      img.alt = ""; // alt will be wired later via JSON
+
+      img.style.width = "100%";
+      img.style.height = "100%";
+      img.style.objectFit = "cover";
+      img.style.borderRadius = "inherit";
+
+      slot.appendChild(img);
+    });
+  }
+
+
+
   function renderAllDynamic() {
     renderNav();
     renderHeroCtas();
@@ -543,6 +580,7 @@
 
     applyText();
     renderAllDynamic();
+    renderImages();
   }
 
   function wireLangToggle() {
