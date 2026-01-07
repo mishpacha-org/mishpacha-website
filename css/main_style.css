@@ -555,7 +555,7 @@ html[dir="ltr"] .split{
     grid-template-columns: 1fr;
   }
   .brand{ min-width: auto; }
-  .nav{ display:none; } /* keep it clean on mobile; can add burger later */
+  /* .nav{ display:none; } keep it clean on mobile; can add burger later */
 }
 
 @media (prefers-reduced-motion: reduce){
