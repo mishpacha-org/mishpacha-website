@@ -405,36 +405,37 @@ html[dir="ltr"] .card{
 }
 
 /* =========================
-   VOLUNTEER – card + image layout
-   ========================= */
-
-#volunteer .card{
-  overflow: hidden;
-}
+/* ===== VOLUNTEER – SINGLE SOURCE OF TRUTH ===== */
 
 .volunteer__card{
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: 32px;
 }
 
-/* עברית (RTL): טקסט מימין, תמונה משמאל */
+/* עברית – טקסט ימין, תמונה שמאל */
 html[dir="rtl"] .volunteer__card{
   flex-direction: row-reverse;
 }
 
-/* אנגלית (LTR): טקסט משמאל, תמונה מימין */
+/* אנגלית – טקסט שמאל, תמונה ימין */
 html[dir="ltr"] .volunteer__card{
   flex-direction: row;
 }
 
 .volunteer__content{
   flex: 1;
+  text-align: start; /* ימין ב-RTL, שמאל ב-LTR */
+}
+
+.volunteer__cta{
+  margin-top: 16px;
+  text-align: center; /* הכפתור תמיד באמצע */
 }
 
 .volunteer__visual{
-  flex: 0 0 320px; /* אותו רוחב שתכננת */
-  min-height: 260px; /* שיהיה “בשר” לתמונה */
+  width: 320px;
+  min-height: 260px;
   border-radius: var(--r-3);
   overflow: hidden;
 }
