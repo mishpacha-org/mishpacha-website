@@ -314,9 +314,47 @@ body{
 
 .about__cards{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-3);
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
   margin-top: var(--space-4);
+}
+/* =========================
+   ABOUT – text & pillars fix
+   ========================= */
+
+/* About intro text (rendered via JS into #aboutIntro) */
+#aboutIntro .muted{
+  max-width: 62ch;
+  line-height: 1.75;
+  margin: 0 0 12px;
+}
+
+#aboutIntro .muted:last-child{
+  margin-bottom: 0;
+}
+
+/* About pillars cards – prevent flex side layout */
+#aboutPillars .card{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+#aboutPillars .card__title{
+  margin-bottom: 0;
+}
+
+#aboutPillars .card__text{
+  margin-top: 0;
+}
+
+/* RTL / LTR alignment safety */
+html[dir="rtl"] #aboutPillars .card{
+  text-align: right;
+}
+
+html[dir="ltr"] #aboutPillars .card{
+  text-align: left;
 }
 
 /* ---------- Grid & Cards ---------- */
@@ -362,6 +400,8 @@ html[dir="ltr"] .card{
 .card__text{
   color: var(--muted);
   font-size: 15px;
+ overflow-wrap: break-word;
+
 }
 /* ---------- Split (like Hero layout) ---------- */
 .split{
