@@ -81,33 +81,33 @@ function getIconSvg(name) {
   const icons = {
     // ===== About pillars (your JSON ids) =====
     // personal: mentoring / personal guidance
-personal: `<svg viewBox="0 0 24 24" aria-hidden="true">
-  <path d="M16 11a3 3 0 1 0-6 0"/>
-  <path d="M20 20a6 6 0 0 0-12 0"/>
-  <path d="M6.5 10.5a2.5 2.5 0 1 0-5 0"/>
-  <path d="M1 20a5 5 0 0 1 6-4.5"/>
-  <path d="M18.5 3.5l.7 1.6 1.7.2-1.3 1.1.4 1.7-1.5-.9-1.5.9.4-1.7-1.3-1.1 1.7-.2.7-1.6z"/>
-</svg>`,
+    personal: `<svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M16 11a3 3 0 1 0-6 0"/>
+      <path d="M20 20a6 6 0 0 0-12 0"/>
+      <path d="M6.5 10.5a2.5 2.5 0 1 0-5 0"/>
+      <path d="M1 20a5 5 0 0 1 6-4.5"/>
+      <path d="M18.5 3.5l.7 1.6 1.7.2-1.3 1.1.4 1.7-1.5-.9-1.5.9.4-1.7-1.3-1.1 1.7-.2.7-1.6z"/>
+    </svg>`,
 
-digital: `<svg viewBox="0 0 24 24" aria-hidden="true">
-  <rect x="4" y="6" width="16" height="10" rx="2"/>
-  <path d="M8 20h8"/>
-  <path d="M12 16v4"/>
-  <circle cx="8" cy="9" r="1"/>
-  <circle cx="12" cy="11" r="1"/>
-  <circle cx="16" cy="9" r="1"/>
-  <path d="M9 9.5l2 1.2"/>
-  <path d="M15 9.5l-2 1.2"/>
-</svg>`,
+    digital: `<svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="4" y="6" width="16" height="10" rx="2"/>
+      <path d="M8 20h8"/>
+      <path d="M12 16v4"/>
+      <circle cx="8" cy="9" r="1"/>
+      <circle cx="12" cy="11" r="1"/>
+      <circle cx="16" cy="9" r="1"/>
+      <path d="M9 9.5l2 1.2"/>
+      <path d="M15 9.5l-2 1.2"/>
+    </svg>`,
 
-tools: `<svg viewBox="0 0 24 24" aria-hidden="true">
-  <circle cx="12" cy="12" r="9"/>
-  <path d="M12 7v2"/>
-  <path d="M12 15v2"/>
-  <path d="M7 12h2"/>
-  <path d="M15 12h2"/>
-  <path d="M10 14l2-6 2 6-2-1-2 1z"/>
-</svg>`,
+    tools: `<svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 7v2"/>
+      <path d="M12 15v2"/>
+      <path d="M7 12h2"/>
+      <path d="M15 12h2"/>
+      <path d="M10 14l2-6 2 6-2-1-2 1z"/>
+    </svg>`,
 
     // ===== Existing generic icons (improved where needed) =====
     // donate / compassion (outline heart)
@@ -190,26 +190,82 @@ tools: `<svg viewBox="0 0 24 24" aria-hidden="true">
     link: wrap(`
       <path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1"/>
       <path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1"/>
+    `),
+
+    // ===== Services (mock-aligned) =====
+    // money / financial
+    money: wrap(`
+      <path d="M3 7h18v10H3z"/>
+      <path d="M7 7v10"/>
+      <path d="M17 7v10"/>
+      <path d="M12 10.2a1.8 1.8 0 1 0 0 3.6a1.8 1.8 0 1 0 0-3.6Z"/>
+      <path d="M10.2 9.6c.4-.6 1.1-1 1.8-1c1.1 0 2 .7 2 1.6"/>
+      <path d="M9.8 14.4c.4.6 1.1 1 2.2 1c1.1 0 2-.6 2-1.6"/>
+    `),
+
+    // diaper (mock-style)
+    diaper: wrap(`
+      <path d="M6 6h12l-2 6H8L6 6Z"/>
+      <path d="M8 12l-2 6h12l-2-6"/>
+      <path d="M9 12c0 2-1 3-3 3"/>
+      <path d="M15 12c0 2 1 3 3 3"/>
+      <path d="M10 9h4"/>
+    `),
+
+    // mentor / fairy-ish (person + halo + wand star)
+    mentorStar: wrap(`
+      <path d="M12 12a3 3 0 1 0-6 0"/>
+      <path d="M20 20a6 6 0 0 0-12 0"/>
+      <path d="M18 7.2c0-1.4-1.3-2.6-3-2.6s-3 1.2-3 2.6"/>
+      <path d="M18.6 9.2l.5 1.2 1.3.2-1 .8.3 1.3-1.1-.7-1.1.7.3-1.3-1-.8 1.3-.2.5-1.2z"/>
+      <path d="M18.2 12.2l-2 2"/>
+    `),
+
+    // house + key
+    houseKey: wrap(`
+      <path d="M4 11l8-7 8 7"/>
+      <path d="M6 10v10h12V10"/>
+      <path d="M14.5 14.5a2 2 0 1 0 0 4"/>
+      <path d="M16.5 16.5h3"/>
+      <path d="M18.5 16.5v1.5"/>
+    `),
+
+    // community + chat
+    groupChat: wrap(`
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+      <path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
+      <path d="M22 12a4 4 0 0 1-4 4h-2l-2 2v-4a4 4 0 0 1 4-4h4Z"/>
     `)
   };
 
   // ===== Aliases (context-friendly names) =====
-  // so you can call getIconSvg("mentor") etc. without adding new SVGs
+  // No JSON changes needed: map existing IDs -> mock icons
   const aliases = {
+    // existing convenience aliases
     mentor: "personal",
     guidance: "personal",
     network: "digital",
     knowledge: "digital",
     compass: "tools",
-    independence: "tools"
+    independence: "tools",
+
+    // SERVICES ids -> desired icons (mock-aligned)
+    financialEducation: "money",
+    emotionalSupport: "heart",
+    mentoring: "mentorStar",
+    rights: "diaper",
+    community: "groupChat",
+    housing: "houseKey"
   };
 
   const key = aliases[name] || name;
   const svg = icons[key] || icons.link;
 
   // Normalize SVG style: thin outline, uses currentColor
-  return svg
-    .replace("<svg ", `<svg stroke="currentColor" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" `);
+  return svg.replace(
+    "<svg ",
+    `<svg stroke="currentColor" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" `
+  );
 }
 
 function normalizeSocialKey(label) {
