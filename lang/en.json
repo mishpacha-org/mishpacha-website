@@ -143,23 +143,54 @@
 }
 
   ,
-  "volunteer": {
-    "title": "Volunteer and Change Lives",
-    "intro": "You can make a real difference in the life of an orphan.",
-    "roles": [
-      { "id": "personalMentor", "title": "Personal Mentoring", "text": "Long-term guidance and support." },
-      { "id": "professionalVolunteer", "title": "Professional Volunteering", "text": "Social workers, lawyers, tech mentors." },
-      { "id": "logistics", "title": "Logistical Support", "text": "Event organization, transportation, project management." }
-    ],
-    "processTitle": "Our Process",
-    "processSteps": [
-      { "order": 1, "title": "Submit a form", "text": "A short form with personal details." },
-      { "order": 2, "title": "Get-to-know interview", "text": "A personal conversation to align expectations." },
-      { "order": 3, "title": "Professional training", "text": "Training tailored to the volunteer role." },
-      { "order": 4, "title": "Matching & ongoing support", "text": "Matching with an orphan and continuous support." }
-    ],
-    "button": "Join as a Volunteer"
-  },
+"volunteer": {
+  "title": "Volunteer and Change Lives",
+  "intro": "Volunteering with the Mishpacha Association is an opportunity to make a real difference. Not as a one-time gesture, but as a commitment to be present for orphans who need guidance, listening, and stable support over time.",
+  "roles": [
+    {
+      "id": "personalMentor",
+      "title": "Personal Mentorship",
+      "text": "Close, personal guidance for an orphan, building a meaningful relationship and trust over time."
+    },
+    {
+      "id": "professionalVolunteer",
+      "title": "Professional Volunteering",
+      "text": "Professionals from various fields such as social work, law, technology, and consulting, contributing their knowledge and experience."
+    },
+    {
+      "id": "logistics",
+      "title": "Logistical Support",
+      "text": "Assistance with event organization, task management, transportation, and ongoing operations that make our work possible."
+    }
+  ],
+  "processTitle": "Our Process",
+  "processSteps": [
+    {
+      "order": 1,
+      "title": "Application Form",
+      "text": "A short form with personal details, interests, and availability so we can get to know you better."
+    },
+    {
+      "order": 2,
+      "title": "Introductory Interview",
+      "text": "A personal conversation to align expectations, understand motivation and skills, and answer questions."
+    },
+    {
+      "id": 3,
+      "title": "Training",
+      "text": "Role-specific training that provides practical tools and initial guidance."
+    },
+    {
+      "order": 4,
+      "title": "Matching and Ongoing Support",
+      "text": "Careful matching to an orphan or volunteering role, with continuous support throughout the journey."
+    }
+  ],
+  "button": "Join as a Volunteer"
+}
+
+
+,
   "donate": {
     "title": "Your Donation Changes Lives",
     "intro": "Every shekel you donate goes directly to changing lives.",
