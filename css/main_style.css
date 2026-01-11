@@ -405,39 +405,54 @@ html[dir="ltr"] .card{
 }
 
 /* =========================
-/* ===== VOLUNTEER – SINGLE SOURCE OF TRUTH ===== */
+   VOLUNTEER – FINAL, SIMPLE
+   ========================= */
 
-.volunteer__card{
+#volunteer .volunteer__card{
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 40px;
 }
 
-/* עברית – טקסט ימין, תמונה שמאל */
-html[dir="rtl"] .volunteer__card{
+/* עברית: טקסט ימין, תמונה שמאל */
+html[dir="rtl"] #volunteer .volunteer__card{
   flex-direction: row-reverse;
 }
 
-/* אנגלית – טקסט שמאל, תמונה ימין */
-html[dir="ltr"] .volunteer__card{
+/* אנגלית: טקסט שמאל, תמונה ימין */
+html[dir="ltr"] #volunteer .volunteer__card{
   flex-direction: row;
 }
 
-.volunteer__content{
+/* טקסט */
+#volunteer .volunteer__content{
   flex: 1;
   text-align: start; /* ימין ב-RTL, שמאל ב-LTR */
 }
 
-.volunteer__cta{
+/* כפתור תמיד באמצע */
+#volunteer .volunteer__cta{
   margin-top: 16px;
-  text-align: center; /* הכפתור תמיד באמצע */
+  text-align: center;
 }
 
-.volunteer__visual{
+/* תמונה */
+#volunteer .volunteer__visual{
   width: 320px;
   min-height: 260px;
-  border-radius: var(--r-3);
-  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* מובייל */
+@media (max-width: 900px){
+  #volunteer .volunteer__card{
+    flex-direction: column;
+  }
+
+  #volunteer .volunteer__visual{
+    width: 100%;
+    min-height: 220px;
+  }
 }
 
 
