@@ -833,48 +833,4 @@ html[dir="ltr"] .volunteer__card{
 .volunteer__visual{
   flex: 0 0 320px;
 }
-/* =========================
-   VOLUNTEER – isolated fix
-   ========================= */
-
-#volunteer .card{
-  display: flex;
-  align-items: center;
-  gap: var(--space-6);
-}
-
-/* תוכן */
-#volunteer .volunteer__content{
-  flex: 1;
-}
-
-/* תמונה – משתמשים ב-about__visual הקיים */
-#volunteer .about__visual{
-  flex: 0 0 320px;
-  height: 320px;
-}
-
-/* RTL – עברית: טקסט מימין, תמונה משמאל */
-html[dir="rtl"] #volunteer .card{
-  flex-direction: row-reverse;
-  text-align: right;
-}
-
-/* LTR – אנגלית: טקסט משמאל, תמונה מימין */
-html[dir="ltr"] #volunteer .card{
-  flex-direction: row;
-  text-align: left;
-}
-
-/* מובייל */
-@media (max-width: 980px){
-  #volunteer .card{
-    flex-direction: column;
-  }
-
-  #volunteer .about__visual{
-    width: 100%;
-    height: 240px;
-  }
-}
 
