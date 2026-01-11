@@ -393,7 +393,7 @@ icon.innerHTML = getIconSvg(item.id);
       icon.className = "service__icon";
       icon.setAttribute("aria-hidden", "true");
 
-      icon.innerHTML = getIconSvg("spark");
+icon.innerHTML = getIconSvg(s.icon || "spark");
 
       const t = document.createElement("div");
       t.className = "service__title";
