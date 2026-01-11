@@ -403,6 +403,43 @@ html[dir="ltr"] .card{
  overflow-wrap: break-word;
 
 }
+
+/* =========================
+   VOLUNTEER – card + image layout
+   ========================= */
+
+#volunteer .card{
+  overflow: hidden;
+}
+
+.volunteer__card{
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* עברית (RTL): טקסט מימין, תמונה משמאל */
+html[dir="rtl"] .volunteer__card{
+  flex-direction: row-reverse;
+}
+
+/* אנגלית (LTR): טקסט משמאל, תמונה מימין */
+html[dir="ltr"] .volunteer__card{
+  flex-direction: row;
+}
+
+.volunteer__content{
+  flex: 1;
+}
+
+.volunteer__visual{
+  flex: 0 0 320px; /* אותו רוחב שתכננת */
+  min-height: 260px; /* שיהיה “בשר” לתמונה */
+  border-radius: var(--r-3);
+  overflow: hidden;
+}
+
+
 /* ---------- Split (like Hero layout) ---------- */
 .split{
   /* Fix invalid rgba alpha values (must be 0..1). */
