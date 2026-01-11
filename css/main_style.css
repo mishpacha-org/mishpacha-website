@@ -408,53 +408,6 @@ html[dir="ltr"] .card{
    VOLUNTEER – FINAL, SIMPLE
    ========================= */
 
-#volunteer .volunteer__card{
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-/* עברית: טקסט ימין, תמונה שמאל */
-html[dir="rtl"] #volunteer .volunteer__card{
-  flex-direction: row-reverse;
-}
-
-/* אנגלית: טקסט שמאל, תמונה ימין */
-html[dir="ltr"] #volunteer .volunteer__card{
-  flex-direction: row;
-}
-
-/* טקסט */
-#volunteer .volunteer__content{
-  flex: 1;
-  text-align: start; /* ימין ב-RTL, שמאל ב-LTR */
-}
-
-/* כפתור תמיד באמצע */
-#volunteer .volunteer__cta{
-  margin-top: 16px;
-  text-align: center;
-}
-
-/* תמונה */
-#volunteer .volunteer__visual{
-  width: 320px;
-  min-height: 260px;
-  flex-shrink: 0;
-}
-
-/* מובייל */
-@media (max-width: 900px){
-  #volunteer .volunteer__card{
-    flex-direction: column;
-  }
-
-  #volunteer .volunteer__visual{
-    width: 100%;
-    min-height: 220px;
-  }
-}
-
 
 /* ---------- Split (like Hero layout) ---------- */
 .split{
@@ -808,3 +761,52 @@ html[dir="ltr"] .split{
   box-shadow: none;
 }
 
+/* =========================
+   VOLUNTEER layout (RTL/LTR)
+   Requirements:
+   - RTL: text right, image left, button centered
+   - LTR: text left, image right, button centered
+   ========================= */
+
+#volunteer .card{
+  width: 100%;
+}
+
+/* 2 columns wrapper */
+.volunteer__card{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+/* Swap sides by document direction */
+html[dir="rtl"] .volunteer__card{ flex-direction: row-reverse; } /* content right, image left */
+html[dir="ltr"] .volunteer__card{ flex-direction: row; }         /* content left, image right */
+
+/* Text side */
+.volunteer__content{
+  flex: 1;
+  min-width: 0;
+}
+
+html[dir="rtl"] .volunteer__content{ text-align: right; }
+html[dir="ltr"] .volunteer__content{ text-align: left; }
+
+/* Image side (your div is also .about__visual) */
+.volunteer__visual{
+  flex: 0 0 42%;
+  max-width: 460px;
+  height: 360px;            /* overrides .about__visual height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Button centered (always) */
+#volunteerBtn{
+  display: inline-flex;
+  justify-content: center;
+  margin-inline: auto;
+}
