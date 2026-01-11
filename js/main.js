@@ -326,7 +326,13 @@ function createCardWithMedia(imgKey, title, text) {
       img.loading = "lazy";
       img.style.width = "100%";
       img.style.height = "100%";
-      img.style.objectFit = "cover";
+// Default
+img.style.objectFit = "cover";
+
+// Special case: volunteer image should be fully visible
+if (key === "volunteer") {
+  img.style.objectFit = "contain";
+}
 
       el.appendChild(img);
     });
