@@ -111,18 +111,38 @@
     "attribution": "Jonathan, 22, Engineering Student",
     "note": "Stories like Jonathan's are why we wake up every morning."
   },
-  "help": {
-    "title": "I'm an Orphan – I Need Help",
-    "intro": "You are not alone. We are here for you.",
-    "steps": [
-      { "order": 1, "title": "Tell us about yourself", "text": "Fill out a short and discreet form." },
-      { "order": 2, "title": "We'll talk and understand what you need", "text": "A representative will contact you within 48 hours." },
-      { "order": 3, "title": "We'll build a personal plan", "text": "We will tailor the services to your needs." },
-      { "order": 4, "title": "We'll begin the journey together", "text": "We will support you every step of the way." }
-    ],
-    "benefitsText": "Emotional support, financial assistance, legal guidance, a personal mentor, and more.",
-    "button": "Fill out the application form here"
-  },
+
+
+"help": {
+  "title": "I am an orphan – I need help",
+  "intro": "You are not alone. We are here for you.",
+  "steps": [
+    {
+      "order": 1,
+      "title": "Tell us about yourself",
+      "text": "Fill out a short and discreet form."
+    },
+    {
+      "order": 2,
+      "title": "We will talk and understand your needs",
+      "text": "A representative from the organization will contact you within 48 hours."
+    },
+    {
+      "order": 3,
+      "title": "We will build a personal plan",
+      "text": "We will tailor the relevant support and services for you."
+    },
+    {
+      "order": 4,
+      "title": "We will start the journey together",
+      "text": "We will accompany you over time."
+    }
+  ],
+  "benefitsText": "Emotional support, financial assistance, legal guidance, a personal mentor, and ongoing support along the way.",
+  "button": "Fill out the contact form"
+}
+
+  ,
   "volunteer": {
     "title": "Volunteer and Change Lives",
     "intro": "You can make a real difference in the life of an orphan.",
