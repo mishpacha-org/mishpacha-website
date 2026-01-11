@@ -24,7 +24,9 @@
     hero: "assets/img/logo.png",
     about: "assets/img/about.png",
     story: "assets/img/story.png",
-    help: "assets/img/vision2.png"
+    help: "assets/img/vision2.png",
+    volunteer : "assets/img/volunteer.png"
+
   };
 
 
