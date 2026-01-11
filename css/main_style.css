@@ -756,53 +756,51 @@ html[dir="ltr"] .split{
 }
 
 /* =========================
-   VOLUNTEER – process card layout (CSS only)
+   VOLUNTEER – layout only
    ========================= */
 
 #volunteer .wrap > .card{
-  /* override global .card flex only here */
   display: grid;
-  align-items: center;
-  gap: var(--space-4);
-  position: relative;
-  overflow: hidden;
-
-  /* LTR default: content left, media right */
   grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--space-4);
+  align-items: center;
+  position: relative;
 }
 
-/* Put all existing card children in the content column */
+/* כל התוכן נשאר בטור הראשון */
 #volunteer .wrap > .card > *{
   grid-column: 1;
-  text-align: start; /* auto: right in RTL, left in LTR */
+  text-align: start;
 }
 
-/* The media placeholder (we’ll replace with real image later) */
+/* אזור תמונה – placeholder */
 #volunteer .wrap > .card::after{
   content: "";
   grid-column: 2;
   grid-row: 1 / -1;
-  align-self: stretch;
 
   border-radius: var(--r-3);
-  border: 1px solid rgba(20,20,35,.08);
-
-  /* placeholder look until you decide the real image */
+  border: 1px solid rgba(20,20,35,.10);
   background:
     radial-gradient(220px 180px at 30% 30%, rgba(184,72,216,.14), transparent 70%),
-    linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.55));
+    linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,.6));
   box-shadow: var(--shadow-soft);
 }
 
-/* RTL: media left, content right */
+/* RTL – התמונה מימין */
 html[dir="rtl"] #volunteer .wrap > .card{
   grid-template-columns: 320px minmax(0, 1fr);
 }
 
-html[dir="rtl"] #volunteer .wrap > .card > *{
-  grid-column: 2;
-}
-
 html[dir="rtl"] #volunteer .wrap > .card::after{
   grid-column: 1;
+}
+
+/* LTR – התמונה משמאל */
+html[dir="ltr"] #volunteer .wrap > .card{
+  grid-template-columns: minmax(0, 1fr) 320px;
+}
+
+html[dir="ltr"] #volunteer .wrap > .card::after{
+  grid-column: 2;
 }
