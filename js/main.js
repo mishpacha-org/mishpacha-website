@@ -4,7 +4,7 @@
 
   // ====== External links placeholders (update later) ======
   const LINKS = {
-    volunteerForm: "https://example.com/volunteer-form",
+    volunteerForm: "https://docs.google.com/forms/d/e/1FAIpQLSchRPNoUJ1N-da9y4cRWtw9-BwGyEiCJXtfEWVZi1CqAWtgmw/viewform",
     helpForm: "https://example.com/help-form",
     contactForm: "https://example.com/contact-form",
     donatePlatform: "https://example.com/donate",
