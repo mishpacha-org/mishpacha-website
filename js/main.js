@@ -81,35 +81,33 @@ function getIconSvg(name) {
   const icons = {
     // ===== About pillars (your JSON ids) =====
     // personal: mentoring / personal guidance
-    personal: wrap(`
-      <path d="M16 11a3 3 0 1 0-6 0"/>
-      <path d="M20 20a6 6 0 0 0-12 0"/>
-      <path d="M6.5 10.5a2.5 2.5 0 1 0-5 0"/>
-      <path d="M1 20a5 5 0 0 1 6-4.5"/>
-      <path d="M18.5 3.5l.7 1.6 1.7.2-1.3 1.1.4 1.7-1.5-.9-1.5.9.4-1.7-1.3-1.1 1.7-.2.7-1.6z"/>
-    `),
+personal: `<svg viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M16 11a3 3 0 1 0-6 0"/>
+  <path d="M20 20a6 6 0 0 0-12 0"/>
+  <path d="M6.5 10.5a2.5 2.5 0 1 0-5 0"/>
+  <path d="M1 20a5 5 0 0 1 6-4.5"/>
+  <path d="M18.5 3.5l.7 1.6 1.7.2-1.3 1.1.4 1.7-1.5-.9-1.5.9.4-1.7-1.3-1.1 1.7-.2.7-1.6z"/>
+</svg>`,
 
-    // digital: digital systems / knowledge access
-    digital: wrap(`
-      <rect x="4" y="6" width="16" height="10" rx="2"/>
-      <path d="M8 20h8"/>
-      <path d="M12 16v4"/>
-      <circle cx="8" cy="9" r="1"/>
-      <circle cx="12" cy="11" r="1"/>
-      <circle cx="16" cy="9" r="1"/>
-      <path d="M9 9.5l2 1.2"/>
-      <path d="M15 9.5l-2 1.2"/>
-    `),
+digital: `<svg viewBox="0 0 24 24" aria-hidden="true">
+  <rect x="4" y="6" width="16" height="10" rx="2"/>
+  <path d="M8 20h8"/>
+  <path d="M12 16v4"/>
+  <circle cx="8" cy="9" r="1"/>
+  <circle cx="12" cy="11" r="1"/>
+  <circle cx="16" cy="9" r="1"/>
+  <path d="M9 9.5l2 1.2"/>
+  <path d="M15 9.5l-2 1.2"/>
+</svg>`,
 
-    // tools: life skills / independence
-    tools: wrap(`
-      <circle cx="12" cy="12" r="9"/>
-      <path d="M12 7v2"/>
-      <path d="M12 15v2"/>
-      <path d="M7 12h2"/>
-      <path d="M15 12h2"/>
-      <path d="M10 14l2-6 2 6-2-1-2 1z"/>
-    `),
+tools: `<svg viewBox="0 0 24 24" aria-hidden="true">
+  <circle cx="12" cy="12" r="9"/>
+  <path d="M12 7v2"/>
+  <path d="M12 15v2"/>
+  <path d="M7 12h2"/>
+  <path d="M15 12h2"/>
+  <path d="M10 14l2-6 2 6-2-1-2 1z"/>
+</svg>`,
 
     // ===== Existing generic icons (improved where needed) =====
     // donate / compassion (outline heart)
@@ -363,8 +361,8 @@ function createCardWithMedia(imgKey, title, text) {
         const icon = document.createElement("div");
         icon.className = "card__icon";
         // simple deterministic icon rotation for pillars
-        const pillarIcons = ["heart","hands","book","spark"];
-        icon.innerHTML = getIconSvg(pillarIcons[(pillars.children.length) % pillarIcons.length]);
+        // const pillarIcons = ["heart","hands","book","spark"];
+icon.innerHTML = getIconSvg(item.id);
 
         const t = document.createElement("div");
         t.className = "card__title";
