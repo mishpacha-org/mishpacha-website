@@ -35,19 +35,32 @@
   ]
 },
 "about": {
-    "title": "Who We Are and Why We Founded Mishpacha",
-    "intro": [
-      "Mishpacha was born from deep personal experience and the understanding that orphans in Israel need comprehensive, systemic support.",
-      "We are more than a welfare organization – we are a true family, accompanying orphans at every stage of their lives.",
-      "Our vision is to build a national support network that empowers them to realize their full potential, provides tools for independence, and ensures they are surrounded by love and support.",
-      "Our systemic approach, technological innovation, and personal guidance set us apart."
-    ],
-    "pillars": [
-      { "id": "systemic", "title": "Systemic Approach", "text": "Comprehensive guidance across all areas of life." },
-      { "id": "digital", "title": "Digital Innovation", "text": "Leveraging technology to serve society." },
-      { "id": "empowerment", "title": "Personal Empowerment", "text": "Not pity — strength and dignity." }
-    ]
-  },
+  "title": "Who We Are and Why We Founded Mishpacha",
+  "intro": [
+    "Mishpacha was born from personal experience and a deep understanding that orphaned youth in Israel need real guidance during the most critical years of their lives: adolescence, military service, and the first steps into independent adulthood.",
+    "We are not just another welfare organization, but a supportive family for youth and young adults after loss, standing with them at a complex crossroads of identity, decision-making, and future, often without a full family safety net.",
+    "Our work focuses on personal guidance, emotional resilience, and building practical life skills, serving orphaned youth, soldiers, and young adults at the beginning of their independent journey, alongside volunteers and professionals who seek to be part of a deep and lasting solution."
+  ],
+  "pillars": [
+    {
+      "id": "personal",
+      "title": "Personal Guidance for Youth",
+      "text": "Ongoing mentoring and close support for orphaned youth, soldiers, and discharged young adults during the most formative years of life."
+    },
+    {
+      "id": "digital",
+      "title": "Digital Innovation & Knowledge Access",
+      "text": "Developing digital systems and tools that centralize information, rights, and guidance for orphaned youth and the wider public."
+    },
+    {
+      "id": "tools",
+      "title": "Life Skills & Independence",
+      "text": "Emotional strengthening, guidance, and practical tools for military service and building stable, independent adult lives."
+    }
+  ]
+},
+
+
   "services": {
     "title": "What We Do for Orphans in Israel",
     "intro": "We offer a wide range of services supporting orphans emotionally, socially, financially, educationally, and legally.",
