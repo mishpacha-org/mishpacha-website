@@ -754,3 +754,55 @@ html[dir="ltr"] .split{
   transform: translateY(0);
   box-shadow: none;
 }
+
+/* =========================
+   VOLUNTEER – process card layout (CSS only)
+   ========================= */
+
+#volunteer .wrap > .card{
+  /* override global .card flex only here */
+  display: grid;
+  align-items: center;
+  gap: var(--space-4);
+  position: relative;
+  overflow: hidden;
+
+  /* LTR default: content left, media right */
+  grid-template-columns: minmax(0, 1fr) 320px;
+}
+
+/* Put all existing card children in the content column */
+#volunteer .wrap > .card > *{
+  grid-column: 1;
+  text-align: start; /* auto: right in RTL, left in LTR */
+}
+
+/* The media placeholder (we’ll replace with real image later) */
+#volunteer .wrap > .card::after{
+  content: "";
+  grid-column: 2;
+  grid-row: 1 / -1;
+  align-self: stretch;
+
+  border-radius: var(--r-3);
+  border: 1px solid rgba(20,20,35,.08);
+
+  /* placeholder look until you decide the real image */
+  background:
+    radial-gradient(220px 180px at 30% 30%, rgba(184,72,216,.14), transparent 70%),
+    linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.55));
+  box-shadow: var(--shadow-soft);
+}
+
+/* RTL: media left, content right */
+html[dir="rtl"] #volunteer .wrap > .card{
+  grid-template-columns: 320px minmax(0, 1fr);
+}
+
+html[dir="rtl"] #volunteer .wrap > .card > *{
+  grid-column: 2;
+}
+
+html[dir="rtl"] #volunteer .wrap > .card::after{
+  grid-column: 1;
+}
