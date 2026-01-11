@@ -804,3 +804,32 @@ html[dir="ltr"] #volunteer .wrap > .card{
 html[dir="ltr"] #volunteer .wrap > .card::after{
   grid-column: 2;
 }
+
+/* =========================
+   Volunteer layout direction
+   ========================= */
+
+.volunteer__card{
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* עברית – תמונה משמאל */
+html[dir="rtl"] .volunteer__card{
+  flex-direction: row-reverse;
+}
+
+/* אנגלית – תמונה מימין */
+html[dir="ltr"] .volunteer__card{
+  flex-direction: row;
+}
+
+/* רוחבים */
+.volunteer__content{
+  flex: 1;
+}
+
+.volunteer__visual{
+  flex: 0 0 320px;
+}
