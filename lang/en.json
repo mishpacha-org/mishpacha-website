@@ -60,43 +60,51 @@
   ]
 },
 
+"services": {
+  "title": "What We Do for Orphans in Israel",
+  "intro": "The organization works to provide orphans with stability, practical tools, and long-term guidance — from the initial moment of loss to full independence.",
+  "items": [
+    {
+      "id": "financialEducation",
+      "title": "Financial Support and Education",
+      "text": "Scholarships and tuition assistance, funding for courses and professional training, and guidance in critical financial decisions — enabling progress without financial barriers.",
+      "icon": "book"
+    },
+    {
+      "id": "emotionalSupport",
+      "title": "Emotional and Psychological Support",
+      "text": "Professional emotional care, support groups, and empowerment workshops — helping cope with loss, strengthen personal resilience, and build self-confidence.",
+      "icon": "heart"
+    },
+    {
+      "id": "mentoring",
+      "title": "Personal Mentorship and Guidance",
+      "text": "Ongoing connection with dedicated mentors, career guidance, and personal support — so important decisions are not made alone.",
+      "icon": "personal"
+    },
+    {
+      "id": "rights",
+      "title": "Rights Assistance and Support with Authorities",
+      "text": "Support in accessing benefits, bureaucratic and legal guidance, and representation with relevant authorities — ensuring that legal rights are fully exercised.",
+      "icon": "tools"
+    },
+    {
+      "id": "community",
+      "title": "Community, Belonging, and Social Connection",
+      "text": "Building a supportive social framework through gatherings, trips, and activities — reducing loneliness and fostering a sense of belonging.",
+      "icon": "users"
+    },
+    {
+      "id": "housing",
+      "title": "Housing Support and Foster Families",
+      "text": "Assistance in finding housing solutions, guidance for foster families, and support throughout adoption processes — creating a stable and secure home.",
+      "icon": "hands"
+    }
+  ]
+},
 
-  "services": {
-    "title": "What We Do for Orphans in Israel",
-    "intro": "We offer a wide range of services supporting orphans emotionally, socially, financially, educationally, and legally.",
-    "items": [
-      {
-        "id": "financialEducation",
-        "title": "Financial & Educational Support",
-        "text": "Scholarships, tuition assistance, and funding for courses and training."
-      },
-      {
-        "id": "emotionalSupport",
-        "title": "Emotional & Psychological Support",
-        "text": "Professional guidance, support groups, emotional therapy, and empowerment workshops."
-      },
-      {
-        "id": "mentoring",
-        "title": "Mentoring & Coaching",
-        "text": "Personal mentors, career guidance, and professional direction."
-      },
-      {
-        "id": "rights",
-        "title": "Rights & Legal Guidance",
-        "text": "Assistance with benefits, legal representation, and advocacy."
-      },
-      {
-        "id": "community",
-        "title": "Community & Friendship",
-        "text": "Social gatherings, camps, trips, and activities."
-      },
-      {
-        "id": "housing",
-        "title": "Housing & Foster Care",
-        "text": "Assistance in finding foster families, adoption guidance, and housing solutions."
-      }
-    ]
-  },
+
+
   "story": {
     "title": "Personal Story: A Voice from the Field",
     "quote": "When my father passed away, I was 14 and didn't know where to turn. Mishpacha didn’t just help me financially – they gave me a second family...",
