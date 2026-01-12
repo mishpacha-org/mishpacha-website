@@ -1030,3 +1030,24 @@ html[dir="rtl"] #orphanWeek .acc__btn{
     grid-template-columns: 1fr;
   }
 }
+
+/* Contact – align like a real contact page */
+#contact .contactCard{
+  align-items: start;
+}
+
+#contact .contactCard__primary,
+#contact .contactCard__details{
+  text-align: start;
+}
+
+#contact .contact__methods{
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+#contact .contact__chips a,
+#contact .contact__chips button{
+  width: 46px;
+  height: 46px;
+}
