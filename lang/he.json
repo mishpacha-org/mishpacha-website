@@ -368,14 +368,13 @@
     "title": "צרו קשר",
     "intro": "אנחנו זמינים ונשמח לשמוע מכם.",
     "methods": [
-      { "type": "phone", "label": "טלפון", "value": "055-3134210" },
-      { "type": "email", "label": "אימייל", "value": "misshporg@gmail.com" },
-      { "type": "org", "label": "ארגון רשום", "value": "580012345" }
+      { "type": "phone", "label": "טלפון", "value": "0553134210" },
+      { "type": "email", "label": "אימייל", "value": "mishporg@gmail.com" },
     ],
     "socialTitle": "עקבו אחרינו",
-    "social": ["Facebook", "Instagram", "LinkedIn", "YouTube"],
+    "social": ["Facebook", "Instagram", "YouTube"],
     "cta": "שלחו לנו הודעה",
-    "pressNote": "לתקשורת ועיתונאים: נשמח לשתף פעולה.",
+    // "pressNote": "לתקשורת ועיתונאים: נשמח לשתף פעולה.",
     "footerLine": "משפאחה – כי אף ילד לא צריך לעבור את זה לבד."
   }
 }
