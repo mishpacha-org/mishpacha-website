@@ -6,7 +6,7 @@
   const LINKS = {
     volunteerForm: "https://docs.google.com/forms/d/e/1FAIpQLSchRPNoUJ1N-da9y4cRWtw9-BwGyEiCJXtfEWVZi1CqAWtgmw/viewform",
     helpForm: "https://docs.google.com/forms/d/1_CTLlOLWDoH1-cZPbiUSurmshkH4EMYeh2i6CpaNB7g/viewform?pli=1&pli=1&pli=1&edit_requested=true",
-    contactForm: "",
+    contactForm: "https://wa.me/message/IMUVXWXVPB64M1",
     donatePlatform: "",
     // Social links (placeholders; replace when ready)
     social: {
