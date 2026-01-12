@@ -491,6 +491,27 @@ icon.innerHTML = getIconSvg(s.icon || "spark");
     });
   }
 
+function renderStory() {
+  const holder = document.querySelector("#storyContent");
+  if (!holder) return;
+
+  holder.innerHTML = "";
+  const parts = dictionary?.story?.content;
+
+  if (!Array.isArray(parts)) return;
+
+  parts.forEach((text) => {
+    const p = document.createElement("p");
+    p.className = "muted";
+    p.style.margin = "10px 0";
+    p.textContent = text || "";
+    holder.appendChild(p);
+  });
+}
+
+
+
+
   function renderHelp() {
     const holder = $("#helpSteps");
     if (!holder) return;
@@ -943,24 +964,24 @@ function bindAccordionButtons(scope = document) {
     }
   }
 
-  function renderAllDynamic() {
-    renderNav();
-    renderHeroCtas();
-    renderAbout();
-    renderServices();
-    renderHelp();
-    renderVolunteer();
-    renderDonate();
-    renderKnowledge();
-    renderStatistics();
-    renderRights();
-    renderTransparency();
-    renderOrphanWeek();
-    renderDocuments();
-    renderContact();
-    bindAccordionButtons();
-
-  }
+function renderAllDynamic() {
+  renderNav();
+  renderHeroCtas();
+  renderAbout();
+  renderServices();
+  renderStory();       // <-- להוסיף את זה
+  renderHelp();
+  renderVolunteer();
+  renderDonate();
+  renderKnowledge();
+  renderStatistics();
+  renderRights();
+  renderTransparency();
+  renderOrphanWeek();
+  renderDocuments();
+  renderContact();
+  bindAccordionButtons();
+}
 
   async function setLanguage(lang) {
     currentLang = lang;
