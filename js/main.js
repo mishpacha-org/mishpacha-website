@@ -800,6 +800,31 @@ function renderOrphanWeek() {
 }
 
 
+function bindAccordionButtons(scope = document) {
+  scope.querySelectorAll('.acc__btn[data-target]').forEach((btn) => {
+    // prevent double-binding
+    if (btn.dataset.bound === "1") return;
+    btn.dataset.bound = "1";
+
+    btn.addEventListener("click", () => {
+      const panelId = btn.dataset.target;
+      const panel = document.getElementById(panelId);
+      if (!panel) return;
+
+      const isOpen = !panel.hasAttribute("hidden");
+      if (isOpen) {
+        panel.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", "false");
+      } else {
+        panel.removeAttribute("hidden");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+}
+
+
+
 
 
 
@@ -917,6 +942,8 @@ function renderOrphanWeek() {
     renderOrphanWeek();
     renderDocuments();
     renderContact();
+    bindAccordionButtons();
+
   }
 
   async function setLanguage(lang) {
