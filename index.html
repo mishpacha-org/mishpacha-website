@@ -295,10 +295,7 @@
     </div>
 
     <div class="contact">
-      <!-- One main card -->
       <div class="card contactCard" id="contactMainCard">
-
-        <!-- Left / primary -->
         <div class="contactCard__primary">
           <div class="card__title" data-i18n="contact.quickTitle"></div>
           <p class="muted" data-i18n="contact.footerLine"></p>
@@ -312,10 +309,8 @@
           <div class="muted contactCard__meta" data-i18n="contact.pressNote"></div>
         </div>
 
-        <!-- Right / details -->
         <div class="contactCard__details">
           <div class="card__title" data-i18n="contact.methodsTitle"></div>
-
           <ul class="contact__methods" id="contactMethods"></ul>
 
           <div class="contactSocial">
@@ -323,19 +318,16 @@
             <div class="contact__chips" id="contactSocial"></div>
           </div>
         </div>
-
       </div>
 
-      <!-- Optional: tiny secondary card -->
-      <div class="card contactMini">
-        <a class="btn btn--outline" href="#top" data-i18n="ui.backTop"></a>
+      <!-- Back to top (below contact content) -->
+      <div class="contact__bottom">
+        <button class="btn btn--outline" id="backToTopBtn" type="button"
+                aria-label="Back to top" title="Back to top">↑</button>
       </div>
     </div>
   </div>
 </section>
-
-  <!-- Back to top (floating) -->
-  <button class="backToTop btn btn--outline" id="backToTopBtn" type="button" aria-label="Back to top" title="Back to top">↑</button>
 
   <script src="js/main.js" defer></script>
 </body>
