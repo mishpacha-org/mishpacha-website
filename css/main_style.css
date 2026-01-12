@@ -694,6 +694,17 @@ html[dir="ltr"] .split{
   opacity: 0.9;
 }
 
+#contact .contactMini{
+  padding: 14px !important;
+  width: fit-content !important;
+  max-width: none !important;
+}
+
+#contact .contact{
+  justify-content: start !important;
+  align-items: start !important;
+}
+
 
 
 /* ---------- Responsive ---------- */
