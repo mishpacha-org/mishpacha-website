@@ -23,7 +23,7 @@
     logo: "assets/img/logo.png",
     hero: "assets/img/logo.png",
     about: "assets/img/about.png",
-    story: "assets/img/story.png",
+    story: "assets/img/story.jpg",
     help: "assets/img/vision2.png",
     volunteer : "assets/img/volunteer.png"
 
