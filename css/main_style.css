@@ -882,7 +882,7 @@ html[dir="rtl"] #orphanWeek .acc__btn{
   gap: 8px;
 }
 
-/* Make the value feel like a "metric" (big + bold) */
+/* Metric value (big + bold) */
 #statistics #statisticsMetrics .metric__value{
   font-size: clamp(22px, 3.2vw, 34px);
   font-weight: 900;
@@ -890,42 +890,84 @@ html[dir="rtl"] #orphanWeek .acc__btn{
   line-height: 1.05;
 }
 
-/* Keep the label readable but not louder than the number */
+/* Label: readable, not louder than the number */
 #statistics #statisticsMetrics .card__title{
   font-weight: 800;
   opacity: .85;
 }
 
-/* Lists inside the context card */
-#statistics #statisticsContext .list,
-#statistics #statisticsAgeGroups.list,
-#statistics #statisticsMeaning.list{
+#statistics #statisticsMetrics .card__text{
+  opacity: .95;
+}
+
+/* =========================
+   Context card layout
+   ========================= */
+
+/* Turn the bottom card into 2 columns:
+   Left: Meaning
+   Right: Age groups + source */
+#statistics #statisticsContext{
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Meaning list = comfortable reading */
+#statistics #statisticsMeaning{
   margin: 10px 0 0;
   padding-inline-start: 18px;
 }
 
-#statistics #statisticsMeaning li,
+#statistics #statisticsMeaning li{
+  margin: 0 0 10px;
+  line-height: 1.65;
+}
+
+/* Age groups = compact and informational */
+#statistics #statisticsAgeGroups{
+  margin: 10px 0 0;
+  padding-inline-start: 18px;
+}
+
 #statistics #statisticsAgeGroups li{
   margin: 6px 0;
+  font-weight: 700;
+  opacity: .86;
 }
 
-/* Subtle separator between Meaning and Age groups titles */
-#statistics #statisticsContext .card__title + .list{
-  margin-top: 10px;
+/* Titles spacing inside the bottom card */
+#statistics #statisticsContext .card__title{
+  margin-bottom: 6px;
 }
 
-/* Make the source feel like a footnote */
-#statistics [data-i18n="statistics.source"]{
+/* Source + note = footnotes */
+#statistics [data-i18n="statistics.source"],
+#statistics [data-i18n="statistics.note"]{
   font-size: 13px;
-  opacity: .8;
+  opacity: .82;
+  line-height: 1.45;
 }
 
-/* Mobile: keep metrics comfy */
+/* Give a little separation between source and note */
+#statistics [data-i18n="statistics.note"]{
+  margin-top: 6px;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 900px){
+  #statistics #statisticsContext{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
 @media (max-width: 720px){
   #statistics #statisticsMetrics{
     grid-template-columns: 1fr;
   }
-}
-#statistics #statisticsMetrics .card__text{
-  opacity: .95;
 }
