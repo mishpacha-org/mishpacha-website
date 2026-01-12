@@ -176,20 +176,36 @@
 
 
   <!-- ORPHAN WEEK -->
-  <section class="section" id="orphanWeek">
-    <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="orphanWeek.title"></h3>
-        <p class="section__subtitle" data-i18n="orphanWeek.intro"></p>
-      </div>
+<section class="section" id="orphanWeek">
+  <div class="wrap">
+    <div class="section__head">
+      <h3 class="section__title" data-i18n="orphanWeek.title"></h3>
+      <p class="section__subtitle" data-i18n="orphanWeek.intro"></p>
+    </div>
 
-      <div class="grid" id="orphanWeekDays"></div>
+    <!-- About (one expandable card explaining what this week is) -->
+    <div class="card" id="orphanWeekAbout">
+      <div class="card__title" data-i18n="orphanWeek.aboutTitle"></div>
 
-      <div style="margin-top:16px" class="card">
-        <div class="muted" data-i18n="orphanWeek.note"></div>
+      <button class="acc__btn" type="button" aria-expanded="false" data-target="orphanWeekAboutPanel">
+        <span data-i18n="orphanWeek.aboutToggle"></span>
+        <span class="acc__chev" aria-hidden="true">⌄</span>
+      </button>
+
+      <div class="acc__panel" id="orphanWeekAboutPanel" hidden>
+        <p class="muted" data-i18n="orphanWeek.aboutText"></p>
       </div>
     </div>
-  </section>
+
+    <!-- Days list (rendered via JS) -->
+    <div class="acc" id="orphanWeekDays"></div>
+
+    <!-- Note -->
+    <div id="orphanWeekNote" style="margin-top:16px" class="card">
+      <div class="muted" data-i18n="orphanWeek.note"></div>
+    </div>
+  </div>
+</section>
 
 
 
