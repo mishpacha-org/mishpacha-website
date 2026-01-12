@@ -295,42 +295,40 @@
     </div>
 
     <div class="contact">
-      <!-- Main contact card -->
-      <div class="card" id="contactMainCard">
-        <div class="card__title" data-i18n="contact.methodsTitle"></div>
+      <!-- One main card -->
+      <div class="card contactCard" id="contactMainCard">
 
-        <!-- Methods (phone/email/registration) rendered via JS -->
-        <div class="contact__methods" id="contactMethods"></div>
+        <!-- Left / primary -->
+        <div class="contactCard__primary">
+          <div class="card__title" data-i18n="contact.quickTitle"></div>
+          <p class="muted" data-i18n="contact.footerLine"></p>
 
-        <!-- Response time / hours -->
-        <div class="card contact__meta" style="margin-top:14px">
-          <div class="muted" data-i18n="contact.responseNote"></div>
+          <div class="contactCard__cta">
+            <a class="btn btn--primary" id="contactFormBtn" target="_blank" rel="noopener" href="#"
+               data-i18n="contact.cta"></a>
+          </div>
+
+          <div class="muted contactCard__meta" data-i18n="contact.responseNote"></div>
+          <div class="muted contactCard__meta" data-i18n="contact.pressNote"></div>
         </div>
 
-        <!-- Social -->
-        <div style="margin-top:14px">
-          <div class="card__title" data-i18n="contact.socialTitle"></div>
-          <div class="contact__chips" id="contactSocial"></div>
+        <!-- Right / details -->
+        <div class="contactCard__details">
+          <div class="card__title" data-i18n="contact.methodsTitle"></div>
+
+          <ul class="contact__methods" id="contactMethods"></ul>
+
+          <div class="contactSocial">
+            <div class="card__title" data-i18n="contact.socialTitle"></div>
+            <div class="contact__chips" id="contactSocial"></div>
+          </div>
         </div>
 
-        <!-- Press note -->
-        <div class="muted" style="margin-top:12px" data-i18n="contact.pressNote"></div>
-
-        <!-- CTA -->
-        <div style="margin-top:14px">
-          <a class="btn btn--primary" id="contactFormBtn" target="_blank" rel="noopener" href="#"
-             data-i18n="contact.cta"></a>
-        </div>
       </div>
 
-      <!-- Secondary card: short closing + back to top -->
-      <div class="card" id="contactSideCard">
-        <div class="card__title" data-i18n="contact.quickTitle"></div>
-        <p class="muted" style="margin-top:8px" data-i18n="contact.footerLine"></p>
-
-        <div style="margin-top:12px">
-          <a class="btn btn--outline" href="#top" data-i18n="ui.backTop"></a>
-        </div>
+      <!-- Optional: tiny secondary card -->
+      <div class="card contactMini">
+        <a class="btn btn--outline" href="#top" data-i18n="ui.backTop"></a>
       </div>
     </div>
   </div>
