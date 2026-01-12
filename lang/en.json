@@ -25,7 +25,6 @@
   "subtitle": "Comprehensive support for orphans in Israel – emotional, educational, legal, and social",
   "text": "No child should have to face loss alone.\n\nMishpacha is a national organization supporting orphans in Israel and their families through emotional, educational, legal, and social care.\n\nWe are here to walk alongside them, to strengthen, and to ensure that no child or young adult is ever left alone.",
   "primaryCtas": [
-    { "id": "donate", "label": "I Want to Donate" },
     { "id": "volunteer", "label": "I Want to Volunteer" },
     { "id": "help", "label": "I'm an Orphan – I Need Help" }
   ]
