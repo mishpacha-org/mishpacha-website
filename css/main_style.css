@@ -424,15 +424,47 @@ html[dir="ltr"] .card{
   align-items: center;
 }
 
+/* ===============================
+   STORY / SPLIT – image fills full text height
+   =============================== */
+
+.split{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr; /* אפשר לשחק עם היחס */
+  gap: 24px;
+  align-items: stretch; /* קריטי: גורם לשתי העמודות לקבל אותו גובה */
+}
+
+/* נותן לטקסט "לגדול" בלי לדחוף דברים מוזר */
 .split__text{
   min-width: 0;
 }
 
+/* התמונה ממלאת את כל גובה הטקסט */
 .split__art{
-  height: 320px;              /* חובה כדי שלתמונה יהיה “מקום” */
+  width: 100%;
+  height: 100%;
+  min-height: 320px;          /* כדי שלא יהיה נמוך מדי כשיש מעט טקסט */
   border-radius: var(--r-3);
-  border: 1px solid rgba(20,20,35,.10);
+  background-size: cover;     /* “מלא” */
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
+}
+
+/* אם יש לך כלל אחר שמגדיר ל-split__art display:block קטן, זה מנצח אותו */
+#story .split__art{
+  align-self: stretch;
+}
+
+/* מובייל: לשבור לעמודה אחת, ואז לתת לתמונה גובה יפה */
+@media (max-width: 900px){
+  .split{
+    grid-template-columns: 1fr;
+  }
+  .split__art{
+    min-height: 240px;
+  }
 }
 
 /* swap sides by language */
