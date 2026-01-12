@@ -369,12 +369,12 @@
     "intro": "אנחנו זמינים ונשמח לשמוע מכם.",
     "methods": [
       { "type": "phone", "label": "טלפון", "value": "0553134210" },
-      { "type": "email", "label": "אימייל", "value": "mishporg@gmail.com" },
+      { "type": "email", "label": "אימייל", "value": "mishporg@gmail.com" }
     ],
     "socialTitle": "עקבו אחרינו",
     "social": ["Facebook", "Instagram", "YouTube"],
     "cta": "שלחו לנו הודעה",
-    // "pressNote": "לתקשורת ועיתונאים: נשמח לשתף פעולה.",
+    "pressNote": "לתקשורת ועיתונאים: נשמח לשתף פעולה.",
     "footerLine": "משפאחה – כי אף ילד לא צריך לעבור את זה לבד."
   }
 }
