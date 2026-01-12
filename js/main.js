@@ -355,6 +355,34 @@ if (key === "volunteer") {
     });
   }
 
+  function wireBtnLink(el, url) {
+  if (!el) return;
+
+  const bad =
+    !url ||
+    url === "#" ||
+    String(url).includes("...");
+
+  if (bad) {
+    el.href = "#";
+    el.classList.add("is-disabled");
+    el.setAttribute("aria-disabled", "true");
+    el.removeAttribute("target");
+    el.removeAttribute("rel");
+    return;
+  }
+
+  el.href = url;
+  el.classList.remove("is-disabled");
+  el.removeAttribute("aria-disabled");
+
+  // external by default when it is a full URL
+  if (String(url).startsWith("http")) {
+    el.target = "_blank";
+    el.rel = "noopener";
+  }
+}
+
 
   function renderNav() {
     const nav = $("#navLinks");

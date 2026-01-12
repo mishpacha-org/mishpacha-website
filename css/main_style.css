@@ -1102,3 +1102,10 @@ html[dir="rtl"] #orphanWeek .acc__btn{
     max-width: 34ch;
   }
 }
+
+.btn.is-disabled{
+  opacity: .55;
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
