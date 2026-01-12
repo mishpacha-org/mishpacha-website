@@ -5,17 +5,17 @@
   // ====== External links placeholders (update later) ======
   const LINKS = {
     volunteerForm: "https://docs.google.com/forms/d/e/1FAIpQLSchRPNoUJ1N-da9y4cRWtw9-BwGyEiCJXtfEWVZi1CqAWtgmw/viewform",
-    helpForm: "https://example.com/help-form",
-    contactForm: "https://example.com/contact-form",
-    donatePlatform: "https://example.com/donate",
+    helpForm: "https://docs.google.com/forms/d/1_CTLlOLWDoH1-cZPbiUSurmshkH4EMYeh2i6CpaNB7g/viewform?pli=1&pli=1&pli=1&edit_requested=true",
+    contactForm: "",
+    donatePlatform: "",
     // Social links (placeholders; replace when ready)
     social: {
-      facebook: "#",
-      instagram: "#",
-      whatsapp: "#",
-      linkedin: "#",
-      youtube: "#",
-      x: "#"
+      facebook: "https://www.facebook.com/search/top?q=%D7%A2%D7%9E%D7%95%D7%AA%D7%AA%20%D7%9E%D7%A9%D7%A4%D7%90%D7%97%D7%94&locale=he_IL",
+      instagram: "https://www.instagram.com/org_mishpacha/",
+      whatsapp: "https://wa.me/message/IMUVXWXVPB64M1",
+      linkedin: "",
+      youtube: "https://www.youtube.com/@organizationmishpacha7482",
+      x: ""
     }
   };
     // ====== Images mapping ======
