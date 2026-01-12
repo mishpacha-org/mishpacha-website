@@ -898,23 +898,29 @@ function renderContact() {
   const waBtn = $("#contactWhatsAppBtn");
   const emailBtn = $("#contactEmailBtn");
 
-  // WhatsApp button (just a link)
+  const emailValue =
+    (dictionary?.contact?.methods || []).find(m => m?.type === "email")?.value || "";
+
+  // WhatsApp: uses LINKS.contactForm as the base (your current wa.me link)
   if (waBtn) {
-    waBtn.href = LINKS.contactWhatsApp;
+    const text = dictionary?.contact?.whatsAppText || "";
+    const base = LINKS.contactForm || "#"; // currently your WhatsApp link
+    const sep = base.includes("?") ? "&" : "?";
+    waBtn.href = text ? `${base}${sep}text=${encodeURIComponent(text)}` : base;
     waBtn.target = "_blank";
     waBtn.rel = "noopener";
   }
 
-  // Email button (mailto link)
+  // Email: mailto with subject/body from JSON
   if (emailBtn) {
     const subject = dictionary?.contact?.emailSubject || "";
     const body = dictionary?.contact?.emailBody || "";
-    const mail = LINKS.contactEmail || "mishporg@gmail.com";
 
     const qs = new URLSearchParams();
     if (subject) qs.set("subject", subject);
     if (body) qs.set("body", body);
 
+    const mail = emailValue || "mishporg@gmail.com"; // fallback
     emailBtn.href = `mailto:${mail}${qs.toString() ? "?" + qs.toString() : ""}`;
   }
 
@@ -932,9 +938,6 @@ function renderContact() {
     volunteerBtn.target = "_blank";
     volunteerBtn.rel = "noopener";
   }
-
-  // ... ממשיך בדיוק כמו שיש לך (methods + social)
-}
 
   // ===== contact methods =====
   const methods = $("#contactMethods");
