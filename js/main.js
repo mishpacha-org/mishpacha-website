@@ -53,6 +53,23 @@
     }
   }
 
+
+function togglePanel(btn, panel) {
+  if (!btn || !panel) return;
+
+  const isOpen = !panel.hasAttribute("hidden");
+  if (isOpen) {
+    panel.setAttribute("hidden", "");
+    btn.setAttribute("aria-expanded", "false");
+  } else {
+    panel.removeAttribute("hidden");
+    btn.setAttribute("aria-expanded", "true");
+  }
+}
+
+
+
+
   function getByKey(obj, dottedKey) {
     return dottedKey
       .split(".")
@@ -703,29 +720,89 @@ icon.innerHTML = getIconSvg(s.icon || "spark");
     });
   }
 
-  function renderOrphanWeek() {
-    const holder = $("#orphanWeekDays");
-    if (!holder) return;
-    holder.innerHTML = "";
 
-    (dictionary?.orphanWeek?.days || []).forEach((d) => {
-      const card = document.createElement("div");
-      card.className = "card";
 
-      const t = document.createElement("div");
-      t.className = "card__title";
-      const label = d?.label ? `${d.label}: ` : "";
-      setSafeInnerText(t, `${label}${d?.title || ""}`);
 
-      const x = document.createElement("div");
-      x.className = "card__text";
-      setSafeInnerText(x, d?.text);
 
-      card.appendChild(t);
-      card.appendChild(x);
-      holder.appendChild(card);
-    });
-  }
+function renderOrphanWeek() {
+  const holder = $("#orphanWeekDays");
+  if (!holder) return;
+
+  holder.innerHTML = "";
+
+  const days = dictionary?.orphanWeek?.days;
+  if (!Array.isArray(days) || days.length === 0) return;
+
+  days.forEach((d, idx) => {
+    const item = document.createElement("div");
+    item.className = "acc__item"; // אם אין לך CSS לזה עדיין, לא נורא. זה רק class.
+
+    const btn = document.createElement("button");
+    btn.className = "acc__btn";
+    btn.type = "button";
+    btn.setAttribute("aria-expanded", "false");
+
+    const panelId = `ow-day-${idx}`;
+    btn.setAttribute("data-target", panelId);
+
+    // headline text: label + title (כמו שהיה לך בכרטיס)
+    const headline = document.createElement("span");
+    headline.className = "acc__headline";
+
+    const label = d?.label ? `${d.label}: ` : "";
+    headline.textContent = `${label}${d?.title || ""}`;
+
+    const chev = document.createElement("span");
+    chev.className = "acc__chev";
+    chev.setAttribute("aria-hidden", "true");
+    chev.textContent = "⌄";
+
+    btn.appendChild(headline);
+    btn.appendChild(chev);
+
+    const panel = document.createElement("div");
+    panel.className = "acc__panel";
+    panel.id = panelId;
+    panel.setAttribute("hidden", "");
+
+    // main text
+    if (d?.text) {
+      const p = document.createElement("div");
+      p.className = "muted";
+      p.textContent = d.text;
+      panel.appendChild(p);
+    }
+
+    // optional practical block (לא חובה שיהיה ב-JSON)
+    if (d?.practical) {
+      const box = document.createElement("div");
+      box.className = "acc__practical";
+
+      if (d?.practicalTitle) {
+        const st = document.createElement("strong");
+        st.textContent = d.practicalTitle;
+        box.appendChild(st);
+      }
+
+      const body = document.createElement("div");
+      body.textContent = d.practical;
+      box.appendChild(body);
+
+      panel.appendChild(box);
+    }
+
+    btn.addEventListener("click", () => togglePanel(btn, panel));
+
+    item.appendChild(btn);
+    item.appendChild(panel);
+    holder.appendChild(item);
+  });
+}
+
+
+
+
+
 
   function renderDocuments() {
     const holder = $("#documentsItems");
