@@ -380,18 +380,19 @@
       { "id": "aboutPdf", "title": "About the Organization", "text": "General information." }
     ]
   },
-  "contact": {
-    "title": "Contact Us",
-    "intro": "We are available and happy to hear from you.",
-    "methods": [
-      { "type": "phone", "label": "Phone", "value": "055-3134210" },
-      { "type": "email", "label": "Email", "value": "misshporg@gmail.com" },
-      { "type": "org", "label": "Registered Organization", "value": "580012345" }
-    ],
-    "socialTitle": "Follow Us",
-    "social": ["Facebook", "Instagram", "LinkedIn", "YouTube"],
-    "cta": "Send a Message",
-    "pressNote": "For media inquiries: we are happy to collaborate.",
-    "footerLine": "Mishpacha – because no child should go through this alone."
-  }
+"contact": {
+  "title": "Contact Us",
+  "intro": "We would be glad to assist with any inquiry, request, or potential collaboration.",
+  "methods": [
+    { "type": "phone", "label": "Phone", "value": "0553134210" },
+    { "type": "email", "label": "Email", "value": "mishporg@gmail.com" }
+  ],
+  "socialTitle": "Stay Connected",
+  "social": ["Facebook", "Instagram", "YouTube"],
+  "cta": "Send Us a Message",
+  "pressNote": "For media inquiries, journalists, and content partners – we welcome the opportunity to connect and collaborate.",
+  "footerLine": "Mishpacha Association supports orphaned children and young people on their journey toward safe, supportive, and meaningful lives."
 }
+  }
+
+

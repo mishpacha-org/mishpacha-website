@@ -364,17 +364,21 @@
       { "id": "aboutPdf", "title": "על העמותה", "text": "מידע כללי." }
     ]
   },
-  "contact": {
-    "title": "צרו קשר",
-    "intro": "אנחנו זמינים ונשמח לשמוע מכם.",
-    "methods": [
-      { "type": "phone", "label": "טלפון", "value": "0553134210" },
-      { "type": "email", "label": "אימייל", "value": "mishporg@gmail.com" }
-    ],
-    "socialTitle": "עקבו אחרינו",
-    "social": ["Facebook", "Instagram", "YouTube"],
-    "cta": "שלחו לנו הודעה",
-    "pressNote": "לתקשורת ועיתונאים: נשמח לשתף פעולה.",
-    "footerLine": "משפאחה – כי אף ילד לא צריך לעבור את זה לבד."
-  }
+"contact": {
+  "title": "צור קשר",
+  "intro": "נשמח לעמוד לרשותכם לכל שאלה, פנייה או שיתוף פעולה.",
+  "methods": [
+    { "type": "phone", "label": "טלפון", "value": "0553134210" },
+    { "type": "email", "label": "אימייל", "value": "mishporg@gmail.com" }
+  ],
+  "socialTitle": "אפשר גם לעקוב",
+  "social": ["Facebook", "Instagram", "YouTube"],
+  "cta": "שלחו לנו הודעה",
+  "pressNote": "לפניות תקשורת, עיתונאים וגופי תוכן – נשמח ליצור קשר ולשתף פעולה.",
+  "footerLine": "עמותת משפאחה מלווה יתומים ויתומות במסע לחיים בטוחים, תומכים ומשמעותיים."
+}
+
+
+
+
 }
