@@ -79,23 +79,30 @@
   </section>
 
   <!-- STORY -->
-  <section class="section" id="story">
-    <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="story.title"></h3>
-      </div>
-	  
-      
-<div class="split">
-  <div class="split__text">
-    <div class="quote" data-i18n="story.quote"></div>
-    <div class="quote__by" data-i18n="story.attribution"></div>
-    <div class="muted" data-i18n="story.note"></div>
-  </div>
+<section class="section" id="story">
+  <div class="wrap">
+    <div class="section__head">
+      <h3 class="section__title" data-i18n="story.title"></h3>
+      <p class="section__subtitle" data-i18n="story.subtitle"></p>
+    </div>
 
-  <div class="split__art" data-img="story" aria-hidden="true"></div>
-</div>
-  </section>
+    <div class="split">
+      <div class="split__text">
+        <!-- Person header -->
+        <div class="card__title" data-i18n="story.person.name"></div>
+        <div class="muted" style="margin-top:6px" data-i18n="story.person.role"></div>
+
+        <!-- Paragraphs rendered via JS -->
+        <div id="storyContent" class="story__content" style="margin-top:14px"></div>
+
+        <!-- Closing line -->
+        <div class="muted" style="margin-top:14px" data-i18n="story.closing"></div>
+      </div>
+
+      <div class="split__art" data-img="story" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
 
   <!-- HELP -->
   <section class="section" id="help">
