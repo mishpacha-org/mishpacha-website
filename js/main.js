@@ -919,10 +919,8 @@ function bindAccordionButtons(scope = document) {
 
   function renderContact() {
     // wire contact CTA link
-if (contactBtn) {
-  contactBtn.href =
-    "mailto:mishporg@gmail.com?subject=פנייה%20מאתר%20משפאחה";
-}
+    const contactBtn = $("#contactFormBtn");
+    if (contactBtn) contactBtn.href = LINKS.contactForm;
 
     const helpBtn = $("#helpFormBtn");
     if (helpBtn) {
