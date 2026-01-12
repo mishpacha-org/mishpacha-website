@@ -223,17 +223,53 @@
     "comingSoon": "Coming soon: Israeli Orphan Wiki.",
     "cta": "Enter the Knowledge Center"
   },
-  "orphanWeek": {
-    "title": "Israeli Orphan Families Week",
-    "intro": "A national week of awareness, advocacy, and community activities.",
-    "days": [
-      { "order": 1, "label": "Sunday – Opening", "title": "Opening Event", "text": "Speakers, personal stories, and a call to action." },
-      { "order": 2, "label": "Mon–Wed – Awareness", "title": "Media Campaigns", "text": "Campaigns, school visits, and public awareness." },
-      { "order": 3, "label": "Thursday – Policy", "title": "Government Meetings", "text": "Advancing rights and support systems." },
-      { "order": 4, "label": "Fri–Sat – Community", "title": "Community Events", "text": "Family activities and closing events." }
-    ],
-    "note": "An opportunity to raise awareness and strengthen the community."
-  },
+
+
+
+"orphanWeek": {
+  "title": "Israeli Orphans’ Families Week",
+  "intro": "A national week dedicated to placing the issue of orphanhood at the center of educational, community, and public discourse – grounded in recognition, responsibility, and resilience.",
+
+  "aboutTitle": "What Is Israeli Orphans’ Families Week?",
+  "aboutToggle": "Click for a full explanation of the week",
+  "aboutText": "In Israel, thousands of children, adolescents, and young adults have lost a parent, yet the experience of orphanhood often remains invisible and excluded from public discourse. Israeli Orphans’ Families Week was created to change this – not out of pity, but out of recognition of the lived reality of orphans and the shared responsibility of society as a whole to accompany, support, and include them.\n\nThe week creates an educational, community, and national continuum: safe dialogue in schools, increased public awareness, policy advancement, and community support – with the aim of strengthening visibility, belonging, and resilience for orphaned families and for Israeli society as a whole.",
+
+  "days": [
+    {
+      "order": 1,
+      "label": "Sunday – Opening and Recognition",
+      "title": "National Opening Event",
+      "text": "The opening day is dedicated to public and official recognition of the lived reality of orphaned children and adolescents. It marks the placement of the issue at the center of public attention through personal testimonies, remarks by education and welfare professionals, and public representatives, alongside a call for sustained social responsibility."
+    },
+    {
+      "order": 2,
+      "label": "Monday–Wednesday – Education and Awareness",
+      "title": "Educational Dialogue and Raising Awareness",
+      "text": "These days are devoted to educational and community-based work: lesson plans in schools, age-appropriate classroom discussions, community activities, and media exposure. The emphasis is on understanding, empathy, and providing tools for becoming a supportive society – without pity and without silencing."
+    },
+    {
+      "order": 3,
+      "label": "Thursday – Policy and Responsibility",
+      "title": "Advancing Policy and Rights",
+      "text": "This day focuses on the systemic dimensions of orphanhood: meetings with government ministries, local authorities, and professional stakeholders, aimed at advancing recognition, rights, and sustained support frameworks for orphaned children and adults."
+    },
+    {
+      "order": 4,
+      "label": "Friday–Saturday – Community and Belonging",
+      "title": "Community Activities and Strengthening Belonging",
+      "text": "The closing of the week is dedicated to the community: gatherings, cultural activities, and events that strengthen connection, visibility, and belonging, and emphasize that orphanhood is not loneliness – but a lived reality that can and must be accompanied together."
+    }
+  ],
+
+  "note": "Israeli Orphans’ Families Week is a first step in an ongoing process of educational, social, and systemic change – for orphans and for a more sensitive, responsible, and inclusive society."
+}
+  
+  
+  
+  
+  
+  
+  ,
   "statistics": {
     "title": "Orphan Statistics in Israel 2025",
     "intro": "Official data on orphanhood in Israel.",
