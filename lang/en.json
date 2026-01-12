@@ -269,24 +269,53 @@
   
   
   ,
-  "statistics": {
-    "title": "Orphan Statistics in Israel 2025",
-    "intro": "Official data on orphanhood in Israel.",
-    "metrics": [
-      { "label": "Total Orphans", "value": "44,864" },
-      { "label": "Under 18", "value": "29,782" },
-      { "label": "New Orphans per Year", "value": "901" },
-      { "label": "Living in Poverty", "value": "18,500" },
-      { "label": "In Difficult Housing", "value": "3,200" }
-    ],
-    "ageGroups": [
-      "0–6 years",
-      "7–12 years",
-      "13–18 years",
-      "19+ years"
-    ],
-    "note": "These figures highlight the importance of supporting orphans."
-  },
+"statistics": {
+  "title": "Orphanhood Statistics in Israel – 2025",
+  "intro": "Official data on orphanhood in Israel, based on publications by the Central Bureau of Statistics (CBS).",
+
+  "metrics": [
+    {
+      "label": "Total number of orphans",
+      "value": "44,864"
+    },
+    {
+      "label": "Under the age of 18",
+      "value": "29,782"
+    },
+    {
+      "label": "New orphans per year",
+      "value": "901"
+    },
+    {
+      "label": "Living in poverty",
+      "value": "18,500"
+    },
+    {
+      "label": "Living in inadequate housing",
+      "value": "3,200"
+    }
+  ],
+
+  "meaningTitle": "What do these figures mean?",
+  "meaning": [
+    "The data indicates that orphanhood in Israel is not a marginal phenomenon and affects tens of thousands of families.",
+    "The scope includes children, adolescents, and young adults, highlighting that coping with orphanhood does not end at the age of 18.",
+    "A significant portion of orphans face poverty and complex housing conditions, in addition to the loss itself.",
+    "The figures emphasize the need for public recognition and long-term responses, rather than isolated or short-term solutions."
+  ],
+
+  "ageGroupsTitle": "Age groups",
+  "ageGroups": [
+    "Ages 0–6",
+    "Ages 7–12",
+    "Ages 13–18",
+    "Ages 19+"
+  ],
+
+  "source": "Data source: Central Bureau of Statistics (CBS), 2025",
+  "note": "The data reflects a national snapshot and does not include an assessment of emotional, educational, or therapeutic needs."
+}
+  ,
   "rights": {
     "title": "Rights Guide",
     "intro": "All the rights available to orphans in Israel.",
