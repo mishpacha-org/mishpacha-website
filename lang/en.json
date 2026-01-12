@@ -403,17 +403,35 @@
   },
 "contact": {
   "title": "Contact Us",
-  "intro": "We would be glad to assist with any inquiry, request, or potential collaboration.",
+  "intro": "We will be happy to assist you with any question, inquiry, or collaboration.",
+
+  "quickTitle": "Quick Contact",
+  "methodsTitle": "Contact Details",
+  "responseNote": "We will get back to you as soon as possible.",
+
   "methods": [
     { "type": "phone", "label": "Phone", "value": "0553134210" },
     { "type": "email", "label": "Email", "value": "mishporg@gmail.com" }
   ],
-  "socialTitle": "Stay Connected",
+
+  "ctaWhatsApp": "Send a WhatsApp Message",
+  "ctaEmail": "Send an Email",
+
+  "whatsAppText": "Hello, I would like to contact Mishpacha Association regarding:",
+  "emailSubject": "Inquiry from the Mishpacha Website",
+  "emailBody": "Hello,\n\nI am contacting you through the website regarding:\n\nName:\nPhone:\nMessage:\n\nThank you,",
+
+  "socialTitle": "You Can Also Follow Us",
   "social": ["Facebook", "Instagram", "YouTube"],
-  "cta": "Send Us a Message",
-  "pressNote": "For media inquiries, journalists, and content partners – we welcome the opportunity to connect and collaborate.",
-  "footerLine": "Mishpacha Association supports orphaned children and young people on their journey toward safe, supportive, and meaningful lives."
+
+  "pressNote": "For media inquiries, journalists, and content organizations – we would be happy to get in touch and collaborate.",
+  "footerLine": "Mishpacha Association supports orphans on their journey toward safe, supportive, and meaningful lives."
 }
+
+
+
+
+
   }
 
 
