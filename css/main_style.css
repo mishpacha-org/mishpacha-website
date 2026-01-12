@@ -619,90 +619,74 @@ html[dir="ltr"] .split{
   font-size: 13px;
 }
 
-/* .contact{
-  display:grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: var(--space-3);
-}
-
-.contact__chips{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 10px;
-} */
 
 /* ===============================
    CONTACT – layout & hierarchy
    =============================== */
 
-.contact {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 24px;
+/* ===============================
+   CONTACT – fixed (full-width card)
+   =============================== */
+
+/* Contact section layout: one column (card + bottom button) */
+#contact .contact{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   align-items: stretch;
 }
 
-/* Main contact card */
-.contactCard {
+/* Main contact card spans full width */
+#contact .contactCard{
+  width: 100%;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 28px;
 }
 
 /* CTA area */
-.contactCard__cta {
+#contact .contactCard__cta{
   margin: 20px 0;
 }
 
-#contactFormBtn {
+#contact #contactFormBtn{
   display: inline-block;
 }
 
 /* Meta / secondary text */
-.contactCard__meta {
+#contact .contactCard__meta{
   font-size: 0.9rem;
   opacity: 0.75;
   margin-top: 8px;
 }
 
 /* Social icons – horizontal row */
-.contact__chips {
+#contact .contact__chips{
   display: flex;
   gap: 10px;
   margin-top: 8px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.contact__chips a,
-.contact__chips button {
+#contact .contact__chips a,
+#contact .contact__chips button{
   width: 42px;
   height: 42px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Secondary / mini card */
-.contactMini {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-
-  padding: 20px;
+/* If you STILL have a back-to-top element inside .contact (optional) */
+#contact .contactMini{
+  width: fit-content;
+  max-width: none;
+  padding: 14px;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: var(--shadow-soft);
   opacity: 0.9;
-}
-
-#contact .contactMini{
-  padding: 14px !important;
-  width: fit-content !important;
-  max-width: none !important;
-}
-
-#contact .contact{
-  justify-content: start !important;
-  align-items: start !important;
+  align-self: flex-start;
 }
 
 
