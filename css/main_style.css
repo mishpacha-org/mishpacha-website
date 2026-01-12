@@ -1050,39 +1050,55 @@ html[dir="rtl"] #orphanWeek .acc__btn{
    Responsive
    ========================= */
 
-@media (max-width: 900px){
-  #statistics #statisticsContext{
-    grid-template-columns: 1fr;
-    gap: 16px;
+@media (max-width: 600px){
+  .wrap{
+    width: min(var(--wrap), calc(100% - 28px));
+  }
+
+  .section__subtitle,
+  .hero__p,
+  .card,
+  .split__text{
+    max-width: 60ch;
+  }
+
+  .hero__p{
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .section__subtitle{
+    line-height: 1.75;
+  }
+
+  .btn{
+    min-height: 46px;
+  }
+
+  .hero__cta{
+    gap: 10px;
+  }
+
+  .hero__cta .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .card__media{
+    width: 110px;
+    height: 110px;
+    min-width: 110px;
+    flex: 0 0 110px;
+  }
+
+  #story .split__art{
+    min-height: 210px;
   }
 }
 
-@media (max-width: 720px){
-  #statistics #statisticsMetrics{
-    grid-template-columns: 1fr;
+@media (max-width: 420px){
+  .section__subtitle,
+  .hero__p{
+    max-width: 34ch;
   }
 }
-
-/* Contact – align like a real contact page */
-#contact .contactCard{
-  align-items: start;
-}
-
-#contact .contactCard__primary,
-#contact .contactCard__details{
-  text-align: start;
-}
-
-#contact .contact__methods{
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-}
-#contact .contact__chips a,
-#contact .contact__chips button{
-  width: 46px;
-  height: 46px;
-}
-
-
-
