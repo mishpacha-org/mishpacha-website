@@ -1251,3 +1251,34 @@ body{
   width: clamp(44px, 10vw, 46px);
   height: clamp(44px, 10vw, 46px);
 }
+
+/* =========================================================
+   MOBILE IMAGE REDUCTION – content first
+   ========================================================= */
+
+/* Tablets and down */
+@media (max-width: 900px){
+  /* Hero / decorative arts */
+  .hero__art,
+  .about__visual,
+  .split__art{
+    display: none !important;
+  }
+
+  /* Re-center content when visuals are gone */
+  .hero__inner,
+  .about,
+  .split{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small phones – extra clean */
+@media (max-width: 600px){
+  /* Ensure no phantom spacing remains */
+  .hero,
+  .about,
+  .split{
+    padding-top: var(--space-5);
+  }
+}
