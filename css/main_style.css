@@ -1264,32 +1264,10 @@ body{
 
 /* Small phones – extra clean */
 @media (max-width: 600px){
-
-  /* שהכרטיס ינצל את כל הרוחב */
-  .card{
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* לבטל “עמודת טקסט צרה” במובייל */
-  .prose,
-  .card__body,
-  .split__text,
-  .section__subtitle{
-    max-width: 100% !important;
-    width: 100%;
-  }
-
-  /* טקסט צריך להיות מיושר להתחלה (RTL: לימין, LTR: לשמאל) */
-  .prose,
-  .card__body,
-  .split__text{
-    text-align: start;
-  }
-
-  /* אם יש לך מרכזת על ההורה */
-  .card,
-  .prose{
-    align-items: stretch;
+  /* Ensure no phantom spacing remains */
+  .hero,
+  .about,
+  .split{
+    padding-top: var(--space-5);
   }
 }
