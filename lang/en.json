@@ -105,12 +105,37 @@
 
 
 
-  "story": {
-    "title": "Personal Story: A Voice from the Field",
-    "quote": "When my father passed away, I was 14 and didn't know where to turn. Mishpacha didn’t just help me financially – they gave me a second family...",
-    "attribution": "Jonathan, 22, Engineering Student",
-    "note": "Stories like Jonathan's are why we wake up every morning."
+"story": {
+  "title": "The Story Behind Mishpacha",
+
+  "subtitle": "A personal mission that became a social initiative",
+
+  "person": {
+    "name": "Delalin Destaw",
+    "role": "Founder and President of Mishpacha Association"
   },
+
+  "content": [
+    "Delalin Destaw is a social entrepreneur, author, and a Captain in the Israel Defense Forces, driven by a deep sense of mission to support orphaned children and youth facing complex life circumstances.",
+
+    "Delalin lost both of his parents at a young age. He immigrated to Israel 13 years ago with his uncle, grew up in Afula, and now lives in Tel Aviv. His personal life story lies at the heart of the association’s founding, and from lived experience emerged the decision to act so that no child would ever feel alone.",
+
+    "During his service in the IDF, Delalin served in the Education and Youth Corps and later in the Civil Administration and COGAT, holding leadership and educational roles in both routine and emergency situations, guided by the belief that leadership means seeing the person behind the uniform.",
+
+    "Mishpacha Association operates from a community-based approach, offering long-term accompaniment and genuine human connections, and leads a shift in perception from 'at-risk youth' to 'youth with potential', grounded in a deep belief in people and in the ability to grow even from complex realities.",
+
+    "Delalin is the author of the book \"Running the Long Distance\", an autobiographical and values-driven work that provides inspiration and practical tools for young people and individuals at life crossroads. He is a graduate of the National Student and Youth Council, a recipient of the Minister of Education’s Award for Youth Volunteering, and was selected as one of Israel’s 20 most influential young leaders."
+  ],
+
+  "closing": "The work of Mishpacha and Delalin’s personal journey are united by one simple belief and one clear vision: every child deserves a Mishpacha, and every person deserves an opportunity."
+}
+  
+  
+  
+  
+  
+  
+  ,
 
 
 "help": {
