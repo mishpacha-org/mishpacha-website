@@ -901,17 +901,24 @@ function renderContact() {
   const emailValue =
     (dictionary?.contact?.methods || []).find(m => m?.type === "email")?.value || "";
 
-  // WhatsApp: uses LINKS.contactForm as the base (your current wa.me link)
+  // WhatsApp
   if (waBtn) {
     const text = dictionary?.contact?.whatsAppText || "";
-    const base = LINKS.contactForm || "#"; // currently your WhatsApp link
+
+    // ✅ FIX: use contactWhatsApp (and keep fallback to old names if exist)
+    const base =
+      LINKS.contactWhatsApp ||
+      LINKS.contactForm ||                 // fallback (old key)
+      LINKS?.social?.whatsapp ||           // fallback
+      "#";
+
     const sep = base.includes("?") ? "&" : "?";
     waBtn.href = text ? `${base}${sep}text=${encodeURIComponent(text)}` : base;
     waBtn.target = "_blank";
     waBtn.rel = "noopener";
   }
 
-  // Email: mailto with subject/body from JSON
+  // Email
   if (emailBtn) {
     const subject = dictionary?.contact?.emailSubject || "";
     const body = dictionary?.contact?.emailBody || "";
@@ -920,7 +927,8 @@ function renderContact() {
     if (subject) qs.set("subject", subject);
     if (body) qs.set("body", body);
 
-    const mail = emailValue || "mishporg@gmail.com"; // fallback
+    // ✅ FIX: prefer LINKS.contactEmail if exists, otherwise JSON mail
+    const mail = LINKS.contactEmail || emailValue || "mishporg@gmail.com";
     emailBtn.href = `mailto:${mail}${qs.toString() ? "?" + qs.toString() : ""}`;
   }
 
@@ -944,21 +952,21 @@ function renderContact() {
   if (methods) {
     methods.innerHTML = "";
     (dictionary?.contact?.methods || []).forEach((m) => {
-      // If your container is UL (recommended), create LI.
-      // If it is DIV, LI still renders fine in most browsers but better to match HTML.
-      const row = document.createElement(methods.tagName === "UL" ? "li" : "div");
-
+      const row = document.createElement("li");
       row.style.display = "flex";
       row.style.gap = "10px";
       row.style.alignItems = "baseline";
       row.style.margin = "6px 0";
 
       const label = document.createElement("strong");
+
+      // ✅ as you wanted: WhatsApp icon for phone, mail icon for email
       const icon =
         m?.type === "phone" ? "💬" :
         m?.type === "email" ? "✉️" :
-        (m?.label || "");
-      label.textContent = `${icon}`;
+        "";
+
+      label.textContent = icon;
 
       let val;
       if (m?.type === "email") {
