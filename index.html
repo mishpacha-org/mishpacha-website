@@ -213,22 +213,29 @@
 
 
   <!-- STATISTICS -->
-  <section class="section" id="statistics">
-    <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="statistics.title"></h3>
-        <p class="section__subtitle" data-i18n="statistics.intro"></p>
-      </div>
-
-      <div class="grid" id="statisticsMetrics"></div>
-
-      <div style="margin-top:16px" class="card">
-        <div class="card__title" data-i18n="statistics.ageGroupsTitle"></div>
-        <ul class="list" id="statisticsAgeGroups"></ul>
-        <div class="muted" style="margin-top:8px" data-i18n="statistics.note"></div>
-      </div>
+<section class="section" id="statistics">
+  <div class="wrap">
+    <div class="section__head">
+      <h3 class="section__title" data-i18n="statistics.title"></h3>
+      <p class="section__subtitle" data-i18n="statistics.intro"></p>
     </div>
-  </section>
+
+    <!-- Metrics cards (rendered via JS) -->
+    <div class="grid" id="statisticsMetrics"></div>
+
+    <!-- Context card -->
+    <div style="margin-top:16px" class="card" id="statisticsContext">
+      <div class="card__title" data-i18n="statistics.meaningTitle"></div>
+      <ul class="list" id="statisticsMeaning"></ul>
+
+      <div style="margin-top:14px" class="card__title" data-i18n="statistics.ageGroupsTitle"></div>
+      <ul class="list" id="statisticsAgeGroups"></ul>
+
+      <div class="muted" style="margin-top:12px" data-i18n="statistics.source"></div>
+      <div class="muted" style="margin-top:6px" data-i18n="statistics.note"></div>
+    </div>
+  </div>
+</section>
 
     <!-- KNOWLEDGE -->
 

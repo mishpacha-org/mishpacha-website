@@ -641,38 +641,54 @@ icon.innerHTML = getIconSvg(s.icon || "spark");
     });
   }
 
-  function renderStatistics() {
-    const metrics = $("#statisticsMetrics");
-    if (metrics) {
-      metrics.innerHTML = "";
-      (dictionary?.statistics?.metrics || []).forEach((m) => {
-        const card = document.createElement("div");
-        card.className = "card";
+function renderStatistics() {
+  const data = dictionary?.statistics;
+  if (!data) return;
 
-        const t = document.createElement("div");
-        t.className = "card__title";
-        setSafeInnerText(t, m?.label);
+  /* ---- Metrics ---- */
+  const metrics = $("#statisticsMetrics");
+  if (metrics) {
+    metrics.innerHTML = "";
+    (data.metrics || []).forEach((m) => {
+      const card = document.createElement("div");
+      card.className = "card";
 
-        const x = document.createElement("div");
-        x.className = "card__text";
-        setSafeInnerText(x, m?.value);
+      const t = document.createElement("div");
+      t.className = "card__title";
+      setSafeInnerText(t, m?.label);
 
-        card.appendChild(t);
-        card.appendChild(x);
-        metrics.appendChild(card);
-      });
-    }
+      const x = document.createElement("div");
+      x.className = "card__text metric__value";
+      setSafeInnerText(x, m?.value);
 
-    const ages = $("#statisticsAgeGroups");
-    if (ages) {
-      ages.innerHTML = "";
-      (dictionary?.statistics?.ageGroups || []).forEach((a) => {
-        const li = document.createElement("li");
-        li.textContent = a;
-        ages.appendChild(li);
-      });
-    }
+      card.appendChild(t);
+      card.appendChild(x);
+      metrics.appendChild(card);
+    });
   }
+
+  /* ---- Meaning ---- */
+  const meaning = $("#statisticsMeaning");
+  if (meaning) {
+    meaning.innerHTML = "";
+    (data.meaning || []).forEach((text) => {
+      const li = document.createElement("li");
+      setSafeInnerText(li, text);
+      meaning.appendChild(li);
+    });
+  }
+
+  /* ---- Age groups ---- */
+  const ageGroups = $("#statisticsAgeGroups");
+  if (ageGroups) {
+    ageGroups.innerHTML = "";
+    (data.ageGroups || []).forEach((text) => {
+      const li = document.createElement("li");
+      setSafeInnerText(li, text);
+      ageGroups.appendChild(li);
+    });
+  }
+}
 
   function renderRights() {
     const holder = $("#rightsItems");
