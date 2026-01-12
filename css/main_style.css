@@ -926,3 +926,6 @@ html[dir="rtl"] #orphanWeek .acc__btn{
     grid-template-columns: 1fr;
   }
 }
+#statistics #statisticsMetrics .card__text{
+  opacity: .95;
+}
