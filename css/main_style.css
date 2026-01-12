@@ -760,3 +760,114 @@ html[dir="ltr"] .split{
   transform: translateY(0);
   box-shadow: none;
 }
+
+/* =========================
+   Orphan Week Accordion UI
+   ========================= */
+
+#orphanWeek .acc{
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+#orphanWeek .acc__item{
+  background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.92));
+  border: 1px solid rgba(20,20,35,.10);
+  border-radius: var(--r-3);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+#orphanWeek .acc__btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 14px 16px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  font: inherit;
+  text-align: start;
+}
+
+#orphanWeek .acc__btn:focus-visible{
+  outline: 2px solid rgba(0,0,0,.18);
+  outline-offset: 3px;
+  border-radius: calc(var(--r-3) - 6px);
+}
+
+#orphanWeek .acc__headline{
+  font-weight: 850;
+  letter-spacing: .2px;
+}
+
+#orphanWeek .acc__chev{
+  opacity: .65;
+  transition: transform .18s ease, opacity .18s ease;
+  transform-origin: center;
+  user-select: none;
+}
+
+#orphanWeek .acc__btn[aria-expanded="true"] .acc__chev{
+  transform: rotate(180deg);
+  opacity: .85;
+}
+
+/* Panel */
+#orphanWeek .acc__panel{
+  padding: 0 16px 16px;
+}
+
+#orphanWeek .acc__panel .muted{
+  margin-top: 8px;
+}
+
+/* Divider line between header and panel (subtle) */
+#orphanWeek .acc__btn{
+  position: relative;
+}
+#orphanWeek .acc__btn[aria-expanded="true"]::after{
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 0;
+  height: 1px;
+  background: rgba(20,20,35,.08);
+}
+
+/* Practical box inside panel */
+#orphanWeek .acc__practical{
+  margin-top: 12px;
+  padding: 12px 12px;
+
+  border-radius: 14px;
+  border: 1px solid rgba(20,20,35,.08);
+  background: rgba(255,255,255,.75);
+}
+
+#orphanWeek .acc__practical strong{
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 850;
+}
+
+/* Hover feel */
+@media (hover:hover){
+  #orphanWeek .acc__item:hover{
+    border-color: rgba(20,20,35,.14);
+  }
+  #orphanWeek .acc__btn:hover .acc__chev{
+    opacity: .9;
+  }
+}
+
+/* RTL fine tuning */
+html[dir="rtl"] #orphanWeek .acc__btn{
+  text-align: right;
+}
