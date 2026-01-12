@@ -902,17 +902,20 @@ function renderContact() {
     (dictionary?.contact?.methods || []).find(m => m?.type === "email")?.value || "";
 
   // Email (ONE block only)
-  if (emailBtn) {
-    const subject = dictionary?.contact?.emailSubject || "פנייה מאתר משפאחה";
-    const body =
-      dictionary?.contact?.emailBody ||
-      "שלום,\n\nאני פונה דרך אתר משפאחה בנושא:\n\nשם:\nטלפון:\nהודעה:\n\nתודה,";
+// Email (Gmail compose - works even if mailto handler is not set)
+if (emailBtn) {
+  const to = LINKS.contactEmail || emailValue || "mishporg@gmail.com";
+  const subject = dictionary?.contact?.emailSubject || "פנייה מאתר משפאחה";
+  const body =
+    dictionary?.contact?.emailBody ||
+    "שלום,\n\nאני פונה דרך אתר משפאחה בנושא:\n\nשם:\nטלפון:\nהודעה:\n\nתודה,";
 
-    const qs = new URLSearchParams({ subject, body }).toString();
-    const mail = LINKS.contactEmail || emailValue || "mishporg@gmail.com";
+  emailBtn.href =
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    emailBtn.href = `mailto:${mail}?${qs}`;
-  }
+  emailBtn.target = "_blank";
+  emailBtn.rel = "noopener";
+}
 
   // WhatsApp
   if (waBtn) {
