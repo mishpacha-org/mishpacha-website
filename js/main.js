@@ -6,7 +6,8 @@
   const LINKS = {
     volunteerForm: "https://docs.google.com/forms/d/e/1FAIpQLSchRPNoUJ1N-da9y4cRWtw9-BwGyEiCJXtfEWVZi1CqAWtgmw/viewform",
     helpForm: "https://docs.google.com/forms/d/1_CTLlOLWDoH1-cZPbiUSurmshkH4EMYeh2i6CpaNB7g/viewform?pli=1&pli=1&pli=1&edit_requested=true",
-    contactForm: "https://wa.me/message/IMUVXWXVPB64M1",
+contactWhatsApp: "https://wa.me/message/IMUVXWXVPB64M1",
+contactEmail: "mishporg@gmail.com",
     donatePlatform: "",
     // Social links (placeholders; replace when ready)
     social: {
@@ -355,34 +356,7 @@ if (key === "volunteer") {
     });
   }
 
-  function wireBtnLink(el, url) {
-  if (!el) return;
-
-  const bad =
-    !url ||
-    url === "#" ||
-    String(url).includes("...");
-
-  if (bad) {
-    el.href = "#";
-    el.classList.add("is-disabled");
-    el.setAttribute("aria-disabled", "true");
-    el.removeAttribute("target");
-    el.removeAttribute("rel");
-    return;
-  }
-
-  el.href = url;
-  el.classList.remove("is-disabled");
-  el.removeAttribute("aria-disabled");
-
-  // external by default when it is a full URL
-  if (String(url).startsWith("http")) {
-    el.target = "_blank";
-    el.rel = "noopener";
-  }
-}
-
+  
 
   function renderNav() {
     const nav = $("#navLinks");
@@ -917,80 +891,123 @@ function bindAccordionButtons(scope = document) {
     });
   }
 
-  function renderContact() {
-    // wire contact CTA link
-    const contactBtn = $("#contactFormBtn");
-    if (contactBtn) contactBtn.href = LINKS.contactForm;
+function renderContact() {
+  // ===== wire contact CTA links (2 buttons) =====
+  const waBtn = $("#contactWhatsAppBtn");
+  const emailBtn = $("#contactEmailBtn");
 
-    const helpBtn = $("#helpFormBtn");
-    if (helpBtn) {
-      helpBtn.href = LINKS.helpForm;
-      helpBtn.target = "_blank";
-      helpBtn.rel = "noopener";
-    }
+  const emailValue =
+    (dictionary?.contact?.methods || []).find(m => m?.type === "email")?.value || "";
 
-    const volunteerBtn = $("#volunteerBtn");
-    if (volunteerBtn) {
-      volunteerBtn.href = LINKS.volunteerForm;
-      volunteerBtn.target = "_blank";
-      volunteerBtn.rel = "noopener";
-    }
-
-    const methods = $("#contactMethods");
-    if (methods) {
-      methods.innerHTML = "";
-      (dictionary?.contact?.methods || []).forEach((m) => {
-        const row = document.createElement("div");
-        row.style.display = "flex";
-        row.style.gap = "10px";
-        row.style.alignItems = "baseline";
-        row.style.margin = "6px 0";
-
-        const label = document.createElement("strong");
-        label.textContent = `${m?.label || ""}:`;
-
-        let val;
-        if (m?.type === "email") {
-          val = document.createElement("a");
-          val.href = `mailto:${m.value}`;
-          val.textContent = m.value || "";
-        } else if (m?.type === "phone") {
-          const num = (m.value || "").toString().replace(/\s+/g, "");
-          val = document.createElement("a");
-          val.href = `tel:${num}`;
-          val.textContent = m.value || "";
-        } else {
-          val = document.createElement("span");
-          val.textContent = m?.value || "";
-        }
-
-        row.appendChild(label);
-        row.appendChild(val);
-        methods.appendChild(row);
-      });
-    }
-
-    const social = $("#contactSocial");
-    if (social) {
-      social.innerHTML = "";
-      (dictionary?.contact?.social || []).forEach((label) => {
-        const key = normalizeSocialKey(label);
-        const href = (LINKS.social && LINKS.social[key]) ? LINKS.social[key] : "#";
-
-        const a = document.createElement("a");
-        a.className = "socialBtn";
-        a.href = href || "#";
-        a.setAttribute("aria-label", label || key);
-        if (href && href !== "#") {
-          a.target = "_blank";
-          a.rel = "noopener";
-        }
-
-        a.innerHTML = getIconSvg(key);
-        social.appendChild(a);
-      });
-    }
+  // WhatsApp: uses LINKS.contactForm as the base (your current wa.me link)
+  if (waBtn) {
+    const text = dictionary?.contact?.whatsAppText || "";
+    const base = LINKS.contactForm || "#"; // currently your WhatsApp link
+    const sep = base.includes("?") ? "&" : "?";
+    waBtn.href = text ? `${base}${sep}text=${encodeURIComponent(text)}` : base;
+    waBtn.target = "_blank";
+    waBtn.rel = "noopener";
   }
+
+  // Email: mailto with subject/body from JSON
+  if (emailBtn) {
+    const subject = dictionary?.contact?.emailSubject || "";
+    const body = dictionary?.contact?.emailBody || "";
+
+    const qs = new URLSearchParams();
+    if (subject) qs.set("subject", subject);
+    if (body) qs.set("body", body);
+
+    const mail = emailValue || "mishporg@gmail.com"; // fallback
+    emailBtn.href = `mailto:${mail}${qs.toString() ? "?" + qs.toString() : ""}`;
+  }
+
+  // keep your other CTAs
+  const helpBtn = $("#helpFormBtn");
+  if (helpBtn) {
+    helpBtn.href = LINKS.helpForm;
+    helpBtn.target = "_blank";
+    helpBtn.rel = "noopener";
+  }
+
+  const volunteerBtn = $("#volunteerBtn");
+  if (volunteerBtn) {
+    volunteerBtn.href = LINKS.volunteerForm;
+    volunteerBtn.target = "_blank";
+    volunteerBtn.rel = "noopener";
+  }
+
+  // ===== contact methods =====
+  const methods = $("#contactMethods");
+  if (methods) {
+    methods.innerHTML = "";
+    (dictionary?.contact?.methods || []).forEach((m) => {
+      // If your container is UL (recommended), create LI.
+      // If it is DIV, LI still renders fine in most browsers but better to match HTML.
+      const row = document.createElement(methods.tagName === "UL" ? "li" : "div");
+
+      row.style.display = "flex";
+      row.style.gap = "10px";
+      row.style.alignItems = "baseline";
+      row.style.margin = "6px 0";
+
+      const label = document.createElement("strong");
+      const icon =
+        m?.type === "phone" ? "💬" :
+        m?.type === "email" ? "✉️" :
+        (m?.label || "");
+      label.textContent = `${icon}`;
+
+      let val;
+      if (m?.type === "email") {
+        const subject = dictionary?.contact?.emailSubject || "";
+        const body = dictionary?.contact?.emailBody || "";
+
+        const qs = new URLSearchParams();
+        if (subject) qs.set("subject", subject);
+        if (body) qs.set("body", body);
+
+        val = document.createElement("a");
+        val.href = `mailto:${m.value}${qs.toString() ? "?" + qs.toString() : ""}`;
+        val.textContent = m.value || "";
+      } else if (m?.type === "phone") {
+        const num = (m.value || "").toString().replace(/\s+/g, "");
+        val = document.createElement("a");
+        val.href = `tel:${num}`;
+        val.textContent = m.value || "";
+      } else {
+        val = document.createElement("span");
+        val.textContent = m?.value || "";
+      }
+
+      row.appendChild(label);
+      row.appendChild(val);
+      methods.appendChild(row);
+    });
+  }
+
+  // ===== social =====
+  const social = $("#contactSocial");
+  if (social) {
+    social.innerHTML = "";
+    (dictionary?.contact?.social || []).forEach((label) => {
+      const key = normalizeSocialKey(label);
+      const href = (LINKS.social && LINKS.social[key]) ? LINKS.social[key] : "#";
+
+      const a = document.createElement("a");
+      a.className = "socialBtn";
+      a.href = href || "#";
+      a.setAttribute("aria-label", label || key);
+      if (href && href !== "#") {
+        a.target = "_blank";
+        a.rel = "noopener";
+      }
+
+      a.innerHTML = getIconSvg(key);
+      social.appendChild(a);
+    });
+  }
+}
 
 function renderAllDynamic() {
   renderNav();

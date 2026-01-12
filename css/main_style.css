@@ -681,9 +681,6 @@ html[dir="ltr"] .split{
   margin: 20px 0;
 }
 
-#contact #contactFormBtn{
-  display: inline-block;
-}
 
 /* Meta / secondary text */
 #contact .contactCard__meta{
