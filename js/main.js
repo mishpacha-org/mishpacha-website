@@ -901,35 +901,28 @@ function renderContact() {
   const emailValue =
     (dictionary?.contact?.methods || []).find(m => m?.type === "email")?.value || "";
 
+  // Email (ONE block only)
+  if (emailBtn) {
+    const subject = dictionary?.contact?.emailSubject || "פנייה מאתר משפאחה";
+    const body =
+      dictionary?.contact?.emailBody ||
+      "שלום,\n\nאני פונה דרך אתר משפאחה בנושא:\n\nשם:\nטלפון:\nהודעה:\n\nתודה,";
+
+    const qs = new URLSearchParams({ subject, body }).toString();
+    const mail = LINKS.contactEmail || emailValue || "mishporg@gmail.com";
+
+    emailBtn.href = `mailto:${mail}?${qs}`;
+  }
+
   // WhatsApp
   if (waBtn) {
     const text = dictionary?.contact?.whatsAppText || "";
-
-    // ✅ FIX: use contactWhatsApp (and keep fallback to old names if exist)
-    const base =
-      LINKS.contactWhatsApp ||
-      LINKS.contactForm ||                 // fallback (old key)
-      LINKS?.social?.whatsapp ||           // fallback
-      "#";
-
+    const base = LINKS.contactWhatsApp || "#";
     const sep = base.includes("?") ? "&" : "?";
+
     waBtn.href = text ? `${base}${sep}text=${encodeURIComponent(text)}` : base;
     waBtn.target = "_blank";
     waBtn.rel = "noopener";
-  }
-
-  // Email
-  if (emailBtn) {
-    const subject = dictionary?.contact?.emailSubject || "";
-    const body = dictionary?.contact?.emailBody || "";
-
-    const qs = new URLSearchParams();
-    if (subject) qs.set("subject", subject);
-    if (body) qs.set("body", body);
-
-    // ✅ FIX: prefer LINKS.contactEmail if exists, otherwise JSON mail
-    const mail = LINKS.contactEmail || emailValue || "mishporg@gmail.com";
-    emailBtn.href = `mailto:${mail}${qs.toString() ? "?" + qs.toString() : ""}`;
   }
 
   // keep your other CTAs
@@ -959,26 +952,16 @@ function renderContact() {
       row.style.margin = "6px 0";
 
       const label = document.createElement("strong");
-
-      // ✅ as you wanted: WhatsApp icon for phone, mail icon for email
-      const icon =
-        m?.type === "phone" ? "💬" :
-        m?.type === "email" ? "✉️" :
-        "";
-
-      label.textContent = icon;
+      label.textContent = (m?.type === "phone") ? "💬" : (m?.type === "email") ? "✉️" : "";
 
       let val;
       if (m?.type === "email") {
         const subject = dictionary?.contact?.emailSubject || "";
         const body = dictionary?.contact?.emailBody || "";
-
-        const qs = new URLSearchParams();
-        if (subject) qs.set("subject", subject);
-        if (body) qs.set("body", body);
+        const qs = new URLSearchParams({ subject, body }).toString();
 
         val = document.createElement("a");
-        val.href = `mailto:${m.value}${qs.toString() ? "?" + qs.toString() : ""}`;
+        val.href = `mailto:${m.value}?${qs}`;
         val.textContent = m.value || "";
       } else if (m?.type === "phone") {
         const num = (m.value || "").toString().replace(/\s+/g, "");
@@ -1012,7 +995,6 @@ function renderContact() {
         a.target = "_blank";
         a.rel = "noopener";
       }
-
       a.innerHTML = getIconSvg(key);
       social.appendChild(a);
     });
