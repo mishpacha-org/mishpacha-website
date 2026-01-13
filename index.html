@@ -336,6 +336,34 @@
   </div>
 </section>
 
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__rights" data-i18n="footer.rights"></div>
+
+    <div class="site-footer__links">
+      <button class="footer-link" type="button" data-legal="accessibility" data-i18n="footer.accessibility"></button>
+      <span class="site-footer__sep" aria-hidden="true">|</span>
+      <button class="footer-link" type="button" data-legal="privacy" data-i18n="footer.privacy"></button>
+    </div>
+  </div>
+</footer>
+
+<!-- Legal modal -->
+<div class="modal" id="legalModal" hidden>
+  <div class="modal__backdrop" data-close="true"></div>
+
+  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+    <div class="modal__head">
+      <h2 class="modal__title" id="legalTitle"></h2>
+      <button class="modal__close" type="button" aria-label="סגור" data-close="true">✕</button>
+    </div>
+
+    <div class="modal__body" id="legalBody"></div>
+  </div>
+</div>
+
+
+
   <script src="js/main.js" defer></script>
 </body>
 </html>

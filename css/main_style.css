@@ -1245,3 +1245,127 @@ body{
     padding-top: var(--space-5);
   }
 }
+
+/* ===== Footer ===== */
+.site-footer{
+  padding: 18px 0;
+  border-top: 1px solid rgba(20,20,35,.10);
+  background: rgba(255,255,255,.65);
+  backdrop-filter: blur(10px);
+}
+
+.site-footer__inner{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-footer__rights{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.site-footer__links{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-footer__sep{
+  color: rgba(20,20,35,.35);
+}
+
+.footer-link{
+  background: none;
+  border: 0;
+  padding: 6px 8px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-link:focus-visible{
+  outline: 3px solid rgba(0,0,0,.85);
+  outline-offset: 3px;
+}
+
+/* ===== Modal ===== */
+.modal{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.modal__backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,15,.55);
+}
+
+.modal__dialog{
+  position: relative;
+  max-width: 860px;
+  width: calc(100% - 32px);
+  margin: 6vh auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  overflow: hidden;
+}
+
+.modal__head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(20,20,35,.10);
+}
+
+.modal__title{
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.modal__close{
+  border: 0;
+  background: rgba(20,20,35,.06);
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.modal__body{
+  padding: 18px;
+  max-height: 70vh;
+  overflow: auto;
+  color: #222;
+  line-height: 1.65;
+}
+
+.modal__body h3{
+  margin: 14px 0 8px;
+  font-size: 16px;
+}
+
+.modal__body ul{
+  margin: 8px 0 0;
+  padding-inline-start: 18px;
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  .modal__dialog{
+    margin: 4vh auto;
+  }
+  .modal__title{
+    font-size: 18px;
+  }
+}

@@ -1115,3 +1115,67 @@ async function init() {
 
   document.addEventListener("DOMContentLoaded", init);
 })();
+
+// ===== Legal modal =====
+(function initLegalModal(){
+  const modal = document.getElementById("legalModal");
+  if (!modal) return;
+
+  const titleEl = document.getElementById("legalTitle");
+  const bodyEl  = document.getElementById("legalBody");
+
+  let lastFocus = null;
+
+  function getLegalContent(type){
+    // dictionary is your i18n JSON root (already loaded in your main.js)
+    const legal = (window.dictionary && window.dictionary.legal) ? window.dictionary.legal : {};
+    return legal[type] || null;
+  }
+
+  function openModal(type){
+    const data = getLegalContent(type);
+    if (!data) return;
+
+    lastFocus = document.activeElement;
+
+    titleEl.textContent = data.title || "";
+    bodyEl.innerHTML = data.html || "";
+
+    modal.hidden = false;
+    document.body.style.overflow = "hidden";
+
+    // focus close button
+    const closeBtn = modal.querySelector("[data-close='true']");
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal(){
+    modal.hidden = true;
+    document.body.style.overflow = "";
+
+    if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+  }
+
+  // Open handlers
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-legal]");
+    if (btn){
+      openModal(btn.getAttribute("data-legal"));
+      return;
+    }
+
+    if (e.target.closest("#legalModal") && e.target.getAttribute("data-close") === "true"){
+      closeModal();
+    }
+  });
+
+  // Esc closes
+  document.addEventListener("keydown", (e) => {
+    if (!modal.hidden && e.key === "Escape"){
+      closeModal();
+    }
+  });
+
+  // expose for debugging if you want
+  window.openLegalModal = openModal;
+})();
