@@ -1030,7 +1030,9 @@ function renderAllDynamic() {
     setDocDirection(lang);
     dictionary = await loadJson(lang);
 
-    applyText();
+    
+    exposeDictionary();
+applyText();
     renderAllDynamic();
     renderImages();
 
@@ -1101,11 +1103,97 @@ function setupBackToTop() {
   onScroll();
 }
 
+
+  // ===============================
+  // Legal modal (Accessibility / Privacy) — footer buttons
+  // ===============================
+  // Expose dictionary for any code that needs it outside the IIFE (or for debugging).
+  function exposeDictionary() {
+    window.dictionary = dictionary;
+  }
+
+  function setupLegalModal() {
+    const modal = document.querySelector("#legalModal");
+    if (!modal) return;
+
+    const titleEl = modal.querySelector("#legalTitle");
+    const bodyEl = modal.querySelector("#legalBody");
+
+    // HTML uses data-close="true" on both backdrop and X button
+    const closeEls = Array.from(modal.querySelectorAll('[data-close="true"]'));
+
+    let lastFocused = null;
+
+    const isOpen = () => !modal.hasAttribute("hidden") && modal.hidden !== true;
+
+    function open(type) {
+      const data = window.dictionary?.legal?.[type];
+      if (!data) return;
+
+      lastFocused = document.activeElement;
+
+      if (titleEl) titleEl.textContent = data.title || "";
+      if (bodyEl) bodyEl.innerHTML = data.html || "";
+
+      modal.hidden = false;
+      modal.removeAttribute("hidden");
+      modal.setAttribute("aria-hidden", "false");
+
+      // Focus the close button if possible; otherwise first focusable inside dialog
+      const focusTarget =
+        modal.querySelector('.modal__close') ||
+        modal.querySelector("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+
+      if (focusTarget && typeof focusTarget.focus === "function") focusTarget.focus();
+    }
+
+    function close() {
+      modal.hidden = true;
+      modal.setAttribute("hidden", "");
+      modal.setAttribute("aria-hidden", "true");
+
+      if (lastFocused && typeof lastFocused.focus === "function") {
+        lastFocused.focus();
+      }
+    }
+
+    // Prevent double binding
+    if (modal.dataset.bound === "1") return;
+    modal.dataset.bound = "1";
+
+    // Open: footer buttons are <button data-legal="accessibility|privacy">
+    document.addEventListener("click", (e) => {
+      const trigger = e.target.closest("[data-legal]");
+      if (!trigger) return;
+
+      const type = trigger.getAttribute("data-legal");
+      if (type !== "accessibility" && type !== "privacy") return;
+
+      e.preventDefault();
+      open(type);
+    });
+
+    // Close via backdrop / X
+    closeEls.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        close();
+      });
+    });
+
+    // ESC closes only when open
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && isOpen()) close();
+    });
+  }
+
 async function init() {
   wireLangToggle();
   try {
     await setLanguage(currentLang);
-  } catch (err) {
+  
+    setupLegalModal();
+} catch (err) {
     console.error(err);
     alert("Failed to load language JSON. Check console.");
   }
@@ -1115,96 +1203,3 @@ async function init() {
 
   document.addEventListener("DOMContentLoaded", init);
 })();
-
-// ===============================
-// Legal modal (Accessibility / Privacy)
-// ===============================
-
-function exposeDictionary() {
-  window.dictionary = dictionary; // dictionary הוא המשתנה שלך בסקופ הראשי של הקובץ
-}
-
-function setupLegalModal() {
-  const modal = document.querySelector("#legalModal");
-  if (!modal) return;
-
-  const titleEl = modal.querySelector("#legalTitle");
-  const bodyEl  = modal.querySelector("#legalBody");
-  const closeBtn = modal.querySelector("[data-modal-close]");
-
-  let lastFocused = null;
-
-  function openModal(type) {
-    const data = window.dictionary?.legal?.[type];
-    if (!data) return;
-
-    lastFocused = document.activeElement;
-
-    if (titleEl) titleEl.textContent = data.title || "";
-    if (bodyEl)  bodyEl.innerHTML = data.html || "";
-
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
-
-    // פוקוס ראשון נוח במודאל
-    const focusTarget = closeBtn || modal.querySelector("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
-    if (focusTarget) focusTarget.focus();
-  }
-
-  function closeModal() {
-    modal.classList.remove("is-open");
-    modal.setAttribute("aria-hidden", "true");
-
-    if (lastFocused && typeof lastFocused.focus === "function") {
-      lastFocused.focus();
-    }
-  }
-
-  // האזנה לכפתורים בפוטר לפי data-legal
-  document.addEventListener("click", (e) => {
-    const trigger = e.target.closest("[data-legal]");
-    if (!trigger) return;
-
-    const type = trigger.getAttribute("data-legal");
-    if (type !== "accessibility" && type !== "privacy") return;
-
-    e.preventDefault();
-    openModal(type);
-  });
-
-  // כפתור סגירה
-  if (closeBtn) {
-    closeBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      closeModal();
-    });
-  }
-
-  // סגירה בלחיצה על הרקע (אם יש לך overlay)
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
-  });
-
-  // ESC לסגירה
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.classList.contains("is-open")) {
-      closeModal();
-    }
-  });
-}
-
-// ===============================
-// איפה לקרוא לזה אצלך
-// ===============================
-
-// 1) מיד אחרי טעינת ה JSON הראשונה
-// אחרי: dictionary = await loadJson(currentLang) או מה שיש לך
-// תוסיף:
-exposeDictionary();
-
-// 2) ואז פעם אחת, אחרי שה DOM מוכן (או בסוף הקובץ)
-setupLegalModal();
-
-// 3) וגם אחרי החלפת שפה, אחרי שטענת JSON מחדש והצבת dictionary
-// תוסיף שוב:
-exposeDictionary();
