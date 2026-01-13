@@ -1116,66 +1116,95 @@ async function init() {
   document.addEventListener("DOMContentLoaded", init);
 })();
 
-// ===== Legal modal =====
-(function initLegalModal(){
-  const modal = document.getElementById("legalModal");
+// ===============================
+// Legal modal (Accessibility / Privacy)
+// ===============================
+
+function exposeDictionary() {
+  window.dictionary = dictionary; // dictionary הוא המשתנה שלך בסקופ הראשי של הקובץ
+}
+
+function setupLegalModal() {
+  const modal = document.querySelector("#legalModal");
   if (!modal) return;
 
-  const titleEl = document.getElementById("legalTitle");
-  const bodyEl  = document.getElementById("legalBody");
+  const titleEl = modal.querySelector("#legalTitle");
+  const bodyEl  = modal.querySelector("#legalBody");
+  const closeBtn = modal.querySelector("[data-modal-close]");
 
-  let lastFocus = null;
+  let lastFocused = null;
 
-  function getLegalContent(type){
-    // dictionary is your i18n JSON root (already loaded in your main.js)
-    const legal = (window.dictionary && window.dictionary.legal) ? window.dictionary.legal : {};
-    return legal[type] || null;
-  }
-
-  function openModal(type){
-    const data = getLegalContent(type);
+  function openModal(type) {
+    const data = window.dictionary?.legal?.[type];
     if (!data) return;
 
-    lastFocus = document.activeElement;
+    lastFocused = document.activeElement;
 
-    titleEl.textContent = data.title || "";
-    bodyEl.innerHTML = data.html || "";
+    if (titleEl) titleEl.textContent = data.title || "";
+    if (bodyEl)  bodyEl.innerHTML = data.html || "";
 
-    modal.hidden = false;
-    document.body.style.overflow = "hidden";
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
 
-    // focus close button
-    const closeBtn = modal.querySelector("[data-close='true']");
-    if (closeBtn) closeBtn.focus();
+    // פוקוס ראשון נוח במודאל
+    const focusTarget = closeBtn || modal.querySelector("button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])");
+    if (focusTarget) focusTarget.focus();
   }
 
-  function closeModal(){
-    modal.hidden = true;
-    document.body.style.overflow = "";
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
 
-    if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+    if (lastFocused && typeof lastFocused.focus === "function") {
+      lastFocused.focus();
+    }
   }
 
-  // Open handlers
+  // האזנה לכפתורים בפוטר לפי data-legal
   document.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-legal]");
-    if (btn){
-      openModal(btn.getAttribute("data-legal"));
-      return;
-    }
+    const trigger = e.target.closest("[data-legal]");
+    if (!trigger) return;
 
-    if (e.target.closest("#legalModal") && e.target.getAttribute("data-close") === "true"){
-      closeModal();
-    }
+    const type = trigger.getAttribute("data-legal");
+    if (type !== "accessibility" && type !== "privacy") return;
+
+    e.preventDefault();
+    openModal(type);
   });
 
-  // Esc closes
+  // כפתור סגירה
+  if (closeBtn) {
+    closeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeModal();
+    });
+  }
+
+  // סגירה בלחיצה על הרקע (אם יש לך overlay)
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // ESC לסגירה
   document.addEventListener("keydown", (e) => {
-    if (!modal.hidden && e.key === "Escape"){
+    if (e.key === "Escape" && modal.classList.contains("is-open")) {
       closeModal();
     }
   });
+}
 
-  // expose for debugging if you want
-  window.openLegalModal = openModal;
-})();
+// ===============================
+// איפה לקרוא לזה אצלך
+// ===============================
+
+// 1) מיד אחרי טעינת ה JSON הראשונה
+// אחרי: dictionary = await loadJson(currentLang) או מה שיש לך
+// תוסיף:
+exposeDictionary();
+
+// 2) ואז פעם אחת, אחרי שה DOM מוכן (או בסוף הקובץ)
+setupLegalModal();
+
+// 3) וגם אחרי החלפת שפה, אחרי שטענת JSON מחדש והצבת dictionary
+// תוסיף שוב:
+exposeDictionary();
