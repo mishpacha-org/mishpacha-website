@@ -832,7 +832,7 @@ function renderOrphanWeek() {
       panel.appendChild(box);
     }
 
-    btn.addEventListener("click", () => togglePanel(btn, panel));
+    // Click handled by bindAccordionButtons() (prevents double-toggle)
 
     item.appendChild(btn);
     item.appendChild(panel);
