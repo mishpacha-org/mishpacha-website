@@ -377,14 +377,11 @@ if (key === "volunteer") {
       "story",
       "help",
       "volunteer",
-      "donate",
-      "knowledge",
-      "statistics",
-      "rights",
       "orphanWeek",
-      "documents",
+      "statistics",
+      "knowledge",
       "contact"
-      // "transparency" has no label in nav by default; add it in JSON if you want it in the menu.
+      // סקשנים מוסתרים: donate, rights, documents, transparency
     ];
 
     order.forEach((id) => {

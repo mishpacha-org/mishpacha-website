@@ -138,28 +138,36 @@ body{
 
   display: none;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 
-  min-width: 220px;
-  padding: 10px;
-  border-radius: 16px;
+  min-width: 240px;
+  padding: 8px;
+  border-radius: 18px;
   border: 1px solid var(--stroke);
-  background: rgba(245,246,248,.95);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow-soft);
+  background: rgba(250,250,252,.98);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 48px rgba(20,10,35,.13);
   z-index: 60;
 }
 
 .topbar.is-menu-open .nav{ display: flex; }
 
 .topbar .nav a{
-  display:block;
-  width:100%;
-  color: var(--muted);
-  font-size: 14px;
-  padding: 8px 10px;
+  display: block;
+  width: 100%;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 14px;
   border-radius: 12px;
   border: 1px solid transparent;
+  transition: background .12s ease, color .12s ease;
+}
+
+.topbar .nav a:hover{
+  background: rgba(184,72,216,.08);
+  color: var(--accent-2);
+  border-color: rgba(184,72,216,.14);
 }
 
 .brand{
@@ -921,6 +929,7 @@ html[dir="rtl"] #orphanWeek .acc__btn{
 #statistics #statisticsMetrics .card{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
 }
 
@@ -930,12 +939,14 @@ html[dir="rtl"] #orphanWeek .acc__btn{
   font-weight: 900;
   letter-spacing: .2px;
   line-height: 1.05;
+  color: var(--accent);
 }
 
 /* Label: readable, not louder than the number */
 #statistics #statisticsMetrics .card__title{
   font-weight: 800;
   opacity: .85;
+  margin-bottom: 0;
 }
 
 #statistics #statisticsMetrics .card__text{
@@ -946,19 +957,14 @@ html[dir="rtl"] #orphanWeek .acc__btn{
    Context card layout
    ========================= */
 
-/* Turn the bottom card into 2 columns:
-   Left: Meaning
-   Right: Age groups + source */
 #statistics #statisticsContext{
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 24px;
-  align-items: start;
+  display: block;
+  padding: var(--space-4);
 }
 
 /* Meaning list = comfortable reading */
 #statistics #statisticsMeaning{
-  margin: 10px 0 0;
+  margin: 10px 0 20px;
   padding-inline-start: 18px;
 }
 
@@ -967,34 +973,49 @@ html[dir="rtl"] #orphanWeek .acc__btn{
   line-height: 1.65;
 }
 
-/* Age groups = compact and informational */
+/* Age groups = compact */
 #statistics #statisticsAgeGroups{
   margin: 10px 0 0;
   padding-inline-start: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding-inline-start: 0;
 }
 
 #statistics #statisticsAgeGroups li{
-  margin: 6px 0;
+  background: rgba(184,72,216,.08);
+  border: 1px solid rgba(184,72,216,.18);
+  border-radius: 999px;
+  padding: 4px 14px;
   font-weight: 700;
-  opacity: .86;
+  font-size: 14px;
+  opacity: .9;
 }
 
 /* Titles spacing inside the bottom card */
 #statistics #statisticsContext .card__title{
   margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+#statistics #statisticsContext .card__title:first-child{
+  margin-top: 0;
 }
 
 /* Source + note = footnotes */
 #statistics [data-i18n="statistics.source"],
 #statistics [data-i18n="statistics.note"]{
   font-size: 13px;
-  opacity: .82;
+  opacity: .72;
   line-height: 1.45;
+  margin-top: 16px;
+  display: block;
 }
 
-/* Give a little separation between source and note */
 #statistics [data-i18n="statistics.note"]{
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 /* =========================
