@@ -131,11 +131,18 @@ body{
 /* nav dropdown only (single source of truth) */
 .topbar__inner{ position: relative; }
 
+/* Actions wrapper becomes anchor for dropdown */
+.topbar__actions{
+  position: relative;
+}
+
 .topbar .nav{
   position: absolute;
   top: calc(100% + 10px);
-  left: 0;
-  right: auto;
+
+  /* RTL: align to start (left side = near ☰ button) */
+  inset-inline-start: 0;
+  inset-inline-end: auto;
 
   display: none;
   flex-direction: column;
@@ -149,6 +156,12 @@ body{
   backdrop-filter: blur(16px);
   box-shadow: 0 20px 48px rgba(20,10,35,.13);
   z-index: 60;
+}
+
+/* LTR: flip to right side */
+html[dir="ltr"] .topbar .nav{
+  inset-inline-start: auto;
+  inset-inline-end: 0;
 }
 
 .topbar.is-menu-open .nav{ display: flex; }
