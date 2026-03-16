@@ -277,7 +277,13 @@ function getIconSvg(name) {
     mentoring: "mentorStar",
     rights: "diaper",
     community: "groupChat",
-    housing: "houseKey"
+    housing: "houseKey",
+
+    // KNOWLEDGE section ids -> icons
+    guides: "book",
+    faq: "spark",
+    articles: "digital",
+    links: "link"
   };
 
   const key = aliases[name] || name;
@@ -650,7 +656,12 @@ function renderStory() {
 
     (dictionary?.knowledge?.sections || []).forEach((s) => {
       const card = document.createElement("div");
-      card.className = "card";
+      card.className = "card knowledge__card";
+
+      const icon = document.createElement("div");
+      icon.className = "card__icon";
+      icon.setAttribute("aria-hidden", "true");
+      icon.innerHTML = getIconSvg(s?.id || "book");
 
       const t = document.createElement("div");
       t.className = "card__title";
@@ -660,10 +671,29 @@ function renderStory() {
       x.className = "card__text";
       setSafeInnerText(x, s?.text);
 
+      card.appendChild(icon);
       card.appendChild(t);
       card.appendChild(x);
       holder.appendChild(card);
     });
+
+    // Wire the Base44 CTA button
+    const ctaBtn = $("#knowledgeCta");
+    if (ctaBtn) {
+      const label = dictionary?.knowledge?.cta;
+      if (label) setSafeInnerText(ctaBtn, label);
+      ctaBtn.href = "https://ncbos-knowledge-hub-c826ef5e.base44.app/PublicHome";
+      ctaBtn.target = "_blank";
+      ctaBtn.rel = "noopener";
+      ctaBtn.className = "btn btn--primary knowledge__cta-btn";
+    }
+
+    // Update comingSoon text
+    const soon = document.querySelector("[data-i18n='knowledge.comingSoon']");
+    if (soon) {
+      const text = dictionary?.knowledge?.comingSoon;
+      if (text) setSafeInnerText(soon, text);
+    }
   }
 
 function renderStatistics() {

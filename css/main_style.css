@@ -1246,6 +1246,76 @@ body{
   }
 }
 
+/* =========================
+   KNOWLEDGE – מרכז ידע
+   ========================= */
+
+/* כרטיסי knowledge – עמודה (אייקון למעלה) כמו services */
+#knowledge .knowledge__card{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 160px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+#knowledge .knowledge__card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px rgba(25,10,40,.13);
+}
+
+/* אייקון בסגנון services – צבע accent */
+#knowledge .card__icon{
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#knowledge .card__icon svg{
+  width: 28px;
+  height: 28px;
+  stroke: var(--accent-2);
+}
+
+/* כרטיס כפתור Base44 – בולט ומרוכז */
+#knowledge .knowledge__cta-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: var(--space-5);
+  background: linear-gradient(135deg, rgba(184,72,216,.08), rgba(143,43,182,.05));
+  border-color: rgba(184,72,216,.22);
+}
+
+#knowledge .knowledge__cta-card .muted{
+  font-size: 15px;
+  max-width: 52ch;
+}
+
+/* כפתור Base44 – גדול ובולט */
+#knowledge .knowledge__cta-btn{
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 28px;
+  letter-spacing: .2px;
+}
+
+/* RTL / LTR */
+html[dir="rtl"] #knowledge .knowledge__card{
+  text-align: right;
+  align-items: flex-start;
+}
+
+html[dir="ltr"] #knowledge .knowledge__card{
+  text-align: left;
+  align-items: flex-start;
+}
+
 /* ===== Footer ===== */
 .site-footer{
   padding: 18px 0;
