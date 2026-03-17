@@ -4,7 +4,7 @@
 
   // ====== External links placeholders (update later) ======
 const LINKS = {
-  volunteerForm: "https://docs.google.com/forms/d/e/1FAIpQLSchRPNoUJ1N-da9y4cRWtw9-BwGyEiCJXtfEWVZi1CqAWtgmw/viewform",
+  volunteerForm: "https://forms.fillout.com/t/mNTHrX2xwEus",
   helpForm: "https://forms.fillout.com/t/jGF6Z1n5jRus",
   contactWhatsApp: "https://wa.me/message/IMUVXWXVPB64M1",
   contactEmail: "mishporg@gmail.com",
