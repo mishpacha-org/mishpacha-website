@@ -60,6 +60,7 @@
 "services": {
   "title": "What We Do for Orphans in Israel",
   "intro": "The organization works to provide orphans with stability, practical tools, and long-term guidance — from the initial moment of loss to full independence.",
+  "supportInvite": "You're invited to support the organization's activities",
   "items": [
     {
       "id": "financialEducation",
@@ -203,11 +204,6 @@
   "donate": {
     "title": "Your Donation Changes Lives",
     "intro": "Every shekel you donate goes directly to changing lives.",
-    "allocation": [
-      { "label": "Programs & Services", "percent": 85, "description": "Direct support for programs." },
-      { "label": "Administration & Operations", "percent": 10, "description": "Management and operational costs." },
-      { "label": "Development & Innovation", "percent": 5, "description": "Program development and improvement." }
-    ],
     "waysToGive": [
       { "id": "oneTime", "title": "One-time Donation", "text": "Any amount, anytime." },
       { "id": "monthly", "title": "Monthly Donation", "text": "Join our family of recurring donors." },

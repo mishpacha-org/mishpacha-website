@@ -74,6 +74,7 @@ html{
 body{
   min-height: 100%;
   padding-top: clamp(58px, 9vw, 72px); /* תכוון אם צריך */
+  overflow-x: hidden;
 }
 
 /* ---------- Layout Helpers ---------- */
@@ -129,7 +130,14 @@ body{
 }
 
 /* nav dropdown only (single source of truth) */
-.topbar__inner{ position: relative; }
+.topbar__inner{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
 
 /* Actions wrapper becomes anchor for dropdown */
 .topbar__actions{
@@ -191,6 +199,17 @@ html[dir="ltr"] .topbar .nav{
   min-width: 240px;
 }
 
+.brand__text{
+  min-width: 0;
+}
+
+.brand__title,
+.brand__subtitle{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .brand__mark{
   width: 42px;
   height: 42px;
@@ -243,6 +262,7 @@ html[dir="ltr"] .topbar .nav{
   display:flex;
   align-items:center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 /* ---------- Hero ---------- */
@@ -1070,6 +1090,20 @@ html[dir="rtl"] #orphanWeek .acc__btn{
   height: 46px;
 }
 
+#contact .contactCtas{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Contact card: collapse to one column on phones (grid never collapsed before) */
+@media (max-width: 700px){
+  #contact .contactCard{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 
 /* =========================================================
    FLUID MOBILE-FIRST LAYER (append at end)
@@ -1341,25 +1375,31 @@ body{
 }
 
 /* =========================
-   DONATE – CTA card
+   SERVICES – donate/support CTA card
    ========================= */
-#donate .donate__cta-card{
+#services .donate__cta-card{
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 14px;
   padding: var(--space-5);
+  margin-top: var(--space-4);
   background: linear-gradient(135deg, rgba(184,72,216,.08), rgba(143,43,182,.05));
   border-color: rgba(184,72,216,.22);
 }
 
-#donate .donate__cta-card .muted{
+#services .donate__cta-card .muted{
   font-size: 15px;
   max-width: 52ch;
 }
 
-#donate .donate__cta-btn{
+#services .donate__cta-card .grid{
+  width: 100%;
+  margin-top: 6px;
+}
+
+#services .donate__cta-btn{
   font-size: 16px;
   font-weight: 700;
   padding: 14px 28px;

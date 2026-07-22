@@ -376,11 +376,11 @@ if (key === "volunteer") {
       "story",
       "help",
       "volunteer",
-      "donate",
       "orphanWeek",
       "statistics",
       "contact"
       // סקשנים מוסתרים: rights, documents, transparency
+      // תרומות (donate) מוזגו לתוך services
     ];
 
     order.forEach((id) => {
@@ -589,27 +589,6 @@ function renderStory() {
   }
 
   function renderDonate() {
-    const alloc = $("#donateAllocation");
-    if (alloc) {
-      alloc.innerHTML = "";
-      (dictionary?.donate?.allocation || []).forEach((a) => {
-        const card = document.createElement("div");
-        card.className = "card";
-
-        const t = document.createElement("div");
-        t.className = "card__title";
-        setSafeInnerText(t, `${a?.label || ""} — ${a?.percent ?? ""}%`);
-
-        const x = document.createElement("div");
-        x.className = "card__text";
-        setSafeInnerText(x, a?.description);
-
-        card.appendChild(t);
-        card.appendChild(x);
-        alloc.appendChild(card);
-      });
-    }
-
     const ways = $("#donateWays");
     if (ways) {
       ways.innerHTML = "";
