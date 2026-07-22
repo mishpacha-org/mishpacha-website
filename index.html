@@ -1,9 +1,40 @@
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
+  <!-- 🚧 MAINTENANCE MODE TOGGLE — flip to true to redirect all visitors to maintenance.html.
+       This is the ONLY thing that needs to change to take the site into "under construction" mode. -->
+  <script>
+    var MAINTENANCE_MODE = false;
+    if (MAINTENANCE_MODE) { window.location.replace('maintenance.html'); }
+  </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title data-i18n="meta.title"></title>
+
+  <!-- Default (Hebrew) title/description in raw HTML so search engines see real text even before JS runs.
+       The JS still overwrites these on language toggle for the in-browser experience. -->
+  <title data-i18n="meta.title">משפאחה - עוצמה מתוך יתמות | תמיכה ליתומים בישראל</title>
+  <meta name="description" content="עמותת משפאחה מעניקה ליתומים ולמשפחותיהם בישראל תמיכה רגשית, חינוכית, משפטית וחברתית - ליווי אישי, חונכות, מיצוי זכויות ומרכז ידע." />
+
+  <!-- Open Graph / social share preview.
+       TODO once the site has a live domain: og:image/og:url should be ABSOLUTE URLs
+       (e.g. https://yourdomain.org/assets/img/...) - WhatsApp/LinkedIn previews often
+       fail to resolve relative paths. Also consider a dedicated 1200x630 share image
+       instead of the logo for a nicer preview card. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="עמותת משפאחה" />
+  <meta property="og:title" content="משפאחה - עוצמה מתוך יתמות" />
+  <meta property="og:description" content="תמיכה מקיפה ליתומים בישראל - רגשית, חינוכית, משפטית וחברתית. הצטרפו כמתנדבים או תמכו בפעילות העמותה." />
+  <meta property="og:image" content="assets/img/logo.png" />
+  <meta property="og:locale" content="he_IL" />
+
+  <!-- Twitter/X card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="משפאחה - עוצמה מתוך יתמות" />
+  <meta name="twitter:description" content="תמיכה מקיפה ליתומים בישראל - רגשית, חינוכית, משפטית וחברתית." />
+  <meta name="twitter:image" content="assets/img/logo.png" />
+
+  <link rel="icon" href="assets/img/logo.png" type="image/png" />
   <link rel="stylesheet" href="css/main_style.css" />
 </head>
 
@@ -202,7 +233,7 @@
       </button>
 
       <div class="acc__panel" id="orphanWeekAboutPanel" hidden>
-        <p class="muted" data-i18n="orphanWeek.aboutText"></p>
+        <div id="orphanWeekAboutText"></div>
       </div>
     </div>
 
@@ -215,8 +246,6 @@
     </div>
   </div>
 </section>
-
-
 
 
 
@@ -314,12 +343,17 @@
 
       <!-- Back to top (below contact content) -->
       <div class="contact__bottom">
-        <button class="btn btn--outline" id="backToTopBtn" type="button"
+        <button class="btn btn--outline backToTop" id="backToTopBtn" type="button"
                 aria-label="Back to top" title="Back to top">↑</button>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Floating quick-help WhatsApp button (always visible, all pages) -->
+<a class="floatingWhatsApp" id="floatingWhatsAppBtn" href="#" target="_blank" rel="noopener" aria-label="דברו איתנו בוואטסאפ">
+  <span class="floatingWhatsApp__icon" aria-hidden="true"></span>
+</a>
 
 <footer class="site-footer">
   <div class="wrap site-footer__inner">

@@ -211,19 +211,16 @@
       { "id": "corporate", "title": "Corporate Partnership", "text": "Companies and foundations are welcome." }
     ],
     "button": "Donate Now",
-    "legalLine": "I confirm that I have read and understood the donation terms.",
-    "legalNote": "Donations are processed only through secure platforms.",
-    "legalAlert": "You must accept the terms."
+    "legalNote": "Donations are processed only through secure platforms."
   },
   "knowledge": {
     "title": "Knowledge Center",
     "intro": "All the information, rights, and tools orphans and their families need.",
     "sections": [
-      { "id": "guides", "title": "Age-Specific Guides", "text": "From childhood to adulthood." },
-      { "id": "rights", "title": "Rights & Benefits", "text": "Everything you need to know." },
-      { "id": "faq", "title": "Frequently Asked Questions", "text": "Answers to common questions." },
-      { "id": "articles", "title": "Professional Articles", "text": "Content from experts." },
-      { "id": "links", "title": "Useful Links", "text": "Authorities and government offices." }
+      { "id": "minors", "title": "Minor Orphans (under 18)", "text": "Information, rights, and guidance tailored for orphaned children and adolescents." },
+      { "id": "youth", "title": "Youth & Young Adults", "text": "Tools and guidance for adolescence and the first steps into independent adulthood." },
+      { "id": "students", "title": "Students", "text": "Scholarships, tuition assistance, and academic support." },
+      { "id": "soldiers", "title": "Soldiers", "text": "Rights, benefits, and guidance during military service." }
     ],
     "comingSoon": "Coming soon: Israeli Orphan Wiki.",
     "cta": "Enter the Knowledge Center"
@@ -236,7 +233,10 @@
   "intro": "A national week dedicated to placing the issue of orphanhood at the center of educational, community, and public discourse – grounded in recognition, responsibility, and resilience.",
 
   "aboutToggle": "Click for a full explanation of the week",
-  "aboutText": "In Israel, thousands of children, adolescents, and young adults have lost a parent, yet the experience of orphanhood often remains invisible and excluded from public discourse. Israeli Orphans’ Families Week was created to change this – not out of pity, but out of recognition of the lived reality of orphans and the shared responsibility of society as a whole to accompany, support, and include them.\n\nThe week creates an educational, community, and national continuum: safe dialogue in schools, increased public awareness, policy advancement, and community support – with the aim of strengthening visibility, belonging, and resilience for orphaned families and for Israeli society as a whole.",
+  "aboutText": [
+    "In Israel, thousands of children, adolescents, and young adults have lost a parent, yet the experience of orphanhood often remains invisible and excluded from public discourse. Israeli Orphans’ Families Week was created to change this – not out of pity, but out of recognition of the lived reality of orphans and the shared responsibility of society as a whole to accompany, support, and include them.",
+    "The week creates an educational, community, and national continuum: safe dialogue in schools, increased public awareness, policy advancement, and community support – with the aim of strengthening visibility, belonging, and resilience for orphaned families and for Israeli society as a whole."
+  ],
 
   "days": [
     {
@@ -406,7 +406,7 @@
   "emailBody": "Hello,\n\nI am contacting you through the website regarding:\n\nName:\nPhone:\nMessage:\n\nThank you,",
 
   "socialTitle": "You Can Also Follow Us",
-  "social": ["Facebook", "Instagram", "YouTube"],
+  "social": ["Facebook", "Instagram", "LinkedIn", "YouTube"],
 
   "pressNote": "For media inquiries, journalists, and content organizations – we would be happy to get in touch and collaborate.",
   "footerLine": "Mishpacha Association supports orphans on their journey toward safe, supportive, and meaningful lives."

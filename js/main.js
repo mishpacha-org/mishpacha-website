@@ -14,7 +14,7 @@ const LINKS = {
       facebook: "https://www.facebook.com/mishpahaorg?locale=he_IL",
       instagram: "https://www.instagram.com/org_mishpacha/",
       whatsapp: "https://wa.me/message/IMUVXWXVPB64M1",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/company/mishpacha-ngo/?viewAsMember=true",
       youtube: "https://www.youtube.com/@organizationmishpacha7482",
       x: ""
     }
@@ -23,10 +23,10 @@ const LINKS = {
   const IMAGES = {
     logo: "assets/img/logo.png",
     hero: "assets/img/logo.png",
-    about: "assets/img/about.jpg",
-    story: "assets/img/story.jpg",
-    help: "assets/img/vision2.jpg",
-    volunteer : "assets/img/volunteer.jpg"
+    about: "assets/img/about.webp",
+    story: "assets/img/story.webp",
+    help: "assets/img/vision2.webp",
+    volunteer : "assets/img/volunteer.webp"
 
   };
 
@@ -277,11 +277,11 @@ function getIconSvg(name) {
     community: "groupChat",
     housing: "houseKey",
 
-    // KNOWLEDGE section ids -> icons
-    guides: "book",
-    faq: "spark",
-    articles: "digital",
-    links: "link"
+    // KNOWLEDGE section ids -> icons (audience categories)
+    minors: "heart",
+    youth: "users",
+    students: "book",
+    soldiers: "spark"
   };
 
   const key = aliases[name] || name;
@@ -304,9 +304,6 @@ function normalizeSocialKey(label) {
   if (raw === "x" || raw.includes("twitter") || raw.includes("טוויט")) return "x";
   return "link";
 }
-//   function setSafeInnerText(el, text) {
-//   el.textContent = typeof text === "string" ? text : "";
-// }
 
 function createCardWithMedia(imgKey, title, text) {
   const card = document.createElement("div");
@@ -415,8 +412,6 @@ if (key === "volunteer") {
         a.href = LINKS.helpForm;
         a.target = "_blank";
         a.rel = "noopener";
-      } else if (id === "donate") {
-        a.href = "#donate";
       } else {
         a.href = `#${id || "top"}`;
       }
@@ -765,6 +760,23 @@ function renderStatistics() {
 
 
 
+function renderOrphanWeekAbout() {
+  const holder = $("#orphanWeekAboutText");
+  if (!holder) return;
+
+  holder.innerHTML = "";
+  const parts = dictionary?.orphanWeek?.aboutText;
+  if (!Array.isArray(parts)) return;
+
+  parts.forEach((text) => {
+    const p = document.createElement("p");
+    p.className = "muted";
+    p.style.margin = "0 0 10px";
+    setSafeInnerText(p, text);
+    holder.appendChild(p);
+  });
+}
+
 function renderOrphanWeek() {
   const holder = $("#orphanWeekDays");
   if (!holder) return;
@@ -1017,6 +1029,7 @@ function renderAllDynamic() {
   renderStatistics();
   renderRights();
   renderTransparency();
+  renderOrphanWeekAbout();
   renderOrphanWeek();
   renderDocuments();
   renderContact();
@@ -1082,6 +1095,21 @@ function setupMenuToggle() {
   nav.addEventListener("click", (e) => {
     if (e.target.closest("a")) close();
   });
+}
+
+function setupFloatingWhatsApp() {
+  const btn = $("#floatingWhatsAppBtn");
+  if (!btn) return;
+
+  const icon = btn.querySelector(".floatingWhatsApp__icon");
+  if (icon && !icon.dataset.bound) {
+    icon.innerHTML = getIconSvg("whatsapp");
+    icon.dataset.bound = "1";
+  }
+
+  btn.href = LINKS.contactWhatsApp || "#";
+  btn.target = "_blank";
+  btn.rel = "noopener";
 }
 
 function setupBackToTop() {
@@ -1199,6 +1227,7 @@ async function init() {
   }
   setupMenuToggle();
   setupBackToTop();
+  setupFloatingWhatsApp();
 }
 
   document.addEventListener("DOMContentLoaded", init);

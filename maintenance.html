@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>משפאחה – האתר בשיפוצים</title>
+  <meta name="description" content="אתר עמותת משפאחה מתחדש. בינתיים אנחנו כאן בשבילכם בוואטסאפ, במייל ובלינקדאין." />
+  <link rel="stylesheet" href="css/main_style.css" />
+  <style>
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding: 24px;
+    }
+
+    .maint{
+      max-width: 640px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.92));
+      border: 1px solid rgba(20,20,35,.10);
+      border-radius: var(--r-3);
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 5vw, 48px);
+      text-align: center;
+    }
+
+    .maint__logo{
+      width: 96px;
+      height: 70px;
+      margin: 0 auto 22px;
+      background-image: url('assets/img/logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .maint__title{
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      margin: 0 0 14px;
+      line-height: 1.3;
+    }
+
+    .maint__text{
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+      margin: 0 0 28px;
+    }
+
+    .maint__subhead{
+      font-weight: 700;
+      margin: 0 0 14px;
+      text-align: start;
+    }
+
+    .maint__list{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: start;
+    }
+
+    .maint__item{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(20,20,35,.10);
+      background: rgba(255,255,255,.75);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+
+    .maint__item:hover{
+      transform: translateY(-1px);
+      border-color: rgba(184,72,216,.35);
+      box-shadow: 0 10px 20px rgba(20,20,35,.08);
+    }
+
+    .maint__icon{
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .maint__itemText{ min-width: 0; }
+    .maint__itemText strong{ display:block; font-size: 14.5px; }
+    .maint__itemText span{ display:block; color: var(--muted); font-size: 13.5px; margin-top: 2px; }
+
+    .maint__footer{
+      margin-top: 26px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px){
+      .maint{ padding: 24px 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="maint">
+    <div class="maint__logo" role="img" aria-label="לוגו עמותת משפאחה"></div>
+
+    <h1 class="maint__title">אתר עמותת משפאחה מתחדש עבורכם! ✨</h1>
+
+    <p class="maint__text">
+      אנחנו משדרגים את האתר ומרכז הידע כדי להעניק לכם חוויה טובה, נגישה ומאובטחת יותר.
+      נשוב לפעילות מלאה בעוד מספר ימים.
+    </p>
+
+    <p class="maint__subhead">בזמן השדרוג, אנחנו כאן בשבילכם לכל דבר ועניין:</p>
+
+    <div class="maint__list">
+      <a class="maint__item" href="https://wa.me/message/IMUVXWXVPB64M1" target="_blank" rel="noopener">
+        <span class="maint__icon" aria-hidden="true">📞</span>
+        <span class="maint__itemText">
+          <strong>לפניות דחופות, תמיכה או מענה לעזרה</strong>
+          <span>שלחו לנו הודעת וואטסאפ ונחזור אליכם בהקדם</span>
+        </span>
+      </a>
+
+      <a class="maint__item" href="mailto:mishporg@gmail.com">
+        <span class="maint__icon" aria-hidden="true">💼</span>
+        <span class="maint__itemText">
+          <strong>לשותפויות, עיריות וראשי רשויות</strong>
+          <span>mishporg@gmail.com · 055-3134210</span>
+        </span>
+      </a>
+
+      <a class="maint__item" href="https://www.linkedin.com/company/mishpacha-ngo/?viewAsMember=true" target="_blank" rel="noopener">
+        <span class="maint__icon" aria-hidden="true">🔗</span>
+        <span class="maint__itemText">
+          <strong>עדכונים שוטפים מהעשייה שלנו</strong>
+          <span>עקבו אחרינו בלינקדאין</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="maint__footer">© כל הזכויות שמורות לעמותת משפאחה</div>
+  </main>
+</body>
+</html>

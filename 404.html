@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>העמוד לא נמצא – משפאחה</title>
+  <meta name="description" content="העמוד שחיפשתם לא נמצא. חזרו לאתר משפאחה, למרכז הידע או צרו איתנו קשר." />
+  <link rel="stylesheet" href="css/main_style.css" />
+  <style>
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding: 24px;
+    }
+
+    .err{
+      max-width: 560px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.92));
+      border: 1px solid rgba(20,20,35,.10);
+      border-radius: var(--r-3);
+      box-shadow: var(--shadow);
+      padding: clamp(28px, 6vw, 48px);
+      text-align: center;
+    }
+
+    .err__logo{
+      width: 84px;
+      height: 62px;
+      margin: 0 auto 18px;
+      background-image: url('assets/img/logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .err__code{
+      font-size: clamp(48px, 10vw, 72px);
+      font-weight: 900;
+      line-height: 1;
+      margin: 0 0 6px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .err__title{
+      font-size: clamp(19px, 2.4vw, 24px);
+      font-weight: 800;
+      margin: 0 0 12px;
+    }
+
+    .err__text{
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.7;
+      margin: 0 0 26px;
+    }
+
+    .err__ctas{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    @media (max-width: 480px){
+      .err{ padding: 24px 18px; }
+      .err__ctas .btn{ width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="err">
+    <div class="err__logo" role="img" aria-label="לוגו עמותת משפאחה"></div>
+
+    <div class="err__code">404</div>
+    <h1 class="err__title">אופס, העמוד הזה לא נמצא</h1>
+
+    <p class="err__text">
+      ייתכן שהקישור השתנה או שהעמוד הוסר.<br />
+      אפשר לחזור לעמוד הבית, למרכז הידע, או לפנות אלינו ישירות אם אתם צריכים עזרה.
+    </p>
+
+    <div class="err__ctas">
+      <a class="btn btn--primary" href="index.html">חזרה לעמוד הבית</a>
+      <a class="btn btn--outline" href="index.html#knowledge">למרכז הידע</a>
+      <a class="btn btn--outline" href="https://wa.me/message/IMUVXWXVPB64M1" target="_blank" rel="noopener">דברו איתנו בוואטסאפ</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -822,6 +822,44 @@ html[dir="ltr"] .split{
   pointer-events: auto;
 }
 
+/* ---------- Floating quick-help WhatsApp button (always visible) ---------- */
+.floatingWhatsApp{
+  position: fixed;
+  inset-inline-start: 18px;
+  bottom: 18px;
+  z-index: 1000;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(184,72,216,.95), rgba(143,43,182,.9));
+  box-shadow: 0 12px 28px rgba(20,10,40,.25);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.floatingWhatsApp:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(20,10,40,.32);
+}
+
+.floatingWhatsApp__icon svg{
+  width: 26px;
+  height: 26px;
+  stroke: #fff;
+}
+
+@media (max-width: 480px){
+  .floatingWhatsApp{
+    width: 48px;
+    height: 48px;
+    inset-inline-start: 14px;
+    bottom: 14px;
+  }
+  .floatingWhatsApp__icon svg{ width: 22px; height: 22px; }
+}
+
 /* ---------- Contact social icon buttons ---------- */
 .socialBtn{
   width: 44px;
