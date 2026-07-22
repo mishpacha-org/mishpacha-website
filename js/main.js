@@ -277,11 +277,11 @@ function getIconSvg(name) {
     community: "groupChat",
     housing: "houseKey",
 
-    // KNOWLEDGE section ids -> icons (audience categories)
-    minors: "heart",
-    youth: "users",
-    students: "book",
-    soldiers: "spark"
+    // KNOWLEDGE section ids -> icons (the center's goals)
+    hub: "digital",
+    library: "book",
+    bilingual: "link",
+    vision: "spark"
   };
 
   const key = aliases[name] || name;

@@ -217,10 +217,10 @@
     "title": "Knowledge Center on Orphanhood",
     "intro": "The Mishpacha Knowledge Center is a single place for research and information on the subject of orphanhood. It brings together hundreds of articles and resource files in Hebrew and English, and is steadily working to become the national knowledge center on the subject.",
     "sections": [
-      { "id": "minors", "title": "Minor Orphans (under 18)", "text": "Information, rights, and guidance tailored for orphaned children and adolescents." },
-      { "id": "youth", "title": "Youth & Young Adults", "text": "Tools and guidance for adolescence and the first steps into independent adulthood." },
-      { "id": "students", "title": "Students", "text": "Scholarships, tuition assistance, and academic support." },
-      { "id": "soldiers", "title": "Soldiers", "text": "Rights, benefits, and guidance during military service." }
+      { "id": "hub", "title": "One Place for Research and Knowledge", "text": "Everything currently known about orphanhood in Israel - data, research, and professional insights - gathered in one accessible place, instead of scattered across dozens of sources." },
+      { "id": "library", "title": "Hundreds of Articles and Resources", "text": "A digital library that keeps growing - articles, guides, and professional documents that help you understand the subject in depth, from every angle." },
+      { "id": "bilingual", "title": "In Hebrew and English", "text": "All content is available in both languages, so orphans, families, and English-speaking professionals in Israel and abroad can find real answers." },
+      { "id": "vision", "title": "Becoming Israel's National Knowledge Center", "text": "We are steadily building the infrastructure to make Mishpacha the central, trusted address in Israel for everything related to orphanhood." }
     ],
     "comingSoon": "Coming soon: Israeli Orphan Wiki.",
     "cta": "Enter the Knowledge Center"
