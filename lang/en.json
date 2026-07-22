@@ -214,8 +214,8 @@
     "legalNote": "Donations are processed only through secure platforms."
   },
   "knowledge": {
-    "title": "Knowledge Center",
-    "intro": "All the information, rights, and tools orphans and their families need.",
+    "title": "Knowledge Center on Orphanhood",
+    "intro": "The Mishpacha Knowledge Center is a single place for research and information on the subject of orphanhood. It brings together hundreds of articles and resource files in Hebrew and English, and is steadily working to become the national knowledge center on the subject.",
     "sections": [
       { "id": "minors", "title": "Minor Orphans (under 18)", "text": "Information, rights, and guidance tailored for orphaned children and adolescents." },
       { "id": "youth", "title": "Youth & Young Adults", "text": "Tools and guidance for adolescence and the first steps into independent adulthood." },
