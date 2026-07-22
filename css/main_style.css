@@ -1340,6 +1340,32 @@ body{
   letter-spacing: .2px;
 }
 
+/* =========================
+   DONATE – CTA card
+   ========================= */
+#donate .donate__cta-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: var(--space-5);
+  background: linear-gradient(135deg, rgba(184,72,216,.08), rgba(143,43,182,.05));
+  border-color: rgba(184,72,216,.22);
+}
+
+#donate .donate__cta-card .muted{
+  font-size: 15px;
+  max-width: 52ch;
+}
+
+#donate .donate__cta-btn{
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 28px;
+  letter-spacing: .2px;
+}
+
 /* RTL / LTR */
 html[dir="rtl"] #knowledge .knowledge__card{
   text-align: right;

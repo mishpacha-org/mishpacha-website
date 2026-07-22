@@ -12,6 +12,7 @@
     "story": "Personal Story",
     "help": "Orphans Need Help",
     "volunteer": "Volunteer",
+    "donate": "Donate",
     "knowledge": "Knowledge Hub",
     "statistics": "Statistics",
     "orphanWeek": "Orphan Families Week",
@@ -184,7 +185,7 @@
       "text": "A personal conversation to align expectations, understand motivation and skills, and answer questions."
     },
     {
-      "id": 3,
+      "order": 3,
       "title": "Training",
       "text": "Role-specific training that provides practical tools and initial guidance."
     },

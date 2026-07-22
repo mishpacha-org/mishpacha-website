@@ -8,9 +8,7 @@ const LINKS = {
   helpForm: "https://forms.fillout.com/t/jGF6Z1n5jRus",
   contactWhatsApp: "https://wa.me/message/IMUVXWXVPB64M1",
   contactEmail: "mishporg@gmail.com",
-  donatePlatform: "",
-  // ...
-    donatePlatform: "",
+  donatePlatform: "https://donate.meritspread.com/he/charities/mishpaha",
     // Social links (placeholders; replace when ready)
     social: {
       facebook: "https://www.facebook.com/mishpahaorg?locale=he_IL",
@@ -25,10 +23,10 @@ const LINKS = {
   const IMAGES = {
     logo: "assets/img/logo.png",
     hero: "assets/img/logo.png",
-    about: "assets/img/about.png",
+    about: "assets/img/about.jpg",
     story: "assets/img/story.jpg",
-    help: "assets/img/vision2.png",
-    volunteer : "assets/img/volunteer.png"
+    help: "assets/img/vision2.jpg",
+    volunteer : "assets/img/volunteer.jpg"
 
   };
 
@@ -373,15 +371,16 @@ if (key === "volunteer") {
 
     const order = [
       "about",
+      "knowledge",
       "services",
       "story",
       "help",
       "volunteer",
+      "donate",
       "orphanWeek",
       "statistics",
-      "knowledge",
       "contact"
-      // סקשנים מוסתרים: donate, rights, documents, transparency
+      // סקשנים מוסתרים: rights, documents, transparency
     ];
 
     order.forEach((id) => {
@@ -632,17 +631,12 @@ function renderStory() {
       });
     }
 
-    // wire donate button (depends on language alert text)
+    // wire donate CTA -> external Merit Spread donation page
     const btn = $("#donateNowBtn");
-    const checkbox = $("#donateLegalCheck");
-    if (btn && checkbox) {
-      btn.onclick = () => {
-        if (!checkbox.checked) {
-          alert(dictionary?.donate?.legalAlert || "You must accept the terms.");
-          return;
-        }
-        window.open(LINKS.donatePlatform, "_blank", "noopener");
-      };
+    if (btn) {
+      btn.href = LINKS.donatePlatform || "#";
+      btn.target = "_blank";
+      btn.rel = "noopener";
     }
   }
 
