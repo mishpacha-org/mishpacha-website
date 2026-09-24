@@ -388,10 +388,10 @@ if (key === "volunteer") {
       "help",
       "volunteer",
       "events",
-      "orphanWeek",
       "statistics",
       "contact"
       // סקשנים מוסתרים: rights, documents, transparency
+      // orphanWeek מוסתר זמנית (הסקשן ב-HTML מוער כ-comment; לא נמחק)
       // תרומות (donate) מוזגו לתוך services
     ];
 
@@ -644,7 +644,21 @@ function renderEvents() {
     if (ev?.dateLabel || ev?.time) {
       const dateEl = document.createElement("span");
       dateEl.className = "event__date";
-      dateEl.textContent = [ev?.dateLabel, ev?.time].filter(Boolean).join(" · ");
+
+      if (ev?.dateLabel) {
+        dateEl.appendChild(document.createTextNode(ev.dateLabel));
+      }
+
+      if (ev?.time) {
+        if (ev?.dateLabel) dateEl.appendChild(document.createTextNode(" · "));
+        // Isolate the time range so its LTR digits/dash render correctly inside RTL text.
+        const timeEl = document.createElement("span");
+        timeEl.className = "event__time";
+        timeEl.dir = "ltr";
+        timeEl.textContent = ev.time;
+        dateEl.appendChild(timeEl);
+      }
+
       meta.appendChild(dateEl);
     }
 
@@ -675,22 +689,54 @@ function renderEvents() {
     t.className = "card__title";
     setSafeInnerText(t, ev?.title);
 
+    body.appendChild(meta);
+    body.appendChild(t);
+
+    if (ev?.theme) {
+      const themeEl = document.createElement("div");
+      themeEl.className = "event__theme";
+      setSafeInnerText(themeEl, ev.theme);
+      body.appendChild(themeEl);
+    }
+
     const x = document.createElement("div");
     x.className = "card__text";
     setSafeInnerText(x, ev?.text);
-
-    body.appendChild(meta);
-    body.appendChild(t);
     body.appendChild(x);
 
-    if (ev?.ctaLink) {
-      const a = document.createElement("a");
-      a.className = "btn btn--outline event__cta";
-      a.href = ev.ctaLink;
-      a.target = "_blank";
-      a.rel = "noopener";
-      setSafeInnerText(a, ev?.ctaLabel || "");
-      body.appendChild(a);
+    if (ev?.note) {
+      const noteEl = document.createElement("div");
+      noteEl.className = "muted event__note";
+      setSafeInnerText(noteEl, ev.note);
+      body.appendChild(noteEl);
+    }
+
+    if (ev?.primaryCtaLink || ev?.secondaryCtaLink) {
+      const ctaRow = document.createElement("div");
+      ctaRow.className = "event__ctas";
+
+      // Registration is the primary, most prominent action; "learn more" is secondary.
+      if (ev?.primaryCtaLink) {
+        const a = document.createElement("a");
+        a.className = "btn btn--primary event__cta";
+        a.href = ev.primaryCtaLink;
+        a.target = "_blank";
+        a.rel = "noopener";
+        setSafeInnerText(a, ev?.primaryCtaLabel || "");
+        ctaRow.appendChild(a);
+      }
+
+      if (ev?.secondaryCtaLink) {
+        const a = document.createElement("a");
+        a.className = "btn btn--outline event__cta";
+        a.href = ev.secondaryCtaLink;
+        a.target = "_blank";
+        a.rel = "noopener";
+        setSafeInnerText(a, ev?.secondaryCtaLabel || "");
+        ctaRow.appendChild(a);
+      }
+
+      body.appendChild(ctaRow);
     }
 
     card.appendChild(icon);

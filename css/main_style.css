@@ -1459,6 +1459,11 @@ html[dir="ltr"] #knowledge .knowledge__card{
    EVENTS – community events & activities
    ========================= */
 
+/* .card sets display:flex, which otherwise beats the browser's default [hidden]{display:none} */
+#eventsEmpty[hidden]{
+  display: none;
+}
+
 #events .event__card{
   flex-direction: column;
   align-items: flex-start;
@@ -1497,6 +1502,10 @@ html[dir="ltr"] #knowledge .knowledge__card{
   color: var(--text);
 }
 
+#events .event__time{
+  unicode-bidi: isolate;
+}
+
 #events .event__location{
   color: var(--muted);
 }
@@ -1513,8 +1522,25 @@ html[dir="ltr"] #knowledge .knowledge__card{
   background: rgba(184,72,216,.08);
 }
 
-#events .event__cta{
+#events .event__theme{
+  font-weight: 700;
+  font-style: italic;
+  color: var(--accent-2);
+  font-size: 14.5px;
+}
+
+#events .event__note{
+  font-size: 13px;
+}
+
+#events .event__ctas{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 8px;
+}
+
+#events .event__cta{
   align-self: flex-start;
 }
 

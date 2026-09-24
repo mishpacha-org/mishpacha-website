@@ -211,30 +211,21 @@
   "emptyState": "There are no upcoming events published right now. Please check back soon.",
   "items": [
     {
-      "id": "sample-event-1",
-      "date": "2026-11-10",
-      "dateLabel": "November 10, 2026",
-      "time": "6:00 PM",
-      "location": "Tel Aviv",
-      "tag": "Community Gathering",
-      "icon": "calendar",
-      "title": "Sample Title — Community Gathering",
-      "text": "This is a sample event demonstrating the section's data structure. Full content will be added later.",
-      "ctaLabel": "Details & Registration",
-      "ctaLink": ""
-    },
-    {
-      "id": "sample-event-2",
-      "date": "2026-06-02",
-      "dateLabel": "June 2, 2026",
-      "time": "",
-      "location": "Online",
-      "tag": "Workshop",
-      "icon": "spark",
-      "title": "Sample Title — Online Workshop",
-      "text": "Another sample event to demonstrate a list with multiple items. Content will be replaced later.",
-      "ctaLabel": "",
-      "ctaLink": ""
+      "id": "national-study-day-2026",
+      "date": "2026-10-15",
+      "dateLabel": "Thursday, October 15, 2026",
+      "time": "10:00 AM – 2:00 PM",
+      "location": "Ariel University",
+      "tag": "National Study Day",
+      "icon": "book",
+      "title": "National Study Day on Bereavement and Orphanhood",
+      "theme": "From Personal Experience to National Policy",
+      "text": "A national study day held jointly by Mishpacha and Ariel University, bringing together representatives from government ministries, academia, local authorities, civil society, researchers, and professionals for a shared conversation on bereavement and orphanhood. More than another organizational event — a professional and academic gathering that connects personal experience, research, professional knowledge, public systems, and policy.",
+      "note": "Participation is free and requires advance registration.",
+      "primaryCtaLabel": "Register for the Event",
+      "primaryCtaLink": "https://ariel-and-mishpacha.vercel.app/",
+      "secondaryCtaLabel": "Learn More About the Event",
+      "secondaryCtaLink": "https://mishpacha-impact-summit.base44.app"
     }
   ]
 }
