@@ -382,12 +382,12 @@ if (key === "volunteer") {
 
     const order = [
       "about",
+      "events",
       "knowledge",
       "services",
       "story",
       "help",
       "volunteer",
-      "events",
       "statistics",
       "contact"
       // סקשנים מוסתרים: rights, documents, transparency

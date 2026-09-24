@@ -97,6 +97,24 @@
     </div>
   </section>
 
+  <!-- EVENTS -->
+  <section class="section" id="events">
+    <div class="wrap">
+      <div class="section__head">
+        <h3 class="section__title" data-i18n="events.title"></h3>
+        <p class="section__subtitle" data-i18n="events.intro"></p>
+      </div>
+
+      <!-- Event cards (rendered via JS from lang/*.json events.items) -->
+      <div class="grid" id="eventsItems"></div>
+
+      <!-- Shown by JS when events.items is empty -->
+      <div class="card" id="eventsEmpty" hidden>
+        <div class="muted" data-i18n="events.emptyState"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- KNOWLEDGE -->
   <section class="section" id="knowledge">
     <div class="wrap">
@@ -212,24 +230,6 @@
 </div>
 
 
-    </div>
-  </section>
-
-  <!-- EVENTS -->
-  <section class="section" id="events">
-    <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="events.title"></h3>
-        <p class="section__subtitle" data-i18n="events.intro"></p>
-      </div>
-
-      <!-- Event cards (rendered via JS from lang/*.json events.items) -->
-      <div class="grid" id="eventsItems"></div>
-
-      <!-- Shown by JS when events.items is empty -->
-      <div class="card" id="eventsEmpty" hidden>
-        <div class="muted" data-i18n="events.emptyState"></div>
-      </div>
     </div>
   </section>
 
