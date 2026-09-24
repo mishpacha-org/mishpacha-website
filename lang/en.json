@@ -12,6 +12,7 @@
     "story": "Personal Story",
     "help": "Orphans Need Help",
     "volunteer": "Volunteer",
+    "events": "Events",
     "donate": "Donate",
     "knowledge": "Knowledge Hub",
     "statistics": "Statistics",
@@ -199,6 +200,44 @@
   "button": "Join as a Volunteer"
 }
 
+
+,
+
+"events": {
+  "title": "Events & Activities",
+  "intro": "Updates on upcoming events and activities from the Mishpacha Association. This list is updated periodically as the organization's activity evolves.",
+  "upcomingBadge": "Upcoming",
+  "pastBadge": "Past",
+  "emptyState": "There are no upcoming events published right now. Please check back soon.",
+  "items": [
+    {
+      "id": "sample-event-1",
+      "date": "2026-11-10",
+      "dateLabel": "November 10, 2026",
+      "time": "6:00 PM",
+      "location": "Tel Aviv",
+      "tag": "Community Gathering",
+      "icon": "calendar",
+      "title": "Sample Title — Community Gathering",
+      "text": "This is a sample event demonstrating the section's data structure. Full content will be added later.",
+      "ctaLabel": "Details & Registration",
+      "ctaLink": ""
+    },
+    {
+      "id": "sample-event-2",
+      "date": "2026-06-02",
+      "dateLabel": "June 2, 2026",
+      "time": "",
+      "location": "Online",
+      "tag": "Workshop",
+      "icon": "spark",
+      "title": "Sample Title — Online Workshop",
+      "text": "Another sample event to demonstrate a list with multiple items. Content will be replaced later.",
+      "ctaLabel": "",
+      "ctaLink": ""
+    }
+  ]
+}
 
 ,
   "donate": {

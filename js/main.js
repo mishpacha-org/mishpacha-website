@@ -154,6 +154,17 @@ function getIconSvg(name) {
       <path d="M8 11h8"/>
     `),
 
+    // calendar / events
+    calendar: wrap(`
+      <rect x="3" y="5" width="18" height="16" rx="2"/>
+      <path d="M16 3v4"/>
+      <path d="M8 3v4"/>
+      <path d="M3 10h18"/>
+      <path d="M8 14h.01"/>
+      <path d="M12 14h.01"/>
+      <path d="M16 14h.01"/>
+    `),
+
     // users / community
     users: wrap(`
       <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
@@ -281,7 +292,10 @@ function getIconSvg(name) {
     hub: "digital",
     library: "book",
     bilingual: "link",
-    vision: "spark"
+    vision: "spark",
+
+    // EVENTS convenience alias
+    event: "calendar"
   };
 
   const key = aliases[name] || name;
@@ -373,6 +387,7 @@ if (key === "volunteer") {
       "story",
       "help",
       "volunteer",
+      "events",
       "orphanWeek",
       "statistics",
       "contact"
@@ -582,6 +597,107 @@ function renderStory() {
       });
     }
   }
+
+function renderEvents() {
+  const holder = $("#eventsItems");
+  const empty = $("#eventsEmpty");
+  if (!holder) return;
+
+  holder.innerHTML = "";
+
+  const data = dictionary?.events;
+  const items = Array.isArray(data?.items) ? data.items.slice() : [];
+
+  // Chronological order: valid dates first (ascending), undated items pushed to the end.
+  items.sort((a, b) => {
+    const da = a?.date ? new Date(a.date).getTime() : NaN;
+    const db = b?.date ? new Date(b.date).getTime() : NaN;
+    if (isNaN(da) && isNaN(db)) return 0;
+    if (isNaN(da)) return 1;
+    if (isNaN(db)) return -1;
+    return da - db;
+  });
+
+  if (empty) empty.hidden = items.length > 0;
+
+  const now = Date.now();
+
+  items.forEach((ev) => {
+    const card = document.createElement("div");
+    card.className = "card event__card";
+
+    const eventTime = ev?.date ? new Date(ev.date).getTime() : NaN;
+    const isPast = !isNaN(eventTime) && eventTime < now;
+    if (isPast) card.classList.add("event__card--past");
+
+    const icon = document.createElement("div");
+    icon.className = "card__icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.innerHTML = getIconSvg(ev?.icon || "calendar");
+
+    const body = document.createElement("div");
+    body.className = "card__body event__body";
+
+    const meta = document.createElement("div");
+    meta.className = "event__meta";
+
+    if (ev?.dateLabel || ev?.time) {
+      const dateEl = document.createElement("span");
+      dateEl.className = "event__date";
+      dateEl.textContent = [ev?.dateLabel, ev?.time].filter(Boolean).join(" · ");
+      meta.appendChild(dateEl);
+    }
+
+    if (ev?.location) {
+      const locEl = document.createElement("span");
+      locEl.className = "event__location";
+      locEl.textContent = ev.location;
+      meta.appendChild(locEl);
+    }
+
+    if (ev?.tag) {
+      const tagEl = document.createElement("span");
+      tagEl.className = "chip event__tag";
+      tagEl.textContent = ev.tag;
+      meta.appendChild(tagEl);
+    }
+
+    if (!isNaN(eventTime)) {
+      const badge = document.createElement("span");
+      badge.className = isPast
+        ? "chip event__badge"
+        : "chip event__badge event__badge--upcoming";
+      badge.textContent = (isPast ? data?.pastBadge : data?.upcomingBadge) || "";
+      meta.appendChild(badge);
+    }
+
+    const t = document.createElement("div");
+    t.className = "card__title";
+    setSafeInnerText(t, ev?.title);
+
+    const x = document.createElement("div");
+    x.className = "card__text";
+    setSafeInnerText(x, ev?.text);
+
+    body.appendChild(meta);
+    body.appendChild(t);
+    body.appendChild(x);
+
+    if (ev?.ctaLink) {
+      const a = document.createElement("a");
+      a.className = "btn btn--outline event__cta";
+      a.href = ev.ctaLink;
+      a.target = "_blank";
+      a.rel = "noopener";
+      setSafeInnerText(a, ev?.ctaLabel || "");
+      body.appendChild(a);
+    }
+
+    card.appendChild(icon);
+    card.appendChild(body);
+    holder.appendChild(card);
+  });
+}
 
   function renderDonate() {
     const ways = $("#donateWays");
@@ -1024,6 +1140,7 @@ function renderAllDynamic() {
   renderStory();       // <-- להוסיף את זה
   renderHelp();
   renderVolunteer();
+  renderEvents();
   renderDonate();
   renderKnowledge();
   renderStatistics();

@@ -1455,6 +1455,80 @@ html[dir="ltr"] #knowledge .knowledge__card{
   align-items: flex-start;
 }
 
+/* =========================
+   EVENTS – community events & activities
+   ========================= */
+
+#events .event__card{
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+#events .event__card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 22px 48px rgba(25,10,40,.13);
+}
+
+#events .event__card--past{
+  opacity: .68;
+}
+
+#events .event__body{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+#events .event__meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+#events .event__date{
+  font-weight: 800;
+  color: var(--text);
+}
+
+#events .event__location{
+  color: var(--muted);
+}
+
+#events .event__tag,
+#events .event__badge{
+  font-size: 12px;
+  padding: 4px 10px;
+}
+
+#events .event__badge--upcoming{
+  color: var(--accent-2);
+  border-color: rgba(184,72,216,.35);
+  background: rgba(184,72,216,.08);
+}
+
+#events .event__cta{
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+/* RTL / LTR alignment safety */
+html[dir="rtl"] #events .event__card{
+  text-align: right;
+  align-items: flex-start;
+}
+
+html[dir="ltr"] #events .event__card{
+  text-align: left;
+  align-items: flex-start;
+}
+
 /* ===== Footer ===== */
 .site-footer{
   padding: 18px 0;
