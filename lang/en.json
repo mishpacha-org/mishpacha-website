@@ -28,7 +28,7 @@
     "menu": "Menu"
   },
   "hero": {
-    "text": "Tens of thousands of orphans live in Israel. Mishpacha stands with them and their families, and builds the systems, knowledge and partnerships that change how the whole field responds – from personal mentoring to national policy.",
+    "text": "In Israel, tens of thousands of children and teens are coping with orphanhood and bereavement. Mishpacha works to connect them and their families to a supportive framework of knowledge, rights, community and services – from personal challenges to advancing systemic change.",
     "primaryCtas": [
       {
         "id": "services",
@@ -172,8 +172,8 @@
     }
   },
   "knowledge": {
-    "title": "A professional infrastructure for orphanhood and bereavement in Israel",
-    "intro": "Mishpacha is building and organizing the professional knowledge around orphanhood and civilian bereavement in Israel: research, data, policy and models. The Knowledge Center is the starting point, and the examples below are just a first look at the infrastructure.",
+    "title": "A professional infrastructure for bereavement and orphanhood in Israel",
+    "intro": "Mishpacha is building and organizing the professional knowledge around bereavement and orphanhood in Israel: research, data, policy and models. The Knowledge Center is the starting point, and the examples below are just a first look at the infrastructure.",
     "sections": [
       {
         "id": "hub",
