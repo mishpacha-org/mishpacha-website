@@ -10,11 +10,12 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#7437be" />
 
   <!-- Default (Hebrew) title/description in raw HTML so search engines see real text even before JS runs.
        The JS still overwrites these on language toggle for the in-browser experience. -->
   <title data-i18n="meta.title">משפאחה - עוצמה מתוך יתמות | תמיכה ליתומים בישראל</title>
-  <meta name="description" content="עמותת משפאחה מעניקה ליתומים ולמשפחותיהם בישראל תמיכה רגשית, חינוכית, משפטית וחברתית - ליווי אישי, חונכות, מיצוי זכויות ומרכז ידע." />
+  <meta name="description" content="עמותת משפאחה מלווה יתומים ומשפחות שכולות בישראל, ובונה מערכות, ידע ושותפויות שמשנים את המענה לתחום כולו - ליווי אישי, מרכז ידע לאומי, יתום־נט, אירועים ופרויקטים עם רשויות." />
 
   <!-- Open Graph / social share preview.
        TODO once the site has a live domain: og:image/og:url should be ABSOLUTE URLs
@@ -24,212 +25,210 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="עמותת משפאחה" />
   <meta property="og:title" content="משפאחה - עוצמה מתוך יתמות" />
-  <meta property="og:description" content="תמיכה מקיפה ליתומים בישראל - רגשית, חינוכית, משפטית וחברתית. הצטרפו כמתנדבים או תמכו בפעילות העמותה." />
+  <meta property="og:description" content="אף ילד יתום בישראל לא יישאר לבד. ליווי אישי, ידע, טכנולוגיה ושותפויות לשינוי המענה ליתומים." />
   <meta property="og:image" content="assets/img/logo.png" />
   <meta property="og:locale" content="he_IL" />
 
   <!-- Twitter/X card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="משפאחה - עוצמה מתוך יתמות" />
-  <meta name="twitter:description" content="תמיכה מקיפה ליתומים בישראל - רגשית, חינוכית, משפטית וחברתית." />
+  <meta name="twitter:description" content="אף ילד יתום בישראל לא יישאר לבד. ליווי אישי, ידע, טכנולוגיה ושותפויות לשינוי המענה ליתומים." />
   <meta name="twitter:image" content="assets/img/logo.png" />
 
   <link rel="icon" href="assets/img/logo.png" type="image/png" />
+
+  <!-- Heebo: the typeface shared by the whole Mishpacha ecosystem (system fonts are the fallback). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" />
+
   <link rel="stylesheet" href="css/main_style.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main" data-i18n="ui.skipLink"></a>
+
   <!-- TOP BAR -->
   <header class="topbar" id="top">
     <div class="wrap topbar__inner">
-      <div class="brand">
-        <div class="brand__mark" data-img="logo" aria-hidden="true"></div>
-        <div class="brand__text">
-          <div class="brand__title" data-i18n="brand.title"></div>
-          <div class="brand__subtitle" data-i18n="brand.subtitle"></div>
-        </div>
-      </div>
+      <a class="brand" href="#top">
+        <span class="brand__mark" data-img="logo" aria-hidden="true"></span>
+        <span class="brand__text">
+          <span class="brand__title" data-i18n="brand.title"></span>
+          <span class="brand__subtitle" data-i18n="brand.subtitle"></span>
+        </span>
+      </a>
 
       <div class="topbar__actions">
-        <button class="btn btn--ghost topbar__menuBtn" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks">☰ </button>
-
         <nav class="nav" id="navLinks" aria-label="Main navigation"></nav>
 
-        <button class="btn btn--ghost" id="langToggle" type="button">
+        <button class="langToggle" id="langToggle" type="button">
           <span data-i18n="ui.langToggle"></span>
+        </button>
+
+        <button class="menuBtn" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks">
+          <span class="menuBtn__bars" aria-hidden="true"></span>
+          <span class="sr-only" data-i18n="ui.menu"></span>
         </button>
       </div>
     </div>
   </header>
 
+  <main id="main">
+
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="hero" aria-labelledby="heroTitle">
+    <div class="hero__bg" aria-hidden="true">
+      <span class="orb orb--a"></span>
+      <span class="orb orb--b"></span>
+    </div>
+
     <div class="wrap hero__inner">
-      <div class="hero__text">
-        <h1 class="hero__h1" data-i18n="hero.title"></h1>
-        <h2 class="hero__h2" data-i18n="hero.subtitle"></h2>
-        <p class="hero__p" data-i18n="hero.text"></p>
+      <p class="eyebrow eyebrow--pill" data-i18n="hero.eyebrow"></p>
 
-        <div class="hero__cta" id="heroCtas"></div>
-      </div>
+      <h1 class="hero__title" id="heroTitle">
+        <span data-i18n="hero.titleLead"></span>
+        <span class="grad-text" data-i18n="hero.titleAccent"></span>
+      </h1>
 
-      <div class="hero__art" data-img="hero" aria-hidden="true"></div>
+      <p class="hero__text" data-i18n="hero.text"></p>
 
+      <div class="cta-row hero__cta" id="heroCtas"></div>
+
+      <p class="hero__support">
+        <span data-i18n="hero.support.text"></span>
+        <a class="link-arrow" href="#help" data-i18n="hero.support.link"></a>
+      </p>
+
+      <!-- Next upcoming event (rendered by JS from events.items; hidden when there is none) -->
+      <div class="nextEvent" id="nextEvent" hidden></div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="section" id="about">
+  <section class="section" id="about" aria-labelledby="aboutTitle">
     <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="about.title"></h3>
-      </div>
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="about.eyebrow"></p>
+        <h2 class="section__title" id="aboutTitle" data-i18n="about.title"></h2>
+      </header>
 
       <div class="about">
-        <div>
-          <div id="aboutIntro"></div>
-          <div class="about__cards" id="aboutPillars"></div>
+        <div class="about__main">
+          <div class="about__intro" id="aboutIntro"></div>
+          <div class="statements" id="aboutStatements"></div>
         </div>
 
         <div class="about__visual" data-img="about" aria-hidden="true"></div>
+      </div>
 
+      <h3 class="subhead" data-i18n="about.pillarsTitle"></h3>
+      <div class="pillars" id="aboutPillars"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES / WHAT WE DO -->
+  <section class="section section--alt" id="services" aria-labelledby="servicesTitle">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="services.eyebrow"></p>
+        <h2 class="section__title" id="servicesTitle" data-i18n="services.title"></h2>
+        <p class="section__intro" data-i18n="services.intro"></p>
+      </header>
+
+      <ol class="layers" id="servicesLayers"></ol>
+
+      <h3 class="subhead" data-i18n="services.itemsTitle"></h3>
+      <div class="grid grid--3" id="servicesItems"></div>
+
+      <!-- Projects & partnerships preview -> dedicated landing page -->
+      <div class="band">
+        <div class="band__text">
+          <p class="eyebrow eyebrow--light" data-i18n="services.partnership.eyebrow"></p>
+          <h3 class="band__title" data-i18n="services.partnership.title"></h3>
+          <p class="band__lead" data-i18n="services.partnership.text"></p>
+          <ul class="checklist checklist--light" id="partnershipPoints"></ul>
+        </div>
+        <div class="band__cta">
+          <a class="btn btn--light btn--arrow" id="projectsCta" href="#" target="_blank" rel="noopener"
+             data-i18n="services.partnership.cta"></a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- EVENTS -->
-  <section class="section" id="events">
+  <!-- KNOWLEDGE CENTER + YATOM-NET -->
+  <section class="section" id="knowledge" aria-labelledby="knowledgeTitle">
     <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="events.title"></h3>
-        <p class="section__subtitle" data-i18n="events.intro"></p>
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="knowledge.eyebrow"></p>
+        <h2 class="section__title" id="knowledgeTitle" data-i18n="knowledge.title"></h2>
+        <p class="section__intro" data-i18n="knowledge.intro"></p>
+      </header>
+
+      <h3 class="subhead"><span class="tagChip" data-i18n="knowledge.tag"></span> <span data-i18n="knowledge.cardsTitle"></span></h3>
+      <div class="grid grid--4" id="knowledgeSections"></div>
+
+      <div class="knowledge__actions">
+        <a class="btn btn--primary btn--arrow" id="systemsCta" href="#" target="_blank" rel="noopener"
+           data-i18n="knowledge.cta"></a>
+        <a class="link-arrow" id="knowledgeHubLink" href="#" target="_blank" rel="noopener"
+           data-i18n="knowledge.hubLink"></a>
+        <span class="muted knowledge__soon" data-i18n="knowledge.comingSoon"></span>
       </div>
 
+      <div class="bridge" role="presentation">
+        <span class="bridge__line" aria-hidden="true"></span>
+        <span class="bridge__label" data-i18n="knowledge.bridge"></span>
+        <span class="bridge__line" aria-hidden="true"></span>
+      </div>
+
+      <!-- Yatom-Net -->
+      <article class="yatom" id="yatomNet" aria-labelledby="yatomTitle">
+        <div class="yatom__main">
+          <p class="eyebrow eyebrow--light">
+            <span data-i18n="yatomNet.eyebrow"></span>
+            <span class="tagChip tagChip--light" data-i18n="yatomNet.tag"></span>
+          </p>
+          <h3 class="yatom__title" id="yatomTitle" data-i18n="yatomNet.title"></h3>
+          <p class="yatom__text" data-i18n="yatomNet.text"></p>
+
+          <div class="yatom__stat">
+            <span class="yatom__statValue" data-i18n="yatomNet.stat.value"></span>
+            <span class="yatom__statLabel" data-i18n="yatomNet.stat.label"></span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn--light btn--arrow" id="yatomCta" href="#" target="_blank" rel="noopener"
+               data-i18n="yatomNet.cta"></a>
+          </div>
+        </div>
+
+        <div class="yatom__visual">
+          <h4 class="yatom__flowTitle" data-i18n="yatomNet.flowTitle"></h4>
+          <ol class="flow" id="yatomFlow"></ol>
+          <p class="yatom__note" data-i18n="yatomNet.note"></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section section--alt" id="events" aria-labelledby="eventsTitle">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="events.eyebrow"></p>
+        <h2 class="section__title" id="eventsTitle" data-i18n="events.title"></h2>
+        <p class="section__intro" data-i18n="events.intro"></p>
+      </header>
+
       <!-- Event cards (rendered via JS from lang/*.json events.items) -->
-      <div class="grid" id="eventsItems"></div>
+      <div class="events" id="eventsItems"></div>
 
       <!-- Shown by JS when events.items is empty -->
       <div class="card" id="eventsEmpty" hidden>
         <div class="muted" data-i18n="events.emptyState"></div>
       </div>
-    </div>
-  </section>
-
-  <!-- KNOWLEDGE -->
-  <section class="section" id="knowledge">
-    <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="knowledge.title"></h3>
-        <p class="section__subtitle" data-i18n="knowledge.intro"></p>
-      </div>
-
-      <div class="grid" id="knowledgeSections"></div>
-
-      <div style="margin-top:16px" class="card knowledge__cta-card">
-        <div class="muted" data-i18n="knowledge.comingSoon"></div>
-        <div>
-          <a class="btn btn--primary knowledge__cta-btn" id="knowledgeCta" href="https://ncbos-knowledge-hub-c826ef5e.base44.app/PublicHome" target="_blank" rel="noopener" data-i18n="knowledge.cta"></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="services.title"></h3>
-        <p class="section__subtitle" data-i18n="services.intro"></p>
-      </div>
-
-      <div class="grid" id="servicesItems"></div>
-
-      <div style="margin-top:16px" class="card donate__cta-card">
-        <div class="card__title" data-i18n="services.supportInvite"></div>
-        <div class="muted" data-i18n="donate.intro"></div>
-
-        <div class="grid" id="donateWays"></div>
-
-        <div>
-          <a class="btn btn--primary donate__cta-btn" id="donateNowBtn" target="_blank" rel="noopener" href="#"
-             data-i18n="donate.button"></a>
-        </div>
-
-        <div class="muted" style="font-size:13px" data-i18n="donate.legalNote"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STORY -->
-<section class="section" id="story">
-  <div class="wrap">
-    <div class="section__head">
-      <h3 class="section__title" data-i18n="story.title"></h3>
-      <p class="section__subtitle" data-i18n="story.subtitle"></p>
-    </div>
-
-    <div class="split">
-      <div class="split__text">
-        <div class="card__title" data-i18n="story.person.name"></div>
-        <div class="muted" style="margin-top:6px" data-i18n="story.person.role"></div>
-
-        <div id="storyContent" class="story__content" style="margin-top:14px"></div>
-
-        <div class="muted" style="margin-top:14px" data-i18n="story.closing"></div>
-      </div>
-
-      <div class="split__art" data-img="story" aria-hidden="true"></div>
-    </div>
-  </div>
-</section>
-
-  <!-- HELP -->
-  <section class="section" id="help">
-    <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="help.title"></h3>
-        <p class="section__subtitle" data-i18n="help.intro"></p>
-      </div>
-
-<div class="split">
-  <div class="split__text">
-    <div class="help__steps" id="helpSteps"></div>
-    <div class="muted" data-i18n="help.benefitsText"></div>
-
-    <div style="margin-top:14px">
-      <a class="btn btn--primary" id="helpFormBtn" target="_blank" rel="noopener" href="#"
-         data-i18n="help.button"></a>
-    </div>
-  </div>
-
-  <div class="split__art" data-img="help" aria-hidden="true"></div>
-</div>
-  </section>
-
-  <!-- VOLUNTEER -->
-  <section class="section" id="volunteer">
-    <div class="wrap">
-      <div class="section__head">
-        <h3 class="section__title" data-i18n="volunteer.title"></h3>
-        <p class="section__subtitle" data-i18n="volunteer.intro"></p>
-      </div>
-
-<div class="split" style="margin-top:16px">
-  <div class="split__text">
-    <div class="card__title" data-i18n="volunteer.processTitle"></div>
-
-    <div id="volunteerProcess" style="margin-top:10px"></div>
-
-    <div class="volunteer__cta" style="margin-top:14px">
-      <a class="btn btn--outline" id="volunteerBtn" target="_blank" rel="noopener" href="#"
-         data-i18n="volunteer.button"></a>
-    </div>
-  </div>
-
-  <div class="split__art" data-img="volunteer" aria-hidden="true"></div>
-</div>
-
-
     </div>
   </section>
 
@@ -265,33 +264,161 @@
   </div>
 </section>
 
+  <!-- PEOPLE BEHIND MISHPACHA -->
+  <section class="section" id="people" aria-labelledby="peopleTitle">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="people.eyebrow"></p>
+        <h2 class="section__title" id="peopleTitle" data-i18n="people.title"></h2>
+        <p class="section__intro" data-i18n="people.intro"></p>
+      </header>
 
+      <!-- Person cards (rendered via JS from lang/*.json people.items) -->
+      <div class="people" id="peopleItems"></div>
 
-
-  <!-- STATISTICS -->
-<section class="section" id="statistics">
-  <div class="wrap">
-    <div class="section__head">
-      <h3 class="section__title" data-i18n="statistics.title"></h3>
-      <p class="section__subtitle" data-i18n="statistics.intro"></p>
+      <div class="center-cta">
+        <a class="btn btn--secondary btn--arrow" id="peopleCta" href="#" target="_blank" rel="noopener"
+           data-i18n="people.cta"></a>
+      </div>
     </div>
+  </section>
 
-    <!-- Metrics cards (rendered via JS) -->
-    <div class="grid" id="statisticsMetrics"></div>
+  <!-- SUPPORT AFTER LOSS -->
+  <section class="section section--soft" id="help" aria-labelledby="helpTitle">
+    <div class="wrap help">
+      <div class="help__main">
+        <p class="eyebrow" data-i18n="help.eyebrow"></p>
+        <h2 class="section__title" id="helpTitle" data-i18n="help.title"></h2>
+        <p class="section__intro" data-i18n="help.intro"></p>
+        <p class="help__audience" data-i18n="help.audience"></p>
 
-    <!-- Context card -->
-    <div style="margin-top:16px" class="card" id="statisticsContext">
-      <div class="card__title" data-i18n="statistics.meaningTitle"></div>
-      <ul class="list" id="statisticsMeaning"></ul>
+        <div class="cta-row">
+          <a class="btn btn--primary btn--arrow" id="helpFormBtn" target="_blank" rel="noopener" href="#"
+             data-i18n="help.button"></a>
+          <a class="btn btn--secondary" id="helpWhatsAppBtn" target="_blank" rel="noopener" href="#"
+             data-i18n="help.altButton"></a>
+        </div>
 
-      <div style="margin-top:14px" class="card__title" data-i18n="statistics.ageGroupsTitle"></div>
-      <ul class="list" id="statisticsAgeGroups"></ul>
+        <p class="help__reassure" data-i18n="help.reassurance"></p>
+      </div>
 
-      <div class="muted" style="margin-top:12px" data-i18n="statistics.source"></div>
-      <div class="muted" style="margin-top:6px" data-i18n="statistics.note"></div>
+      <div class="help__panel">
+        <h3 class="help__stepsTitle" data-i18n="help.stepsTitle"></h3>
+        <ol class="steps" id="helpSteps"></ol>
+        <p class="help__benefits" data-i18n="help.benefitsText"></p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- IMPACT / STATISTICS -->
+  <section class="section" id="statistics" aria-labelledby="statisticsTitle">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="statistics.eyebrow"></p>
+        <h2 class="section__title" id="statisticsTitle" data-i18n="statistics.title"></h2>
+        <p class="section__intro" data-i18n="statistics.intro"></p>
+      </header>
+
+      <!-- Metric panel (rendered via JS) -->
+      <div class="statsPanel">
+        <p class="statsPanel__label" data-i18n="statistics.scaleLabel"></p>
+        <div class="stats" id="statisticsMetrics"></div>
+      </div>
+
+      <!-- Context -->
+      <div class="statsContext" id="statisticsContext">
+        <div>
+          <h3 class="statsContext__title" data-i18n="statistics.meaningTitle"></h3>
+          <ul class="list" id="statisticsMeaning"></ul>
+        </div>
+        <div>
+          <h3 class="statsContext__title" data-i18n="statistics.ageGroupsTitle"></h3>
+          <ul class="chips" id="statisticsAgeGroups"></ul>
+          <p class="footnote" data-i18n="statistics.source"></p>
+          <p class="footnote" data-i18n="statistics.note"></p>
+        </div>
+      </div>
+
+      <!-- What has been built -> action -->
+      <div class="built">
+        <p class="eyebrow" data-i18n="statistics.builtEyebrow"></p>
+        <h3 class="built__title" data-i18n="statistics.builtTitle"></h3>
+        <div class="grid grid--4" id="statisticsBuilt"></div>
+
+        <div class="built__next">
+          <p class="built__nextTitle" data-i18n="statistics.transitionTitle"></p>
+          <div class="cta-row" id="statisticsCtas"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED: volunteer / support / partner -->
+  <section class="section section--alt" id="involved" aria-labelledby="involvedTitle">
+    <div class="wrap">
+      <header class="section__head">
+        <p class="eyebrow" data-i18n="involved.eyebrow"></p>
+        <h2 class="section__title" id="involvedTitle" data-i18n="involved.title"></h2>
+        <p class="section__intro" data-i18n="involved.intro"></p>
+      </header>
+
+      <div class="involved">
+        <!-- Volunteer -->
+        <article class="path path--volunteer" id="volunteer" aria-labelledby="volunteerTitle">
+          <div class="path__media" data-img="volunteer" aria-hidden="true"></div>
+          <div class="path__body">
+            <p class="eyebrow" data-i18n="volunteer.eyebrow"></p>
+            <h3 class="path__title" id="volunteerTitle" data-i18n="volunteer.title"></h3>
+            <p class="path__lead" data-i18n="volunteer.intro"></p>
+
+            <h4 class="path__sub" data-i18n="volunteer.rolesTitle"></h4>
+            <ul class="roles" id="volunteerRoles"></ul>
+
+            <h4 class="path__sub" data-i18n="volunteer.processTitle"></h4>
+            <ol class="steps steps--inline" id="volunteerProcess"></ol>
+
+            <div class="cta-row">
+              <a class="btn btn--primary btn--arrow" id="volunteerBtn" target="_blank" rel="noopener" href="#"
+                 data-i18n="volunteer.button"></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Donate -->
+        <article class="path path--donate" id="donate" aria-labelledby="donateTitle">
+          <p class="eyebrow eyebrow--light" data-i18n="donate.eyebrow"></p>
+          <h3 class="path__title" id="donateTitle" data-i18n="donate.title"></h3>
+          <p class="path__lead" data-i18n="donate.intro"></p>
+
+          <ul class="enables" id="donateEnables"></ul>
+
+          <p class="path__sub path__sub--light" data-i18n="donate.waysTitle"></p>
+          <ul class="chips chips--light" id="donateWays"></ul>
+
+          <div class="cta-row">
+            <!-- Donation destination is set in js/main.js (LINKS.donatePlatform) so a dedicated donation page can replace it in one place. -->
+            <a class="btn btn--light btn--arrow" id="donateNowBtn" target="_blank" rel="noopener" href="#"
+               data-i18n="donate.button"></a>
+          </div>
+          <p class="footnote footnote--light" data-i18n="donate.legalNote"></p>
+        </article>
+
+        <!-- Partner -->
+        <article class="path path--partner" id="partner" aria-labelledby="partnerTitle">
+          <p class="eyebrow" data-i18n="partner.eyebrow"></p>
+          <h3 class="path__title" id="partnerTitle" data-i18n="partner.title"></h3>
+          <p class="path__lead" data-i18n="partner.text"></p>
+          <ul class="checklist" id="partnerPoints"></ul>
+
+          <div class="cta-row">
+            <a class="btn btn--secondary btn--arrow" href="#contact" data-contact-topic="partnerships"
+               data-i18n="partner.cta"></a>
+          </div>
+          <a class="link-arrow" id="partnerLink" href="#" target="_blank" rel="noopener" data-i18n="partner.link"></a>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- RIGHTS -->
   <!-- <section class="section" id="rights">
@@ -323,83 +450,80 @@
   </section> -->
 
   <!-- CONTACT -->
-<section class="section" id="contact">
-  <div class="wrap">
-    <div class="section__head">
-      <h3 class="section__title" data-i18n="contact.title"></h3>
-      <p class="section__subtitle" data-i18n="contact.intro"></p>
-    </div>
+  <section class="section section--soft" id="contact" aria-labelledby="contactTitle">
+    <div class="wrap contact">
+      <div class="contact__lead">
+        <p class="eyebrow" data-i18n="contact.eyebrow"></p>
+        <h2 class="section__title" id="contactTitle" data-i18n="contact.title"></h2>
+        <p class="section__intro" data-i18n="contact.intro"></p>
 
-    <div class="contact">
-      <div class="card contactCard" id="contactMainCard">
-        <div class="contactCard__primary">
-          <div class="card__title" data-i18n="contact.quickTitle"></div>
-          <p class="muted" data-i18n="contact.footerLine"></p>
+        <h3 class="subhead subhead--sm" id="contactTopicsTitle" data-i18n="contact.topicsTitle"></h3>
+        <div class="topics" id="contactTopics" role="radiogroup" aria-labelledby="contactTopicsTitle"></div>
 
-<div class="contactCard__cta contactCtas">
-  <a class="btn btn--primary" id="contactWhatsAppBtn" target="_blank" rel="noopener" href="#"
-     data-i18n="contact.ctaWhatsApp"></a>
+        <p class="contact__hint" id="contactHint" hidden>
+          <span data-i18n="contact.supportHint"></span>
+          <a class="link-arrow" id="contactHintLink" href="#" target="_blank" rel="noopener"
+             data-i18n="contact.supportHintLink"></a>
+        </p>
 
-  <a class="btn btn--outline" id="contactEmailBtn" href="#"
-     data-i18n="contact.ctaEmail"></a>
-</div>
-
-          <div class="muted contactCard__meta" data-i18n="contact.responseNote"></div>
-          <div class="muted contactCard__meta" data-i18n="contact.pressNote"></div>
+        <div class="cta-row contact__cta">
+          <a class="btn btn--primary" id="contactWhatsAppBtn" target="_blank" rel="noopener" href="#"
+             data-i18n="contact.ctaWhatsApp"></a>
+          <a class="btn btn--secondary" id="contactEmailBtn" href="#"
+             data-i18n="contact.ctaEmail"></a>
         </div>
 
-        <div class="contactCard__details">
-          <div class="card__title" data-i18n="contact.methodsTitle"></div>
-          <ul class="contact__methods" id="contactMethods"></ul>
-
-          <div class="contactSocial">
-            <div class="card__title" data-i18n="contact.socialTitle"></div>
-            <div class="contact__chips" id="contactSocial"></div>
-          </div>
-        </div>
+        <p class="footnote" data-i18n="contact.responseNote"></p>
       </div>
 
-      <!-- Back to top (below contact content) -->
-      <div class="contact__bottom">
-        <button class="btn btn--outline backToTop" id="backToTopBtn" type="button"
-                aria-label="Back to top" title="Back to top">↑</button>
+      <aside class="contact__card" id="contactMainCard">
+        <h3 class="contact__cardTitle" data-i18n="contact.methodsTitle"></h3>
+        <ul class="contact__methods" id="contactMethods"></ul>
+
+        <h3 class="contact__cardTitle" data-i18n="contact.socialTitle"></h3>
+        <div class="contact__chips" id="contactSocial"></div>
+
+        <p class="contact__about" data-i18n="contact.footerLine"></p>
+        <p class="footnote" data-i18n="contact.pressNote"></p>
+      </aside>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Back to top (floating) -->
+  <button class="backToTop" id="backToTopBtn" type="button" aria-label="Back to top" title="Back to top">↑</button>
+
+  <!-- Floating quick-help WhatsApp button (always visible) -->
+  <a class="floatingWhatsApp" id="floatingWhatsAppBtn" href="#" target="_blank" rel="noopener" aria-label="דברו איתנו בוואטסאפ">
+    <span class="floatingWhatsApp__icon" aria-hidden="true"></span>
+  </a>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__rights" data-i18n="footer.rights"></div>
+
+      <div class="site-footer__links">
+        <button class="footer-link" type="button" data-legal="accessibility" data-i18n="footer.accessibility"></button>
+        <span class="site-footer__sep" aria-hidden="true">|</span>
+        <button class="footer-link" type="button" data-legal="privacy" data-i18n="footer.privacy"></button>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Floating quick-help WhatsApp button (always visible, all pages) -->
-<a class="floatingWhatsApp" id="floatingWhatsAppBtn" href="#" target="_blank" rel="noopener" aria-label="דברו איתנו בוואטסאפ">
-  <span class="floatingWhatsApp__icon" aria-hidden="true"></span>
-</a>
+  <!-- Legal modal -->
+  <div class="modal" id="legalModal" hidden>
+    <div class="modal__backdrop" data-close="true"></div>
 
-<footer class="site-footer">
-  <div class="wrap site-footer__inner">
-    <div class="site-footer__rights" data-i18n="footer.rights"></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
+      <div class="modal__head">
+        <h2 class="modal__title" id="legalTitle"></h2>
+        <button class="modal__close" type="button" aria-label="סגור" data-close="true">✕</button>
+      </div>
 
-    <div class="site-footer__links">
-      <button class="footer-link" type="button" data-legal="accessibility" data-i18n="footer.accessibility"></button>
-      <span class="site-footer__sep" aria-hidden="true">|</span>
-      <button class="footer-link" type="button" data-legal="privacy" data-i18n="footer.privacy"></button>
+      <div class="modal__body" id="legalBody"></div>
     </div>
   </div>
-</footer>
-
-<!-- Legal modal -->
-<div class="modal" id="legalModal" hidden>
-  <div class="modal__backdrop" data-close="true"></div>
-
-  <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="legalTitle">
-    <div class="modal__head">
-      <h2 class="modal__title" id="legalTitle"></h2>
-      <button class="modal__close" type="button" aria-label="סגור" data-close="true">✕</button>
-    </div>
-
-    <div class="modal__body" id="legalBody"></div>
-  </div>
-</div>
-
-
 
   <script src="js/main.js" defer></script>
 </body>

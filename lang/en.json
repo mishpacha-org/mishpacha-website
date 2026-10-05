@@ -7,350 +7,604 @@
     "subtitle": "Strength from Orphanhood"
   },
   "nav": {
-    "about": "About Us",
+    "about": "About",
     "services": "What We Do",
     "story": "Personal Story",
     "help": "Orphans Need Help",
     "volunteer": "Volunteer",
     "events": "Events",
     "donate": "Donate",
-    "knowledge": "Knowledge Hub",
+    "knowledge": "Knowledge & Yatom-Net",
     "statistics": "Statistics",
     "orphanWeek": "Orphan Families Week",
-    "contact": "Contact Us"
+    "contact": "Contact",
+    "people": "People",
+    "involved": "Get Involved"
   },
   "ui": {
     "langToggle": "HE",
-    "backTop": "Back to Top"
+    "backTop": "Back to Top",
+    "skipLink": "Skip to main content",
+    "menu": "Menu"
   },
-"hero": {
-  "title": "Mishpacha - Strength from Orphanhood",
-  "subtitle": "Comprehensive support for orphans in Israel – emotional, educational, legal, and social",
-  "text": "No child should have to face loss alone.\n\nMishpacha is a national organization supporting orphans in Israel and their families through emotional, educational, legal, and social care.\n\nWe are here to walk alongside them, to strengthen, and to ensure that no child or young adult is ever left alone.",
-  "primaryCtas": [
-    { "id": "volunteer", "label": "I Want to Volunteer" },
-{ "id": "help", "label": "We’re here for you" }
-  ]
-},
-"about": {
-  "title": "Who We Are and Why We Founded Mishpacha",
-  "intro": [
-    "Mishpacha was born from personal experience and a deep understanding that orphaned youth in Israel need real guidance during the most critical years of their lives: adolescence, military service, and the first steps into independent adulthood.",
-    "We are not just another welfare organization, but a supportive family for youth and young adults after loss, standing with them at a complex crossroads of identity, decision-making, and future, often without a full family safety net.",
-    "Our work focuses on personal guidance, emotional resilience, and building practical life skills, serving orphaned youth, soldiers, and young adults at the beginning of their independent journey, alongside volunteers and professionals who seek to be part of a deep and lasting solution."
-  ],
-  "pillars": [
-    {
-      "id": "personal",
-      "title": "Personal Guidance for Youth",
-      "text": "Ongoing mentoring and close support for orphaned youth, soldiers, and discharged young adults during the most formative years of life."
-    },
-    {
-      "id": "digital",
-      "title": "Digital Innovation & Knowledge Access",
-      "text": "Developing digital systems and tools that centralize information, rights, and guidance for orphaned youth and the wider public."
-    },
-    {
-      "id": "tools",
-      "title": "Life Skills & Independence",
-      "text": "Emotional strengthening, guidance, and practical tools for military service and building stable, independent adult lives."
-    }
-  ]
-},
-
-"services": {
-  "title": "What We Do for Orphans in Israel",
-  "intro": "The organization works to provide orphans with stability, practical tools, and long-term guidance — from the initial moment of loss to full independence.",
-  "supportInvite": "You're invited to support the organization's activities",
-  "items": [
-    {
-      "id": "financialEducation",
-      "title": "Financial Support and Education",
-      "text": "Scholarships and tuition assistance, funding for courses and professional training, and guidance in critical financial decisions — enabling progress without financial barriers.",
-      "icon": "book"
-    },
-    {
-      "id": "emotionalSupport",
-      "title": "Emotional and Psychological Support",
-      "text": "Professional emotional care, support groups, and empowerment workshops — helping cope with loss, strengthen personal resilience, and build self-confidence.",
-      "icon": "heart"
-    },
-    {
-      "id": "mentoring",
-      "title": "Personal Mentorship and Guidance",
-      "text": "Ongoing connection with dedicated mentors, career guidance, and personal support — so important decisions are not made alone.",
-      "icon": "personal"
-    },
-    {
-      "id": "rights",
-      "title": "Rights Assistance and Support with Authorities",
-      "text": "Support in accessing benefits, bureaucratic and legal guidance, and representation with relevant authorities — ensuring that legal rights are fully exercised.",
-      "icon": "tools"
-    },
-    {
-      "id": "community",
-      "title": "Community, Belonging, and Social Connection",
-      "text": "Building a supportive social framework through gatherings, trips, and activities — reducing loneliness and fostering a sense of belonging.",
-      "icon": "users"
-    },
-    {
-      "id": "housing",
-      "title": "Housing Support and Foster Families",
-      "text": "Assistance in finding housing solutions, guidance for foster families, and support throughout adoption processes — creating a stable and secure home.",
-      "icon": "hands"
-    }
-  ]
-},
-
-
-
-"story": {
-  "title": "The Story Behind Mishpacha",
-
-  "subtitle": "A personal mission that became a social initiative",
-
-  "person": {
-    "name": "Delalin Destaw",
-    "role": "Founder and President of Mishpacha Association"
-  },
-
-  "content": [
-    "Delalin Destaw is a social entrepreneur, author, and a Captain in the Israel Defense Forces, driven by a deep sense of mission to support orphaned children and youth facing complex life circumstances.",
-
-    "Delalin lost both of his parents at a young age. He immigrated to Israel 13 years ago with his uncle, grew up in Afula, and now lives in Tel Aviv. His personal life story lies at the heart of the association’s founding, and from lived experience emerged the decision to act so that no child would ever feel alone.",
-
-    "During his service in the IDF, Delalin served in the Education and Youth Corps and later in the Civil Administration and COGAT, holding leadership and educational roles in both routine and emergency situations, guided by the belief that leadership means seeing the person behind the uniform.",
-
-    "Mishpacha Association operates from a community-based approach, offering long-term accompaniment and genuine human connections, and leads a shift in perception from 'at-risk youth' to 'youth with potential', grounded in a deep belief in people and in the ability to grow even from complex realities.",
-
-    "Delalin is the author of the book \"Running the Long Distance\", an autobiographical and values-driven work that provides inspiration and practical tools for young people and individuals at life crossroads. He is a graduate of the National Student and Youth Council, a recipient of the Minister of Education’s Award for Youth Volunteering, and was selected as one of Israel’s 20 most influential young leaders."
-  ],
-
-  "closing": "The work of Mishpacha and Delalin’s personal journey are united by one simple belief and one clear vision: every child deserves a Mishpacha, and every person deserves an opportunity."
-}
-  
-  
-  
-  
-  
-  
-  ,
-
-
-"help": {
-  "title": "You’ve experienced loss. You don’t have to move forward alone.",
-  "intro": "Losing a parent changes life. It does not define who you are, but it does mark a new path. We are here to walk it with you.",
-  "steps": [
-    { "order": 1, "title": "Initial outreach", "text": "Submit a short, private form." },
-    { "order": 2, "title": "A human conversation", "text": "We’ll reach out, listen, and understand what you need right now." },
-    { "order": 3, "title": "Choosing a support path", "text": "Together, we’ll build a support plan that fits you and your pace." },
-    { "order": 4, "title": "Moving forward with support", "text": "Stable, ongoing guidance — not a one-time response." }
-  ],
-  "benefitsText": "Personal guidance, emotional support, financial and legal assistance — and, above all, a framework that allows growth even after loss.",
-  "button": "Start a support process"
-}
-
-
-
-
-  ,
-"volunteer": {
-  "title": "Volunteer and Change Lives",
-  "intro": "Volunteering with the Mishpacha Association is an opportunity to make a real difference. Not as a one-time gesture, but as a commitment to be present for orphans who need guidance, listening, and stable support over time.",
-  "roles": [
-    {
-      "id": "personalMentor",
-      "title": "Personal Mentorship",
-      "text": "Close, personal guidance for an orphan, building a meaningful relationship and trust over time."
-    },
-    {
-      "id": "professionalVolunteer",
-      "title": "Professional Volunteering",
-      "text": "Professionals from various fields such as social work, law, technology, and consulting, contributing their knowledge and experience."
-    },
-    {
-      "id": "logistics",
-      "title": "Logistical Support",
-      "text": "Assistance with event organization, task management, transportation, and ongoing operations that make our work possible."
-    }
-  ],
-  "processTitle": "Our Process",
-  "processSteps": [
-    {
-      "order": 1,
-      "title": "Application Form",
-      "text": "A short form with personal details, interests, and availability so we can get to know you better."
-    },
-    {
-      "order": 2,
-      "title": "Introductory Interview",
-      "text": "A personal conversation to align expectations, understand motivation and skills, and answer questions."
-    },
-    {
-      "order": 3,
-      "title": "Training",
-      "text": "Role-specific training that provides practical tools and initial guidance."
-    },
-    {
-      "order": 4,
-      "title": "Matching and Ongoing Support",
-      "text": "Careful matching to an orphan or volunteering role, with continuous support throughout the journey."
-    }
-  ],
-  "button": "Join as a Volunteer"
-}
-
-
-,
-
-"events": {
-  "title": "Events & Activities",
-  "intro": "Updates on upcoming events and activities from the Mishpacha Association. This list is updated periodically as the organization's activity evolves.",
-  "upcomingBadge": "Upcoming",
-  "pastBadge": "Past",
-  "emptyState": "There are no upcoming events published right now. Please check back soon.",
-  "items": [
-    {
-      "id": "national-study-day-2026",
-      "date": "2026-10-15",
-      "dateLabel": "Thursday, October 15, 2026",
-      "time": "10:00 AM – 2:00 PM",
-      "location": "Ariel University",
-      "tag": "National Study Day",
-      "icon": "book",
-      "title": "National Study Day on Bereavement and Orphanhood",
-      "theme": "From Personal Experience to National Policy",
-      "text": "A national study day held jointly by Mishpacha and Ariel University, bringing together representatives from government ministries, academia, local authorities, civil society, researchers, and professionals for a shared conversation on bereavement and orphanhood. More than another organizational event — a professional and academic gathering that connects personal experience, research, professional knowledge, public systems, and policy.",
-      "note": "Participation is free and requires advance registration.",
-      "primaryCtaLabel": "Register for the Event",
-      "primaryCtaLink": "https://ariel-and-mishpacha.vercel.app/",
-      "secondaryCtaLabel": "Learn More About the Event",
-      "secondaryCtaLink": "https://mishpacha-impact-summit.base44.app"
-    }
-  ]
-}
-
-,
-  "donate": {
-    "title": "Your Donation Changes Lives",
-    "intro": "Every shekel you donate goes directly to changing lives.",
-    "waysToGive": [
-      { "id": "oneTime", "title": "One-time Donation", "text": "Any amount, anytime." },
-      { "id": "monthly", "title": "Monthly Donation", "text": "Join our family of recurring donors." },
-      { "id": "sponsorship", "title": "Project Sponsorship", "text": "Adopt a program or a young person." },
-      { "id": "corporate", "title": "Corporate Partnership", "text": "Companies and foundations are welcome." }
+  "hero": {
+    "text": "Tens of thousands of orphans live in Israel. Mishpacha stands with them and their families, and builds the systems, knowledge and partnerships that change how the whole field responds – from personal mentoring to national policy.",
+    "primaryCtas": [
+      {
+        "id": "services",
+        "label": "Discover what we do"
+      },
+      {
+        "id": "involved",
+        "label": "Get involved"
+      }
     ],
-    "button": "Donate Now",
-    "legalNote": "Donations are processed only through secure platforms."
+    "eyebrow": "Mishpacha · Strength from Orphanhood",
+    "titleLead": "No orphan in Israel",
+    "titleAccent": "will be left alone",
+    "support": {
+      "text": "Experienced a loss?",
+      "link": "We're here for you"
+    },
+    "nextEvent": {
+      "label": "Next event",
+      "cta": "Register"
+    }
+  },
+  "about": {
+    "title": "Having their back – and changing the system around them",
+    "intro": [
+      "Mishpacha was born from personal experience. Orphaned children, teens and young adults need real guidance in the most decisive years: adolescence, military service and the first steps into independent adulthood.",
+      "We're not another welfare body but a family that walks alongside them. Alongside personal support, we build knowledge, technology and partnerships with authorities and government ministries, so the response to orphans in Israel is clear, accessible and continuous."
+    ],
+    "pillars": [
+      {
+        "id": "personal",
+        "title": "Personal guidance, all the way",
+        "text": "Ongoing mentoring for orphaned youth, soldiers and discharged young adults – in the years when the biggest decisions are made."
+      },
+      {
+        "id": "digital",
+        "title": "Knowledge and technology that make rights accessible",
+        "text": "Systems and tools that bring together information, rights and guidance for orphans, families and professionals."
+      },
+      {
+        "id": "tools",
+        "title": "Tools for life and independence",
+        "text": "Emotional strengthening, guidance and practical tools for military service and for building stable adult lives."
+      }
+    ],
+    "eyebrow": "Who we are",
+    "statements": [
+      {
+        "id": "mission",
+        "label": "Our mission",
+        "text": "To support orphaned children, teens and young adults – and to build the responses they're missing."
+      },
+      {
+        "id": "vision",
+        "label": "Our vision",
+        "text": "That no orphan in Israel is left alone, and every one of them has a real chance to grow."
+      },
+      {
+        "id": "change",
+        "label": "The change we're leading",
+        "text": "A country that identifies every orphan, recognizes their needs and provides continuous support – at every age, in every city."
+      }
+    ],
+    "pillarsTitle": "Three anchors in our work"
+  },
+  "services": {
+    "title": "One strategy, several layers of change",
+    "intro": "An orphan's situation isn't a single problem to solve. It involves family, community, local authorities, knowledge systems and policy – and all of them have to work together. Mishpacha acts on all of these layers at once, as parts of one strategy.",
+    "items": [
+      {
+        "id": "financialEducation",
+        "title": "Financial Support and Education",
+        "text": "Scholarships and tuition assistance, funding for courses and professional training, and guidance in critical financial decisions — enabling progress without financial barriers.",
+        "icon": "book"
+      },
+      {
+        "id": "emotionalSupport",
+        "title": "Emotional and Psychological Support",
+        "text": "Professional emotional care, support groups, and empowerment workshops — helping cope with loss, strengthen personal resilience, and build self-confidence.",
+        "icon": "heart"
+      },
+      {
+        "id": "mentoring",
+        "title": "Personal Mentorship and Guidance",
+        "text": "Ongoing connection with dedicated mentors, career guidance, and personal support — so important decisions are not made alone.",
+        "icon": "personal"
+      },
+      {
+        "id": "rights",
+        "title": "Rights Assistance and Support with Authorities",
+        "text": "Support in accessing benefits, bureaucratic and legal guidance, and representation with relevant authorities — ensuring that legal rights are fully exercised.",
+        "icon": "tools"
+      },
+      {
+        "id": "community",
+        "title": "Community, Belonging, and Social Connection",
+        "text": "Building a supportive social framework through gatherings, trips, and activities — reducing loneliness and fostering a sense of belonging.",
+        "icon": "users"
+      },
+      {
+        "id": "housing",
+        "title": "Housing Support and Foster Families",
+        "text": "Assistance in finding housing solutions, guidance for foster families, and support throughout adoption processes — creating a stable and secure home.",
+        "icon": "hands"
+      }
+    ],
+    "eyebrow": "What we do",
+    "layers": [
+      {
+        "id": "direct",
+        "title": "Direct support",
+        "text": "Personal mentoring, plus emotional and financial support for young people and families."
+      },
+      {
+        "id": "knowledge",
+        "title": "Knowledge & technology",
+        "text": "A national knowledge center and digital systems that make information and rights accessible."
+      },
+      {
+        "id": "community",
+        "title": "Community & partnerships",
+        "text": "A supportive community, and connections between local authorities, companies and organizations."
+      },
+      {
+        "id": "systemic",
+        "title": "Systemic change",
+        "text": "Working with government ministries and academia to advance long-term policy."
+      }
+    ],
+    "itemsTitle": "In practice: direct support across six areas",
+    "partnership": {
+      "eyebrow": "Projects & partnerships",
+      "title": "Local authorities, companies and organizations build the response with us",
+      "text": "A new working model: a local authority, Mishpacha and business partners – mapping needs, professional training, city pilots, and community over time.",
+      "points": [
+        "A city pilot together with Mishpacha",
+        "Study days and training for welfare and education teams",
+        "Mentoring programs and scholarships with companies"
+      ],
+      "cta": "Explore our projects and partnerships"
+    }
   },
   "knowledge": {
-    "title": "Knowledge Center on Orphanhood",
-    "intro": "The Mishpacha Knowledge Center is a single place for research and information on the subject of orphanhood. It brings together hundreds of articles and resource files in Hebrew and English, and is steadily working to become the national knowledge center on the subject.",
+    "title": "A professional infrastructure for orphanhood and bereavement in Israel",
+    "intro": "Mishpacha is building and organizing the professional knowledge around orphanhood and civilian bereavement in Israel: research, data, policy and models. The Knowledge Center is the starting point, and the examples below are just a first look at the infrastructure.",
     "sections": [
-      { "id": "hub", "title": "One Place for Research and Knowledge", "text": "Everything currently known about orphanhood in Israel - data, research, and professional insights - gathered in one accessible place, instead of scattered across dozens of sources." },
-      { "id": "library", "title": "Hundreds of Articles and Resources", "text": "A digital library that keeps growing - articles, guides, and professional documents that help you understand the subject in depth, from every angle." },
-      { "id": "bilingual", "title": "In Hebrew and English", "text": "All content is available in both languages, so orphans, families, and English-speaking professionals in Israel and abroad can find real answers." },
-      { "id": "vision", "title": "Becoming Israel's National Knowledge Center", "text": "We are steadily building the infrastructure to make Mishpacha the central, trusted address in Israel for everything related to orphanhood." }
+      {
+        "id": "hub",
+        "title": "One Place for Research and Knowledge",
+        "text": "Everything currently known about orphanhood in Israel - data, research, and professional insights - gathered in one accessible place, instead of scattered across dozens of sources."
+      },
+      {
+        "id": "library",
+        "title": "Hundreds of Articles and Resources",
+        "text": "A digital library that keeps growing - articles, guides, and professional documents that help you understand the subject in depth, from every angle."
+      },
+      {
+        "id": "bilingual",
+        "title": "In Hebrew and English",
+        "text": "All content is available in both languages, so orphans, families, and English-speaking professionals in Israel and abroad can find real answers."
+      },
+      {
+        "id": "vision",
+        "title": "Becoming Israel's National Knowledge Center",
+        "text": "We are steadily building the infrastructure to make Mishpacha the central, trusted address in Israel for everything related to orphanhood."
+      }
     ],
     "comingSoon": "Coming soon: Israeli Orphan Wiki.",
-    "cta": "Enter the Knowledge Center"
+    "cta": "Explore the Knowledge Center & Yatom-Net",
+    "eyebrow": "Knowledge & infrastructure",
+    "tag": "Field → Knowledge",
+    "cardsTitle": "Inside the Center",
+    "hubLink": "Go straight to the Knowledge Center library",
+    "bridge": "Two layers of the same infrastructure"
   },
-
-
-
-"orphanWeek": {
-  "title": "Israeli Orphans’ Families Week",
-  "intro": "A national week dedicated to placing the issue of orphanhood at the center of educational, community, and public discourse – grounded in recognition, responsibility, and resilience.",
-
-  "aboutToggle": "Click for a full explanation of the week",
-  "aboutText": [
-    "In Israel, thousands of children, adolescents, and young adults have lost a parent, yet the experience of orphanhood often remains invisible and excluded from public discourse. Israeli Orphans’ Families Week was created to change this – not out of pity, but out of recognition of the lived reality of orphans and the shared responsibility of society as a whole to accompany, support, and include them.",
-    "The week creates an educational, community, and national continuum: safe dialogue in schools, increased public awareness, policy advancement, and community support – with the aim of strengthening visibility, belonging, and resilience for orphaned families and for Israeli society as a whole."
-  ],
-
-  "days": [
-    {
-      "order": 1,
-      "label": "Sunday – Opening and Recognition",
-      "title": "National Opening Event",
-      "text": "The opening day is dedicated to public and official recognition of the lived reality of orphaned children and adolescents. It marks the placement of the issue at the center of public attention through personal testimonies, remarks by education and welfare professionals, and public representatives, alongside a call for sustained social responsibility."
+  "yatomNet": {
+    "eyebrow": "Yatom-Net",
+    "tag": "People → Rights",
+    "title": "Claiming rights starts from the file, not from the family",
+    "text": "Many of the rights orphans are entitled to go unclaimed, because families have to know what exists, what to look for and whom to approach. Yatom-Net is a case-file system that identifies which rights may be relevant based on the data in the child's file – and shows what can already be claimed.",
+    "stat": {
+      "value": "~147",
+      "label": "rights for orphans published by the State – and claiming them usually means going through a third party or a lawyer."
     },
-    {
-      "order": 2,
-      "label": "Monday–Wednesday – Education and Awareness",
-      "title": "Educational Dialogue and Raising Awareness",
-      "text": "These days are devoted to educational and community-based work: lesson plans in schools, age-appropriate classroom discussions, community activities, and media exposure. The emphasis is on understanding, empathy, and providing tools for becoming a supportive society – without pity and without silencing."
+    "flowTitle": "How it works",
+    "flow": [
+      {
+        "id": "file",
+        "title": "Orphan's file",
+        "text": "The child's and family's data, in one place."
+      },
+      {
+        "id": "profile",
+        "title": "Eligibility profile",
+        "text": "The engine checks the eligibility rules."
+      },
+      {
+        "id": "rights",
+        "title": "Relevant rights",
+        "text": "What may be relevant, and what can already be claimed."
+      },
+      {
+        "id": "claim",
+        "title": "Claiming in practice",
+        "text": "Which documents are missing and what else needs attention."
+      }
+    ],
+    "note": "The system helps identify and surface rights. It does not replace a decision by an authorized body about eligibility.",
+    "cta": "Discover Yatom-Net"
+  },
+  "events": {
+    "title": "Events & Activities",
+    "intro": "Gatherings where knowledge, community and policy meet.",
+    "upcomingBadge": "Upcoming",
+    "pastBadge": "Past",
+    "emptyState": "There are no upcoming events published right now. Please check back soon.",
+    "items": [
+      {
+        "id": "national-study-day-2026",
+        "date": "2026-10-15",
+        "dateLabel": "Thursday, October 15, 2026",
+        "time": "10:00 AM – 2:00 PM",
+        "location": "Ariel University",
+        "tag": "National Study Day",
+        "icon": "book",
+        "title": "National Study Day on Bereavement and Orphanhood",
+        "theme": "From Personal Experience to National Policy",
+        "text": "A professional and academic gathering held jointly by Mishpacha and Ariel University, connecting personal experience, research, public systems and policy – with representatives of government, academia, local authorities and civil society.",
+        "note": "Participation is free and requires advance registration.",
+        "primaryCtaLabel": "Register for the Event",
+        "primaryCtaLink": "https://ariel-and-mishpacha.vercel.app/",
+        "secondaryCtaLabel": "Learn More About the Event",
+        "secondaryCtaLink": "https://mishpacha-impact-summit.base44.app"
+      }
+    ],
+    "eyebrow": "Events"
+  },
+  "people": {
+    "eyebrow": "The team",
+    "title": "The People Behind Mishpacha",
+    "intro": "Behind the work are people with different stories, experience and paths – who meet around one goal.",
+    "cta": "Meet the People Behind Mishpacha",
+    "items": [
+      {
+        "id": "ori-bio",
+        "name": "Ori Bio",
+        "role": "Founder and Chair, Mishpacha Association",
+        "teaser": "A social and business entrepreneur who leads the organization's vision and strategy and builds partnerships with authorities and public bodies.",
+        "image": "assets/img/people/ori-bio.webp"
+      },
+      {
+        "id": "shalev-shapiro",
+        "name": "Shalev Shapiro",
+        "role": "CEO, Mishpacha Association",
+        "teaser": "An entrepreneur and technologist who runs day-to-day operations and leads the development of new projects and systems.",
+        "image": "assets/img/people/shalev-shapiro.webp"
+      },
+      {
+        "id": "ron-yosef",
+        "name": "Ron Yosef",
+        "role": "VP and Head of Projects",
+        "teaser": "A social activist in technology and community, who leads the organization's technology work and its government relations.",
+        "image": "assets/img/people/ron-yosef.webp"
+      },
+      {
+        "id": "delalin-destaw",
+        "name": "Delalin Destaw",
+        "role": "Founder and President, Mishpacha Association",
+        "teaser": "Orphaned of both parents, an IDF officer and author, whose life story lies at the heart of the association's founding.",
+        "image": "assets/img/people/delalin-destaw.webp"
+      }
+    ]
+  },
+  "help": {
+    "title": "Experienced a loss? You don't have to continue alone.",
+    "intro": "Losing a parent changes life, but it doesn't define who you are. Those who reach out get a human conversation, support at their own pace, and someone to help them understand which rights and resources they need.",
+    "steps": [
+      {
+        "order": 1,
+        "title": "Initial outreach",
+        "text": "Submit a short, private form."
+      },
+      {
+        "order": 2,
+        "title": "A human conversation",
+        "text": "We’ll reach out, listen, and understand what you need right now."
+      },
+      {
+        "order": 3,
+        "title": "Choosing a support path",
+        "text": "Together, we’ll build a support plan that fits you and your pace."
+      },
+      {
+        "order": 4,
+        "title": "Moving forward with support",
+        "text": "Stable, ongoing guidance — not a one-time response."
+      }
+    ],
+    "benefitsText": "Personal guidance, emotional support, financial and legal assistance — and, above all, a framework that allows growth even after loss.",
+    "button": "Start a support process",
+    "eyebrow": "We're here for you",
+    "audience": "For children, teens and young adults who have lost a parent, and their families.",
+    "reassurance": "The form is short and discreet, with no commitment. We'll get back to you for a human conversation.",
+    "altButton": "Or send us a WhatsApp message",
+    "stepsTitle": "What happens after you reach out"
+  },
+  "involved": {
+    "eyebrow": "Get involved",
+    "title": "There are several ways to be part of the change",
+    "intro": "Whether you want to give your time, support the work, or build a partnership with us – there's a place for you here."
+  },
+  "volunteer": {
+    "title": "Volunteer and Change Lives",
+    "intro": "Orphans don't need another one-time gesture. They need someone who stays: a steady presence, a listening ear, professional knowledge, or hands that help the work happen. Volunteers are the heart of the support at Mishpacha.",
+    "roles": [
+      {
+        "id": "personalMentor",
+        "title": "Personal Mentorship",
+        "text": "Close, personal guidance for an orphan, building a meaningful relationship and trust over time."
+      },
+      {
+        "id": "professionalVolunteer",
+        "title": "Professional Volunteering",
+        "text": "Professionals from various fields such as social work, law, technology, and consulting, contributing their knowledge and experience."
+      },
+      {
+        "id": "logistics",
+        "title": "Logistical Support",
+        "text": "Assistance with event organization, task management, transportation, and ongoing operations that make our work possible."
+      }
+    ],
+    "processTitle": "Our Process",
+    "processSteps": [
+      {
+        "order": 1,
+        "title": "Application Form",
+        "text": "A short form with personal details, interests, and availability so we can get to know you better."
+      },
+      {
+        "order": 2,
+        "title": "Introductory Interview",
+        "text": "A personal conversation to align expectations, understand motivation and skills, and answer questions."
+      },
+      {
+        "order": 3,
+        "title": "Training",
+        "text": "Role-specific training that provides practical tools and initial guidance."
+      },
+      {
+        "order": 4,
+        "title": "Matching and Ongoing Support",
+        "text": "Careful matching to an orphan or volunteering role, with continuous support throughout the journey."
+      }
+    ],
+    "button": "Join as a Volunteer",
+    "eyebrow": "Volunteering",
+    "rolesTitle": "Ways to volunteer"
+  },
+  "donate": {
+    "title": "Support that turns into action",
+    "intro": "Your donation lets us keep supporting orphans in practice and expand the infrastructure that changes how the whole field responds. Here's what it makes possible:",
+    "waysToGive": [
+      {
+        "id": "oneTime",
+        "title": "One-time Donation",
+        "text": "Any amount, anytime."
+      },
+      {
+        "id": "monthly",
+        "title": "Monthly Donation",
+        "text": "Join our family of recurring donors."
+      },
+      {
+        "id": "sponsorship",
+        "title": "Project Sponsorship",
+        "text": "Adopt a program or a young person."
+      },
+      {
+        "id": "corporate",
+        "title": "Corporate Partnership",
+        "text": "Companies and foundations are welcome."
+      }
+    ],
+    "button": "Donate Now",
+    "legalNote": "Donations are processed only through secure platforms.",
+    "eyebrow": "Support",
+    "enables": [
+      {
+        "id": "projects",
+        "icon": "tools",
+        "title": "Projects",
+        "text": "Initiatives and programs that reach orphans and families on the ground."
+      },
+      {
+        "id": "knowledge",
+        "icon": "book",
+        "title": "Knowledge",
+        "text": "Growing and updating the national Knowledge Center."
+      },
+      {
+        "id": "technology",
+        "icon": "digital",
+        "title": "Technology",
+        "text": "Developing and maintaining systems like Yatom-Net."
+      },
+      {
+        "id": "community",
+        "icon": "users",
+        "title": "Community",
+        "text": "Gatherings, mentoring and activities that reduce loneliness."
+      },
+      {
+        "id": "infrastructure",
+        "icon": "hands",
+        "title": "Support infrastructure",
+        "text": "Professional guidance, emotional support and help claiming rights."
+      },
+      {
+        "id": "growth",
+        "icon": "spark",
+        "title": "Growth",
+        "text": "Extending the work to more authorities, orphans and families."
+      }
+    ],
+    "waysTitle": "Ways to give"
+  },
+  "partner": {
+    "eyebrow": "Partnerships",
+    "title": "Building a response bigger than any one organization",
+    "text": "Local authorities, government ministries, academia, companies and civil society organizations are all part of the response to orphans. If you represent one of them, let's build something together.",
+    "points": [
+      "Local authorities: mapping, training and city pilots",
+      "Companies: mentoring, scholarships and employee volunteering",
+      "Academia and organizations: research, knowledge and joint projects"
+    ],
+    "cta": "Let's talk about collaboration",
+    "link": "Our projects and partnerships"
+  },
+  "statistics": {
+    "title": "Orphanhood Statistics in Israel – 2025",
+    "intro": "Official data on orphanhood in Israel, based on publications by the Central Bureau of Statistics (CBS).",
+    "metrics": [
+      {
+        "label": "Total number of orphans",
+        "value": "44,864"
+      },
+      {
+        "label": "Under the age of 18",
+        "value": "29,782"
+      },
+      {
+        "label": "New orphans per year",
+        "value": "901"
+      },
+      {
+        "label": "Living in poverty",
+        "value": "18,500"
+      },
+      {
+        "label": "Living in inadequate housing",
+        "value": "3,200"
+      }
+    ],
+    "meaningTitle": "What do these figures mean?",
+    "meaning": [
+      "The data indicates that orphanhood in Israel is not a marginal phenomenon and affects tens of thousands of families.",
+      "The scope includes children, adolescents, and young adults, highlighting that coping with orphanhood does not end at the age of 18.",
+      "A significant portion of orphans face poverty and complex housing conditions, in addition to the loss itself.",
+      "The figures emphasize the need for public recognition and long-term responses, rather than isolated or short-term solutions."
+    ],
+    "ageGroupsTitle": "Age groups",
+    "ageGroups": [
+      "Ages 0–6",
+      "Ages 7–12",
+      "Ages 13–18",
+      "Ages 19+"
+    ],
+    "source": "Data source: Central Bureau of Statistics (CBS), 2025",
+    "note": "The data reflects a national snapshot and does not include an assessment of emotional, educational, or therapeutic needs.",
+    "eyebrow": "By the numbers",
+    "scaleLabel": "The scale of the challenge",
+    "builtEyebrow": "What's been built",
+    "builtTitle": "This is what we've already built – and there is much more to do",
+    "built": [
+      {
+        "id": "knowledge",
+        "title": "A national knowledge center",
+        "text": "Hundreds of articles and documents in Hebrew and English, in one place."
+      },
+      {
+        "id": "yatomNet",
+        "title": "Yatom-Net",
+        "text": "A system for managing orphans' files and identifying rights, developed by the association."
+      },
+      {
+        "id": "authorities",
+        "title": "A model for working with authorities",
+        "text": "A framework for local authorities: training, pilots and community."
+      },
+      {
+        "id": "summit",
+        "title": "A national study day",
+        "text": "A joint gathering with Ariel University, government ministries, authorities and researchers."
+      }
+    ],
+    "transitionTitle": "These numbers are people. You can be part of the response.",
+    "ctas": [
+      {
+        "id": "donate",
+        "label": "Support the work",
+        "target": "donate"
+      },
+      {
+        "id": "volunteer",
+        "label": "Volunteer",
+        "target": "volunteer"
+      },
+      {
+        "id": "partner",
+        "label": "Partner with us",
+        "target": "partner"
+      }
+    ]
+  },
+  "story": {
+    "title": "The Story Behind Mishpacha",
+    "subtitle": "A personal mission that became a social initiative",
+    "person": {
+      "name": "Delalin Destaw",
+      "role": "Founder and President of Mishpacha Association"
     },
-    {
-      "order": 3,
-      "label": "Thursday – Policy and Responsibility",
-      "title": "Advancing Policy and Rights",
-      "text": "This day focuses on the systemic dimensions of orphanhood: meetings with government ministries, local authorities, and professional stakeholders, aimed at advancing recognition, rights, and sustained support frameworks for orphaned children and adults."
-    },
-    {
-      "order": 4,
-      "label": "Friday–Saturday – Community and Belonging",
-      "title": "Community Activities and Strengthening Belonging",
-      "text": "The closing of the week is dedicated to the community: gatherings, cultural activities, and events that strengthen connection, visibility, and belonging, and emphasize that orphanhood is not loneliness – but a lived reality that can and must be accompanied together."
-    }
-  ],
-
-  "note": "Israeli Orphans’ Families Week is a first step in an ongoing process of educational, social, and systemic change – for orphans and for a more sensitive, responsible, and inclusive society."
-}
-  
-  
-  
-  
-  
-  
-  ,
-"statistics": {
-  "title": "Orphanhood Statistics in Israel – 2025",
-  "intro": "Official data on orphanhood in Israel, based on publications by the Central Bureau of Statistics (CBS).",
-
-  "metrics": [
-    {
-      "label": "Total number of orphans",
-      "value": "44,864"
-    },
-    {
-      "label": "Under the age of 18",
-      "value": "29,782"
-    },
-    {
-      "label": "New orphans per year",
-      "value": "901"
-    },
-    {
-      "label": "Living in poverty",
-      "value": "18,500"
-    },
-    {
-      "label": "Living in inadequate housing",
-      "value": "3,200"
-    }
-  ],
-
-  "meaningTitle": "What do these figures mean?",
-  "meaning": [
-    "The data indicates that orphanhood in Israel is not a marginal phenomenon and affects tens of thousands of families.",
-    "The scope includes children, adolescents, and young adults, highlighting that coping with orphanhood does not end at the age of 18.",
-    "A significant portion of orphans face poverty and complex housing conditions, in addition to the loss itself.",
-    "The figures emphasize the need for public recognition and long-term responses, rather than isolated or short-term solutions."
-  ],
-
-  "ageGroupsTitle": "Age groups",
-  "ageGroups": [
-    "Ages 0–6",
-    "Ages 7–12",
-    "Ages 13–18",
-    "Ages 19+"
-  ],
-
-  "source": "Data source: Central Bureau of Statistics (CBS), 2025",
-  "note": "The data reflects a national snapshot and does not include an assessment of emotional, educational, or therapeutic needs."
-}
-  ,
+    "content": [
+      "Delalin Destaw is a social entrepreneur, author, and a Captain in the Israel Defense Forces, driven by a deep sense of mission to support orphaned children and youth facing complex life circumstances.",
+      "Delalin lost both of his parents at a young age. He immigrated to Israel 13 years ago with his uncle, grew up in Afula, and now lives in Tel Aviv. His personal life story lies at the heart of the association’s founding, and from lived experience emerged the decision to act so that no child would ever feel alone.",
+      "During his service in the IDF, Delalin served in the Education and Youth Corps and later in the Civil Administration and COGAT, holding leadership and educational roles in both routine and emergency situations, guided by the belief that leadership means seeing the person behind the uniform.",
+      "Mishpacha Association operates from a community-based approach, offering long-term accompaniment and genuine human connections, and leads a shift in perception from 'at-risk youth' to 'youth with potential', grounded in a deep belief in people and in the ability to grow even from complex realities.",
+      "Delalin is the author of the book \"Running the Long Distance\", an autobiographical and values-driven work that provides inspiration and practical tools for young people and individuals at life crossroads. He is a graduate of the National Student and Youth Council, a recipient of the Minister of Education’s Award for Youth Volunteering, and was selected as one of Israel’s 20 most influential young leaders."
+    ],
+    "closing": "The work of Mishpacha and Delalin’s personal journey are united by one simple belief and one clear vision: every child deserves a Mishpacha, and every person deserves an opportunity."
+  },
+  "orphanWeek": {
+    "title": "Israeli Orphans’ Families Week",
+    "intro": "A national week dedicated to placing the issue of orphanhood at the center of educational, community, and public discourse – grounded in recognition, responsibility, and resilience.",
+    "aboutToggle": "Click for a full explanation of the week",
+    "aboutText": [
+      "In Israel, thousands of children, adolescents, and young adults have lost a parent, yet the experience of orphanhood often remains invisible and excluded from public discourse. Israeli Orphans’ Families Week was created to change this – not out of pity, but out of recognition of the lived reality of orphans and the shared responsibility of society as a whole to accompany, support, and include them.",
+      "The week creates an educational, community, and national continuum: safe dialogue in schools, increased public awareness, policy advancement, and community support – with the aim of strengthening visibility, belonging, and resilience for orphaned families and for Israeli society as a whole."
+    ],
+    "days": [
+      {
+        "order": 1,
+        "label": "Sunday – Opening and Recognition",
+        "title": "National Opening Event",
+        "text": "The opening day is dedicated to public and official recognition of the lived reality of orphaned children and adolescents. It marks the placement of the issue at the center of public attention through personal testimonies, remarks by education and welfare professionals, and public representatives, alongside a call for sustained social responsibility."
+      },
+      {
+        "order": 2,
+        "label": "Monday–Wednesday – Education and Awareness",
+        "title": "Educational Dialogue and Raising Awareness",
+        "text": "These days are devoted to educational and community-based work: lesson plans in schools, age-appropriate classroom discussions, community activities, and media exposure. The emphasis is on understanding, empathy, and providing tools for becoming a supportive society – without pity and without silencing."
+      },
+      {
+        "order": 3,
+        "label": "Thursday – Policy and Responsibility",
+        "title": "Advancing Policy and Rights",
+        "text": "This day focuses on the systemic dimensions of orphanhood: meetings with government ministries, local authorities, and professional stakeholders, aimed at advancing recognition, rights, and sustained support frameworks for orphaned children and adults."
+      },
+      {
+        "order": 4,
+        "label": "Friday–Saturday – Community and Belonging",
+        "title": "Community Activities and Strengthening Belonging",
+        "text": "The closing of the week is dedicated to the community: gatherings, cultural activities, and events that strengthen connection, visibility, and belonging, and emphasize that orphanhood is not loneliness – but a lived reality that can and must be accompanied together."
+      }
+    ],
+    "note": "Israeli Orphans’ Families Week is a first step in an ongoing process of educational, social, and systemic change – for orphans and for a more sensitive, responsible, and inclusive society."
+  },
   "rights": {
     "title": "Rights Guide",
     "intro": "All the rights available to orphans in Israel.",
@@ -392,11 +646,31 @@
     "title": "Transparency Report 2024",
     "intro": "How we used donations in 2024.",
     "allocation": [
-      { "amount": "1,500,000", "percent": 35, "category": "Emotional & Psychological Support" },
-      { "amount": "1,300,000", "percent": 30, "category": "Educational Support & Scholarships" },
-      { "amount": "650,000", "percent": 15, "category": "Housing & Community" },
-      { "amount": "430,000", "percent": 10, "category": "Mentoring & Guidance" },
-      { "amount": "430,000", "percent": 10, "category": "Administration" }
+      {
+        "amount": "1,500,000",
+        "percent": 35,
+        "category": "Emotional & Psychological Support"
+      },
+      {
+        "amount": "1,300,000",
+        "percent": 30,
+        "category": "Educational Support & Scholarships"
+      },
+      {
+        "amount": "650,000",
+        "percent": 15,
+        "category": "Housing & Community"
+      },
+      {
+        "amount": "430,000",
+        "percent": 10,
+        "category": "Mentoring & Guidance"
+      },
+      {
+        "amount": "430,000",
+        "percent": 10,
+        "category": "Administration"
+      }
     ],
     "summary": "In 2024, we supported approximately 2,500 orphans."
   },
@@ -404,45 +678,123 @@
     "title": "Documents & Files",
     "intro": "All official Mishpacha documents.",
     "items": [
-      { "id": "orphanReport", "title": "Israel Orphanhood Report 2025", "text": "Full statistics." },
-      { "id": "volunteerGuide", "title": "Volunteer Guide", "text": "How to volunteer." },
-      { "id": "onlineGroups", "title": "Online Support Groups", "text": "Detailed guide." },
-      { "id": "byMunicipality", "title": "Orphans by Municipality", "text": "Data by city." },
-      { "id": "orphanWeekKit", "title": "Orphan Week Kit", "text": "Campaign materials." },
-      { "id": "businessPlan", "title": "Business Plan 2025", "text": "Annual plan." },
-      { "id": "rightsGuide", "title": "Rights Guide", "text": "Official guidelines." },
-      { "id": "regulation", "title": "Regulations & Governance", "text": "Legal documents." },
-      { "id": "aboutPdf", "title": "About the Organization", "text": "General information." }
+      {
+        "id": "orphanReport",
+        "title": "Israel Orphanhood Report 2025",
+        "text": "Full statistics."
+      },
+      {
+        "id": "volunteerGuide",
+        "title": "Volunteer Guide",
+        "text": "How to volunteer."
+      },
+      {
+        "id": "onlineGroups",
+        "title": "Online Support Groups",
+        "text": "Detailed guide."
+      },
+      {
+        "id": "byMunicipality",
+        "title": "Orphans by Municipality",
+        "text": "Data by city."
+      },
+      {
+        "id": "orphanWeekKit",
+        "title": "Orphan Week Kit",
+        "text": "Campaign materials."
+      },
+      {
+        "id": "businessPlan",
+        "title": "Business Plan 2025",
+        "text": "Annual plan."
+      },
+      {
+        "id": "rightsGuide",
+        "title": "Rights Guide",
+        "text": "Official guidelines."
+      },
+      {
+        "id": "regulation",
+        "title": "Regulations & Governance",
+        "text": "Legal documents."
+      },
+      {
+        "id": "aboutPdf",
+        "title": "About the Organization",
+        "text": "General information."
+      }
     ]
   },
-"contact": {
-  "title": "Contact Us",
-  "intro": "We will be happy to assist you with any question, inquiry, or collaboration.",
-
-  "quickTitle": "Quick Contact",
-  "methodsTitle": "Contact Details",
-  "responseNote": "We will get back to you as soon as possible.",
-
-  "methods": [
-    { "type": "phone", "label": "Phone", "value": "0553134210" },
-    { "type": "email", "label": "Email", "value": "mishporg@gmail.com" }
-  ],
-
-  "ctaWhatsApp": "Send a WhatsApp Message",
-  "ctaEmail": "Send an Email",
-
-  "whatsAppText": "Hello, I would like to contact Mishpacha Association regarding:",
-  "emailSubject": "Inquiry from the Mishpacha Website",
-  "emailBody": "Hello,\n\nI am contacting you through the website regarding:\n\nName:\nPhone:\nMessage:\n\nThank you,",
-
-  "socialTitle": "You Can Also Follow Us",
-  "social": ["Facebook", "Instagram", "LinkedIn", "YouTube"],
-
-  "pressNote": "For media inquiries, journalists, and content organizations – we would be happy to get in touch and collaborate.",
-  "footerLine": "Mishpacha Association supports orphans on their journey toward safe, supportive, and meaningful lives."
-},
-
-
+  "contact": {
+    "title": "Let's start a conversation",
+    "intro": "We're glad to hear from anyone who wants to get help, lend a hand, or work with us – people seeking support, local authorities, government bodies, researchers, companies and volunteers. Choose a topic and send a message, and we'll get back to you.",
+    "methodsTitle": "Contact Details",
+    "responseNote": "We will get back to you as soon as possible.",
+    "methods": [
+      {
+        "type": "phone",
+        "label": "Phone",
+        "value": "0553134210"
+      },
+      {
+        "type": "email",
+        "label": "Email",
+        "value": "mishporg@gmail.com"
+      }
+    ],
+    "ctaWhatsApp": "Send a WhatsApp Message",
+    "ctaEmail": "Send an Email",
+    "whatsAppText": "Hello, I would like to contact Mishpacha Association regarding:",
+    "emailSubject": "Inquiry from the Mishpacha Website",
+    "emailBody": "Hello,\n\nI am contacting you through the website regarding:\n\nName:\nPhone:\nMessage:\n\nThank you,",
+    "socialTitle": "You Can Also Follow Us",
+    "social": [
+      "Facebook",
+      "Instagram",
+      "LinkedIn",
+      "YouTube"
+    ],
+    "pressNote": "For media inquiries, journalists, and content organizations – we would be happy to get in touch and collaborate.",
+    "footerLine": "Mishpacha Association supports orphans on their journey toward safe, supportive, and meaningful lives.",
+    "eyebrow": "Contact",
+    "topicsTitle": "What would you like to talk about?",
+    "topics": [
+      {
+        "id": "support",
+        "label": "Seeking support"
+      },
+      {
+        "id": "professional",
+        "label": "Professional collaboration"
+      },
+      {
+        "id": "municipal",
+        "label": "Municipal cooperation"
+      },
+      {
+        "id": "government",
+        "label": "Government cooperation"
+      },
+      {
+        "id": "volunteering",
+        "label": "Volunteering"
+      },
+      {
+        "id": "projects",
+        "label": "Projects"
+      },
+      {
+        "id": "partnerships",
+        "label": "Partnerships"
+      },
+      {
+        "id": "general",
+        "label": "General inquiry"
+      }
+    ],
+    "supportHint": "If you're looking for personal support, the fastest way is our short, discreet form.",
+    "supportHintLink": "Fill in the form"
+  },
   "footer": {
     "rights": "© All rights reserved to Mishpacha Association",
     "accessibility": "Accessibility Statement",
