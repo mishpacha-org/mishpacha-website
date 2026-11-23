@@ -222,13 +222,13 @@
         <p class="section__intro" data-i18n="events.intro"></p>
       </header>
 
-      <!-- Event cards (rendered via JS from lang/*.json events.items) -->
-      <div class="events" id="eventsItems"></div>
-
-      <!-- Shown by JS when events.items is empty -->
+      <!-- Shown by JS when there are no upcoming events (past events are listed below it) -->
       <div class="card" id="eventsEmpty" hidden>
         <div class="muted" data-i18n="events.emptyState"></div>
       </div>
+
+      <!-- Event cards (rendered via JS from lang/*.json events.items) -->
+      <div class="events" id="eventsItems"></div>
     </div>
   </section>
 

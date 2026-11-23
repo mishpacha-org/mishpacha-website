@@ -856,6 +856,13 @@ html[lang="he"] .yatom__flowTitle { letter-spacing: .02em; text-transform: none;
 .event__theme{ margin-top: 8px; font-weight: 700; color: var(--primary-700); font-size: 1.05rem; }
 .event__text{ margin-top: 14px; color: var(--muted); line-height: 1.75; max-width: 62ch; }
 .event__note{ margin-top: 12px; font-size: .9rem; font-weight: 600; color: var(--coral); }
+.event__details{ display: grid; gap: 6px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .93rem; line-height: 1.6; }
+.event__details strong{ margin-inline-end: 6px; color: var(--ink); }
+.event__details span{ color: var(--muted); }
+
+#eventsEmpty{ margin-bottom: 32px; }
+.events__groupTitle{ margin-top: 4px; font-size: 1.15rem; font-weight: 800; color: var(--ink-2); }
+.event + .events__groupTitle{ margin-top: 20px; }
 
 .event__side{
   display: grid; gap: 22px;

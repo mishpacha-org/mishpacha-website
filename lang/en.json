@@ -244,8 +244,35 @@
     "intro": "Gatherings where knowledge, community and policy meet.",
     "upcomingBadge": "Upcoming",
     "pastBadge": "Past",
-    "emptyState": "There are no upcoming events published right now. Please check back soon.",
+    "emptyState": "There are no upcoming events at this time. Please check back soon.",
     "items": [
+      {
+        "id": "president-residence-orphan-day-2026",
+        "date": "2026-11-11",
+        "dateLabel": "Wednesday, November 11, 2026",
+        "time": "",
+        "location": "The President's Residence, Jerusalem",
+        "tag": "International Orphan Day",
+        "icon": "users",
+        "title": "Gathering at the President's Residence Marking International Orphan Day",
+        "theme": "",
+        "text": "At Mishpacha's initiative, a special gathering marking International Orphan Day was held at the President's Residence, with President Isaac Herzog in attendance. It put the issue of civilian orphanhood in Israel on the public agenda, along with the need to define the State's responsibility toward children and young people who have lost a parent. At its center was the bill the association is promoting, which seeks to ensure the realization of rights, continuity of care, ongoing support, and a clear state address for orphans and their families. President Herzog expressed his support for advancing the issue and asked to receive the bill and work to advance it.",
+        "details": [
+          {
+            "label": "Initiated by",
+            "value": "Mishpacha Association"
+          },
+          {
+            "label": "Participants",
+            "value": "President Isaac Herzog, representatives of academia and research, local government, the National Insurance Institute and other professionals"
+          }
+        ],
+        "note": "",
+        "primaryCtaLabel": "",
+        "primaryCtaLink": "",
+        "secondaryCtaLabel": "",
+        "secondaryCtaLink": ""
+      },
       {
         "id": "national-study-day-2026",
         "date": "2026-10-15",
@@ -254,17 +281,24 @@
         "location": "Ariel University",
         "tag": "National Study Day",
         "icon": "book",
-        "title": "National Study Day on Bereavement and Orphanhood",
+        "title": "National Study Day on Bereavement and Civilian Orphanhood",
         "theme": "From Personal Experience to National Policy",
-        "text": "A professional and academic gathering held jointly by Mishpacha and Ariel University, connecting personal experience, research, public systems and policy – with representatives of government, academia, local authorities and civil society.",
-        "note": "Participation is free and requires advance registration.",
-        "primaryCtaLabel": "Register for the Event",
-        "primaryCtaLink": "https://ariel-and-mishpacha.vercel.app/",
-        "secondaryCtaLabel": "Learn More About the Event",
-        "secondaryCtaLink": "https://mishpacha-impact-summit.base44.app"
+        "text": "Mishpacha and Ariel University held a national study day with academics and researchers, representatives of public bodies, professionals and civil society organizations. The discussions addressed gaps in the support available to children, teens and young adults who have lost a parent, the accessibility of rights, and the need for a national policy that ensures continuous support and guidance over time – and explored ways to advance research, build knowledge infrastructure, strengthen cooperation between organizations and develop systemic solutions in the field of civilian orphanhood.",
+        "details": [
+          {
+            "label": "Organizers",
+            "value": "Mishpacha Association, in cooperation with the School of Social Work at Ariel University"
+          }
+        ],
+        "note": "",
+        "primaryCtaLabel": "",
+        "primaryCtaLink": "",
+        "secondaryCtaLabel": "",
+        "secondaryCtaLink": ""
       }
     ],
-    "eyebrow": "Events"
+    "eyebrow": "Events",
+    "pastTitle": "Past events"
   },
   "people": {
     "eyebrow": "The team",

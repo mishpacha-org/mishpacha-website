@@ -597,13 +597,22 @@
     const data = dictionary?.events;
     const items = getSortedEvents();
 
-    if (empty) empty.hidden = items.length > 0;
+    // Notice appears whenever nothing is upcoming; past events (if any) are listed beneath it.
+    if (empty) empty.hidden = items.some((ev) => !isEventPast(ev));
 
     const locale = currentLang === "he" ? "he-IL" : "en-US";
+    let pastTitleShown = false;
 
     items.forEach((ev) => {
       const isPast = isEventPast(ev);
       const t = eventTimestamp(ev);
+
+      // Past events are grouped under their own heading (they sort after any upcoming ones)
+      if (isPast && !pastTitleShown && data?.pastTitle) {
+        holder.appendChild(h("h3", "events__groupTitle", data.pastTitle));
+        pastTitleShown = true;
+      }
+
       const card = h("article", isPast ? "event event--past" : "event");
 
       // Date block (day / month / year) computed from the ISO date
@@ -638,6 +647,23 @@
       main.appendChild(h("h3", "event__title", ev?.title || ""));
       if (ev?.theme) main.appendChild(h("p", "event__theme", ev.theme));
       if (ev?.text) main.appendChild(h("p", "event__text", ev.text));
+
+      // Optional labelled details, e.g. organizers / participants
+      if (Array.isArray(ev?.details) && ev.details.length) {
+        const list = h("ul", "event__details");
+        ev.details.forEach((d) => {
+          if (!d?.value) return;
+          const li = h("li");
+          if (d?.label) {
+            li.appendChild(h("strong", "", d.label));
+            li.appendChild(document.createTextNode(" "));
+          }
+          li.appendChild(h("span", "", d.value));
+          list.appendChild(li);
+        });
+        if (list.children.length) main.appendChild(list);
+      }
+
       if (ev?.note) main.appendChild(h("p", "event__note", ev.note));
       card.appendChild(main);
 
